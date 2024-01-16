@@ -24,11 +24,11 @@
 
   boot.loader.grub.extraInstallCommands = ''
     CMD_MKTEMP=$(command -v mktemp)
-    if [[ -n "$CMD_MKTEMP" ]]; then
+    if [[ -n "${CMD_MKTEMP}" ]]; then
       echo "mktemp not found, please install it";
       exit 1
     else
-      ESP_MIRROR=$($CMD_MKTEMP -d)
+      ESP_MIRROR=$(${CMD_MKTEMP} -d)
       cp -r /boot/efi/EFI $ESP_MIRROR
       for i in /boot/efis/*; do
         cp -r $ESP_MIRROR/EFI $i
