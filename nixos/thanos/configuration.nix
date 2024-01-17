@@ -126,13 +126,38 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+    neovim
+    git
+    wget
+    # yubikey-personalization
+    # yubikey-manager
+    pavucontrol
+    pulseaudio
+    # qmk
+  ];
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   programs.hyprland.enable = true;
-  
+
+  # Enable the X11 windowing system.
+  services.xserver = {
+    enable = true;
+    # videoDrivers = [ "amdgpu" ];
+
+    displayManager.gdm = {
+      enable = true;
+      wayland = true;
+    };
+    windowManager.awesome.enable = true;
+  };
+
+
   services.zfs = {
     autoScrub.enable = true;
     trim.enable = true;
   };
-
 
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.
