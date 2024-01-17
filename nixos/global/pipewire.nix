@@ -1,4 +1,5 @@
-{
+{ lib, ... }: {
+  sound.enable = lib.mkDefault false;
   security.rtkit.enable = true;
   hardware.pulseaudio.enable = false;
   services.pipewire = {
