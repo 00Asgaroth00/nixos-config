@@ -78,7 +78,7 @@
             home-manager.users.${username} = import ./home-manager/home.nix;
             home-manager.extraSpecialArgs = { inherit inputs outputs username; };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-          };
+          }
         ];
       };
     };
