@@ -38,7 +38,7 @@
             type = "zfs_fs";
             mountpoint = "/";
             options.mountpoint = "legacy";
-            postCreateHook = "zfs snapshot zfspool/root@blank";
+            postCreateHook = "zfs snapshot zroot/root@blank";
           };
           nix = {
             type = "zfs_fs";
@@ -54,7 +54,7 @@
             type = "zfs_fs";
             options.mountpoint = "legacy";
             mountpoint = "/home";
-            postCreateHook = "zfs snapshot zfspool/home@blank";
+            postCreateHook = "zfs snapshot zroot/home@blank";
           };
         };
       };
