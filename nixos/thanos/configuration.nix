@@ -81,12 +81,18 @@
   # FIXME: Add the rest of your current configuration
 
   networking.hostName = "thanos";
+  networking.hostId = "a4e287fe";
   networking.useDHCP = lib.mkForce true;
   networking.networkmanager.enable = true;
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  # configure nixos with the specified devices
+  # should be true if the system is booted with those devices
+  # should be false on an installer image etc.
+  disko.enableConfig = true; 
 
   hardware.enableRedistributableFirmware = true;
 
