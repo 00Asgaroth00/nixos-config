@@ -1,3 +1,7 @@
+# see following links for more info
+#    https://github.com/nix-community/disko/blob/master/docs/quickstart.md
+#    https://github.com/nix-community/disko/blob/master/docs/HowTo.md
+
 { ... }: {
   disko.devices = {
     disk = {
