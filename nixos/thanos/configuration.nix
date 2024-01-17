@@ -29,6 +29,7 @@
     # ./zfs.nix
 
     ../global/locale.nix
+    ../global/pipewire.nix
   ];
 
   nixpkgs = {
@@ -125,12 +126,15 @@
     };
   };
 
+  programs.hyprland.enable = true;
+  programs.home-manager.enable = true;
+
   services.zfs = {
     autoScrub.enable = true;
     trim.enable = true;
   };
 
-  
+
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.
   services.openssh = {
