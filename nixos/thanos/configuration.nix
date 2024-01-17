@@ -127,8 +127,7 @@
   };
 
   programs.hyprland.enable = true;
-  programs.home-manager.enable = true;
-
+  
   services.zfs = {
     autoScrub.enable = true;
     trim.enable = true;
