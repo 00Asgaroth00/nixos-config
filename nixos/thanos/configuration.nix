@@ -152,9 +152,10 @@
     enable = true;
     videoDrivers = [ "i915" ];
 
-    layout = "uk";
-    # xkbVariant = "";
-    # xkbOptions = "";
+    xkb.layout = "uk";
+    # xkb.model = "pc104";
+    # xkb.variant = "";
+    # xkb.options = "terminate:ctrl_alt_bksp";
 
     displayManager.gdm = {
       enable = true;
