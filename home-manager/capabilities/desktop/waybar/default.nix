@@ -53,12 +53,12 @@
           on-click = "activate";
         };
 
-        "custom/task-context" = {
-          exec = "~/.config/waybar/scripts/task-context.sh";
-          tooltip = false;
-          on-click = "task @ none";
-          restart-interval = 1;
-        };
+        # "custom/task-context" = {
+        #   exec = "~/.config/waybar/scripts/task-context.sh";
+        #   tooltip = false;
+        #   on-click = "task @ none";
+        #   restart-interval = 1;
+        # };
 
         "network#interface" = {
           format-ethernet = "󰣶  {ifname}";
@@ -171,16 +171,16 @@
     executable = true;
   };
 
-  xdg.configFile."waybar/scripts/task-context.sh" = {
-    text = ''
-      ICON=" "
-      CONTEXT=$(task _get rc.context)
+  # xdg.configFile."waybar/scripts/task-context.sh" = {
+  #   text = ''
+  #     ICON=" "
+  #     CONTEXT=$(task _get rc.context)
 
-      if [ -z "$CONTEXT" ]; then
-        CONTEXT="NONE"
-      fi
-      echo "$ICON  $CONTEXT"
-    '';
-    executable = true;
-  };
+  #     if [ -z "$CONTEXT" ]; then
+  #       CONTEXT="NONE"
+  #     fi
+  #     echo "$ICON  $CONTEXT"
+  #   '';
+  #   executable = true;
+  # };
 }
