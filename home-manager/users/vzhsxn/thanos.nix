@@ -20,6 +20,7 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
 
+    ../../capabilities/desktop
     ../../capabilities/shell.nix
     ../../capabilities/kitty
   ] ++ (builtins.attrValues outputs.homeManagerModules) ;
