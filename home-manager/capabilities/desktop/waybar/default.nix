@@ -15,7 +15,8 @@
         layer = "top";
         modules-left = [ "custom/nix" "hyprland/workspaces" "mpris" ];
         modules-center = [ "wlr/taskbar" ];
-        modules-right = [ "custom/task-context" "network#interface" "network#speed" "cpu" "temperature" "backlight" "battery" "clock" "custom/notification" "tray" ];
+        modules-right = [ "network#interface" "network#speed" "cpu" "temperature" "backlight" "battery" "clock" "custom/notification" "tray" ];
+        # modules-right = [ "custom/task-context" "network#interface" "network#speed" "cpu" "temperature" "backlight" "battery" "clock" "custom/notification" "tray" ];
 
         persistent_workspaces = {
           "1" = [ ];
