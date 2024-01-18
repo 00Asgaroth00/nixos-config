@@ -144,7 +144,7 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    # videoDrivers = [ "amdgpu" ];
+    videoDrivers = [ "i915" ];
 
     displayManager.gdm = {
       enable = true;
