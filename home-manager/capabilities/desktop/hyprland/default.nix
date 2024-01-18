@@ -147,12 +147,12 @@
       windowrulev2 = [
         "workspace 1,class:kitty"
         "workspace 2,title:^(Mozilla Firefox)(.*)$"
-        "workspace special:notes,title:^(kitty-delta)"
-        "workspace special:term,title:^(kitty-scratch)"
+        # "workspace special:notes,title:^(kitty-delta)"
+        # "workspace special:term,title:^(kitty-scratch)"
         "workspace 3,class:Slack"
-        "workspace 3,class:WebCord"
-        "float,title:(GnuCash Tip Of The Day)"
-        "float,title:(Firefox — Sharing Indicator)"
+        # "workspace 3,class:WebCord"
+        # "float,title:(GnuCash Tip Of The Day)"
+        # "float,title:(Firefox — Sharing Indicator)"
       ];
 
       "$mainMod" = "SUPER";
