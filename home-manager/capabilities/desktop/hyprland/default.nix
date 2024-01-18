@@ -19,8 +19,6 @@
     libnotify
   ];
 
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
-
   programs.wofi.enable = true;
 
   wayland.windowManager.hyprland = {
