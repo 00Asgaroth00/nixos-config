@@ -138,6 +138,7 @@
     pavucontrol
     pulseaudio
     jack2
+    libcamera
     # qmk
     pciutils
     hwloc
