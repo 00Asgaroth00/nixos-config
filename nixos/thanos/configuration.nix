@@ -189,9 +189,9 @@
   };
 
 
-  services.dbus.packages = [ pkgs.gcr ];
+  # services.dbus.packages = [ pkgs.gcr ];
 
-  programs.dconf.enable = true;
+  # programs.dconf.enable = true;
 
   services.auto-cpufreq.enable = true;
 
@@ -202,13 +202,20 @@
 
   services.blueman.enable = true;
 
-  xdg.portal = {
-    extraPortals = [ 
-      pkgs.xdg-desktop-portal-gtk 
-      pkgs.xdg-desktop-portal-wlr 
-    ];
-  };
+  # xdg.portal = {
+  #   extraPortals = [ 
+  #     pkgs.xdg-desktop-portal-gtk 
+  #     pkgs.xdg-desktop-portal-wlr 
+  #   ];
+  # };
   
+
+
+  xdg.portal = {
+    extraPortals = [ pkgs.inputs.hyprland.xdg-desktop-portal-hyprland ];
+    configPackages = [ pkgs.inputs.hyprland.hyprland ];
+  };
+
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
