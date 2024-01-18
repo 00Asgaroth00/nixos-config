@@ -101,9 +101,9 @@
       };
 
       input = {
-        kb_layout = "us";
-        kb_variant = config.keyboard.variant;
-        kb_options = config.keyboard.options;
+        kb_layout = "${config.console.keyMap}";
+        kb_variant = "";
+        kb_options = "";
         follow_mouse = 1;
         touchpad = {
           natural_scroll = true;
