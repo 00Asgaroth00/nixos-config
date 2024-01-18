@@ -152,7 +152,7 @@
     enable = true;
     videoDrivers = [ "i915" ];
 
-    xkb.layout = "uk";
+    xkb.layout = "gb";
     # xkb.model = "pc104";
     # xkb.variant = "";
     # xkb.options = "terminate:ctrl_alt_bksp";
