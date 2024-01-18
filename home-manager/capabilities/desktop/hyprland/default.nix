@@ -101,7 +101,7 @@
       };
 
       input = {
-        kb_layout = "uk";
+        kb_layout = "gb";
         # kb_variant = "";
         # kb_options = "";
         follow_mouse = 1;
