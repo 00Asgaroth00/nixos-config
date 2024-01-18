@@ -182,6 +182,16 @@
     };
   };
 
+
+  services.dbus.packages = [ pkgs.gcr ];
+
+  programs.dconf.enable = true;
+
+  services.auto-cpufreq.enable = true;
+
+  xdg.portal = {
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  };
   
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
