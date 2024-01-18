@@ -137,6 +137,7 @@
     # yubikey-manager
     pavucontrol
     pulseaudio
+    jack2
     # qmk
     pciutils
     hwloc
