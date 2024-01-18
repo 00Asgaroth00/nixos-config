@@ -92,7 +92,7 @@
           home-manager.nixosModules.home-manager {
             # home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${username} = import ./home-manager/users/${username}/home.nix;
+            home-manager.users.${username} = import ./home-manager/users/${username}/thanos.nix;
             home-manager.extraSpecialArgs = { inherit inputs outputs username; };
           }
         ];
@@ -108,7 +108,7 @@
         extraSpecialArgs = {inherit inputs outputs username;};
         modules = [
           # > Our main home-manager configuration file <
-          ./home-manager/users/${username}/home.nix
+          ./home-manager/users/${username}/thanos.nix
         ];
       };
     };

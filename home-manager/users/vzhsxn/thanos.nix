@@ -69,6 +69,17 @@
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
+  monitors = [
+    {
+      name = "eDP-1";
+      width = 1920;
+      height = 1080;
+      refreshRate = 60;
+      scale = "1.5";
+      workspaces = [ "1" "2" "3" "4" ];
+    }
+  ];
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
