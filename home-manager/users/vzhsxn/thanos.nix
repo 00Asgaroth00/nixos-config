@@ -76,7 +76,7 @@
       width = 1920;
       height = 1080;
       refreshRate = 60;
-      scale = "1.5";
+      scale = "1";
       workspaces = [ "1" "2" "3" "4" ];
     }
   ];
