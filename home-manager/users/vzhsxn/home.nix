@@ -22,7 +22,7 @@
 
     ../../capabilities/shell.nix
     ../../capabilities/kitty
-  ];
+  ] ++ (builtins.attrValues outputs.homeManagerModules) ;
 
   nixpkgs = {
     # You can add overlays here
