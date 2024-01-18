@@ -118,7 +118,7 @@
       # initialPassword = "correcthorsebatterystaple";
       hashedPassword = "$y$j9T$LOW.UUJZdl94Miro2rPYi0$X7HGYuYWgrG87fGU9F31lElzJSrXC3rwYozqYbc0fZ6";
       isNormalUser = true;
-      shell = [ pkgs.zsh ];
+      shell = pkgs.zsh;
       openssh.authorizedKeys.keys = [
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
