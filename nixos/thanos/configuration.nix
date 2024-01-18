@@ -211,7 +211,7 @@
   
   programs.hyprland.enable = true;
   xdg = {
-    mimeApps.enable = true;
+    mime.enable = true;
     portal = {
       extraPortals = [ 
         pkgs.xdg-desktop-portal-hyprland 
