@@ -118,6 +118,7 @@
       # initialPassword = "correcthorsebatterystaple";
       hashedPassword = "$y$j9T$LOW.UUJZdl94Miro2rPYi0$X7HGYuYWgrG87fGU9F31lElzJSrXC3rwYozqYbc0fZ6";
       isNormalUser = true;
+      shell = [ pkgs.zsh ];
       openssh.authorizedKeys.keys = [
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
@@ -126,6 +127,7 @@
     };
   };
 
+  environment.shells = [ pkgs.zsh pkgs.bash ]
   environment.systemPackages = with pkgs; [
     neovim
     git
@@ -140,6 +142,7 @@
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   programs.hyprland.enable = true;
+  programs.zsh.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver = {
