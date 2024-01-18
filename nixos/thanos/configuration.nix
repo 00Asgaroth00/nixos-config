@@ -141,6 +141,8 @@
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  fonts.fontDir.enable = true;
+
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
 
