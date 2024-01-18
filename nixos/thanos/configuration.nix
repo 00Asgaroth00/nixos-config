@@ -101,6 +101,7 @@
   console = {
     font = "Lat2-Terminus16";
     keyMap = "uk";
+    useXkbConfig = true;
   };
 
   # systemd.sleep.extraConfig = "SuspendState=freeze";
@@ -150,6 +151,10 @@
   services.xserver = {
     enable = true;
     videoDrivers = [ "i915" ];
+
+    layout = "uk";
+    # xkbVariant = "";
+    # xkbOptions = "";
 
     displayManager.gdm = {
       enable = true;
