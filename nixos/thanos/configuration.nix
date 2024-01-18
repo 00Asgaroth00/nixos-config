@@ -212,8 +212,8 @@
 
 
   xdg.portal = {
-    extraPortals = [ pkgs.inputs.hyprland.xdg-desktop-portal-hyprland ];
-    configPackages = [ pkgs.inputs.hyprland.hyprland ];
+    extraPortals = [ pkgs.hyprland.xdg-desktop-portal-hyprland ];
+    configPackages = [ pkgs.hyprland.hyprland ];
   };
 
 
