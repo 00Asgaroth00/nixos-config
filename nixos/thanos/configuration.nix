@@ -137,7 +137,7 @@
     # yubikey-manager
     pavucontrol
     pulseaudio
-    jack2
+    # jack2
     libcamera
     # qmk
     pciutils
@@ -150,7 +150,7 @@
 
   fonts.fontDir.enable = true;
 
-  programs.hyprland.enable = true;
+  
   programs.zsh.enable = true;
 
   # Enable the X11 windowing system.
@@ -209,11 +209,17 @@
   #   ];
   # };
   
-
-
-  xdg.portal = {
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
-    configPackages = [ pkgs.hyprland ];
+  programs.hyprland.enable = true;
+  xdg = {
+    mimeApps.enable = true;
+    portal = {
+      extraPortals = [ 
+        pkgs.xdg-desktop-portal-hyprland 
+        pkgs.xdg-desktop-portal-wlr
+      ];
+      configPackages = [ pkgs.hyprland ];
+    };
+    
   };
 
 
