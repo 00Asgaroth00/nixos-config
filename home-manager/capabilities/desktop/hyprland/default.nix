@@ -101,7 +101,7 @@
       };
 
       input = {
-        kb_layout = "${config.console.keyMap}";
+        kb_layout = "uk";
         kb_variant = "";
         kb_options = "";
         follow_mouse = 1;
