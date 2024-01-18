@@ -102,8 +102,8 @@
 
       input = {
         kb_layout = "uk";
-        kb_variant = "";
-        kb_options = "";
+        # kb_variant = "";
+        # kb_options = "";
         follow_mouse = 1;
         touchpad = {
           natural_scroll = true;
@@ -114,11 +114,11 @@
         workspace_swipe = true;
       };
 
-      "device:getech-huge-trackball-1" = {
-        "scroll_method" = "on_button_down";
-        "scroll_button" = 279;
-        "natural_scroll" = true;
-      };
+      # "device:getech-huge-trackball-1" = {
+      #   "scroll_method" = "on_button_down";
+      #   "scroll_button" = 279;
+      #   "natural_scroll" = true;
+      # };
 
       monitor = map
         (m:
