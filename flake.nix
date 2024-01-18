@@ -108,7 +108,7 @@
         extraSpecialArgs = {inherit inputs outputs username;};
         modules = [
           # > Our main home-manager configuration file <
-          ./home-manager/users/${username}/home.nix;
+          ./home-manager/users/${username}/home.nix
         ];
       };
     };
