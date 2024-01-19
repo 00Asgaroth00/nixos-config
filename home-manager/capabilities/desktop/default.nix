@@ -21,15 +21,15 @@
     font-manager
   ];
 
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-      # gtk-theme = "Catppuccin-Frappe-Standard-Blue-light";
-      gtk-theme = "Catppuccin-Mocha-Standard-Blue-Dark";
-      cursor-theme = "Bibata-Modern-Ice";
-      icon-theme = "Fluent-dark";
-    };
-  };
+  # dconf.settings = {
+  #   "org/gnome/desktop/interface" = {
+  #     color-scheme = "prefer-dark";
+  #     gtk-theme = "Catppuccin-Frappe-Standard-Blue-light";
+  #     gtk-theme = "Catppuccin-Mocha-Standard-Blue-Dark";
+  #     cursor-theme = "Bibata-Modern-Ice";
+  #     icon-theme = "Fluent-dark";
+  #   };
+  # };
 
   gtk = {
     enable = true;
@@ -42,22 +42,22 @@
     #     tweaks = [ ];
     #     variant = "mocha";
     #   };
-    };
+    # };
 
-    cursorTheme = {
-      name = "Bibata-Modern-Ice";
-      package = pkgs.bibata-cursors;
-    };
+    # cursorTheme = {
+    #   name = "Bibata-Modern-Ice";
+    #   package = pkgs.bibata-cursors;
+    # };
 
-    iconTheme = {
-      name = "Fluent-dark";
-      package = pkgs.fluent-icon-theme;
-    };
+    # iconTheme = {
+    #   name = "Fluent-dark";
+    #   package = pkgs.fluent-icon-theme;
+    # };
   };
 
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    # platformTheme = "gtk";
     # style.name = "adwaita-gtk";
   };
 
