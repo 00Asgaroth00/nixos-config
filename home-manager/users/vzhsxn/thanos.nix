@@ -66,7 +66,9 @@
   # programs.neovim.enable = true;
   # home.packages = with pkgs; [ steam ];
 
-  fonts.fontconfig.enable = true;
+  # fonts.fontconfig.enable = true;
+
+  xdg.enable = true;
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
