@@ -98,7 +98,7 @@
             # home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = import ./home-manager/users/${username}/thanos.nix;
-            home-manager.extraSpecialArgs = { inherit inputs outputs username colour_scheme; };
+            home-manager.extraSpecialArgs = { inherit inputs outputs nix-colors username colour_scheme; };
           }
         ];
       };
