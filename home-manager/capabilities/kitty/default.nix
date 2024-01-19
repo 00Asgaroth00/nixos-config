@@ -5,7 +5,7 @@
     enable = true;
 
     font = {
-      name = "FiraCode Nerd Font";
+      name = config.fontProfiles.monospace.family;
       size = 12;
     };
 
