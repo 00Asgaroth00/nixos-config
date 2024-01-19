@@ -22,7 +22,7 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
 
-    inputs.nix-colors.homeManagerModule
+    nix-colors.homeManagerModule
 
     ../../capabilities/desktop
     ../../capabilities/shell.nix
@@ -57,7 +57,7 @@
     };
   };
 
-  colorscheme = nix-colors.colorSchemes.${colour_scheme};
+  colorscheme = lib.mkOverride 1499 nix-colors.colorSchemes.${colour_scheme};
 
   # TODO: Set your username
   home = {
