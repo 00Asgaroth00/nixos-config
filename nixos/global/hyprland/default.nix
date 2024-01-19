@@ -9,11 +9,13 @@
 
   # Hyprland specific xdg portal, augments ../xdg/default.nix
   xdg = {
-    extraPortals = with pkgs; [ 
+    portal = {
+      extraPortals = with pkgs; [ 
         xdg-desktop-portal-hyprland 
         xdg-desktop-portal-wlr
       ];
-    configPackages = [ pkgs.hyprland ];
+      configPackages = [ pkgs.hyprland ];
+    };
   };
 
 }
