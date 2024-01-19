@@ -50,8 +50,10 @@
         gaps_in = 5;
         gaps_out = 5;
         border_size = 2;
-        "col.active_border" = "rgb(78A8FF) rgb(7676FF) 45deg";
-        "col.inactive_border" = "rgba(585272aa)";
+        # "col.active_border" = "rgb(78A8FF) rgb(7676FF) 45deg";
+        # "col.inactive_border" = "rgba(585272aa)";
+        "col.active_border" = "0xff${config.colorscheme.colors.base0C}";
+        "col.inactive_border" = "0xff${config.colorscheme.colors.base02}";
         layout = "dwindle";
         resize_on_border = true;
       };
@@ -76,18 +78,22 @@
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
+        # "col.shadow" = "rgba(1a1a1aee)";
+        "col.shadow" = "0x44000000";
+        "col.shadow_inactive" = "0x66000000";
       };
 
       group = {
-        "col.border_active" = "rgba(63F2F1aa)";
-        "col.border_inactive" = "rgba(585272aa)";
+        # "col.border_active" = "rgba(63F2F1aa)";
+        # "col.border_inactive" = "rgba(585272aa)";
+        "col.border_active" = "0xff${config.colorscheme.colors.base0B}";
+        "col.border_inactive" = "0xff${config.colorscheme.colors.base04}";
 
         groupbar = {
           font_family = "Iosevka";
           font_size = 13;
-          "col.active" = "rgba(63F2F1aa)";
-          "col.inactive" = "rgba(585272aa)";
+          # "col.active" = "rgba(63F2F1aa)";
+          # "col.inactive" = "rgba(585272aa)";
         };
       };
 
