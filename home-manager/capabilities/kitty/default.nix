@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  color = config.lib.sylix.colors;
+  color = config.lib.stylix.colors;
 in {
   programs.kitty = {
     enable = true;

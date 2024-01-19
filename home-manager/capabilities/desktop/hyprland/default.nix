@@ -1,6 +1,6 @@
 { lib, pkgs, config, inputs, username, ... }:
 let
-  color = config.lib.sylix.colors;
+  color = config.lib.stylix.colors;
 in {
 
   imports = [
