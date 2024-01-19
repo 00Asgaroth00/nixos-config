@@ -9,7 +9,7 @@
     #   name = "Fluent-dark";
     #   package = pkgs.fluent-icon-theme;
     # };
-    # settings = {
+    settings = {
     #   global = {
     #     font = "Inter 12";
     #     frame_color = "#100E23";
