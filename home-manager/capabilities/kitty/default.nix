@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
-
-{
+let
+  color = config.lib.sylix.colors;
+in {
   programs.kitty = {
     enable = true;
 
@@ -31,7 +32,7 @@
       copy_on_select = "clipboard";
       clipboard_control = "write-clipboard write-primary no-append";
 
-      foreground = "#${config.colorscheme.base05}";
+      foreground = "#${color.base05}";
       background = "#${config.colorscheme.base00}";
       selection_background = "#${config.colorscheme.base05}";
       selection_foreground = "#${config.colorscheme.base00}";
