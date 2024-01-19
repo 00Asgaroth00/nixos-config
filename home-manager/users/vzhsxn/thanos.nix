@@ -56,7 +56,7 @@
     };
   };
 
-  colorscheme = nix-colors.colorScheme.${colour_scheme};
+  colorscheme = nix-colors.colorSchemes.${colour_scheme};
 
   # TODO: Set your username
   home = {
