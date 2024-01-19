@@ -5,10 +5,10 @@ in {
   programs.kitty = {
     enable = true;
 
-    font = {
-      name = config.fontProfiles.monospace.family;
-      size = 12;
-    };
+    # font = {
+    #   name = config.fontProfiles.monospace.family;
+    #   size = 12;
+    # };
 
     settings = {
       # UI and Window Behavior
