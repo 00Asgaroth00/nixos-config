@@ -30,6 +30,9 @@
 
     ../global/locale.nix
     ../global/pipewire.nix
+    ../global/xserver
+    ../global/xdg
+    ../global/hyprland
   ];
 
   nixpkgs = {
@@ -143,33 +146,26 @@
     pciutils
     hwloc
     usbutils
-    thermald
+    # thermald
   ];
 
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   fonts.fontDir.enable = true;
 
   
   programs.zsh.enable = true;
 
-  # Enable the X11 windowing system.
+  # settings specific to this machine, augments ../global/xserver/default.nix
   services.xserver = {
-    enable = true;
     videoDrivers = [ "i915" ];
-
-    xkb.layout = "gb";
-    # xkb.model = "pc104";
-    # xkb.variant = "";
-    # xkb.options = "terminate:ctrl_alt_bksp";
-
-    displayManager.gdm = {
-      enable = true;
-      wayland = true;
+    xkb = {
+      layout = "gb";
+      model = "pc104";
+      variant = "";
+      xkb.options = "terminate:ctrl_alt_bksp";
     };
-    windowManager.awesome.enable = true;
   };
-
 
   services.zfs = {
     autoScrub.enable = true;
@@ -193,7 +189,7 @@
 
   # programs.dconf.enable = true;
 
-  services.auto-cpufreq.enable = true;
+  # services.auto-cpufreq.enable = true;
 
   hardware.bluetooth = {
     enable = true;
@@ -209,18 +205,18 @@
   #   ];
   # };
   
-  programs.hyprland.enable = true;
-  xdg = {
-    mime.enable = true;
-    portal = {
-      extraPortals = [ 
-        pkgs.xdg-desktop-portal-hyprland 
-        pkgs.xdg-desktop-portal-wlr
-      ];
-      configPackages = [ pkgs.hyprland ];
-    };
+  # programs.hyprland.enable = true;
+  # xdg = {
+  #   mime.enable = true;
+  #   portal = {
+  #     extraPortals = [ 
+  #       pkgs.xdg-desktop-portal-hyprland 
+  #       pkgs.xdg-desktop-portal-wlr
+  #     ];
+  #     configPackages = [ pkgs.hyprland ];
+  #   };
     
-  };
+  # };
 
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
