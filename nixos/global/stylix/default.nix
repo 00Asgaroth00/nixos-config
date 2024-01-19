@@ -9,9 +9,18 @@
     };
     
     fonts = {
-      serif = config.fontProfiles.monospace.family;
-      sansSerif = config.fontProfiles.monospace.family;
-      monospace = config.fontProfiles.monospace.family;
+      serif = {
+        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+        name = ""FiraCode Nerd Font";";
+      }; 
+      sansSerif = {
+        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+        name = ""FiraCode Nerd Font";";
+      }; 
+      monospace = {
+        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+        name = ""FiraCode Nerd Font";";
+      }; 
     };
 
   };
