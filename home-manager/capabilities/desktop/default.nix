@@ -33,15 +33,15 @@
 
   gtk = {
     enable = true;
-    theme = {
-      name = "Catppuccin-Mocha-Standard-Blue-Dark";
-      # name = "Catppuccin-Frappe-Standard-Blue-light";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
-        size = "standard"; # compact
-        tweaks = [ ];
-        variant = "mocha";
-      };
+    # theme = {
+    #   name = "Catppuccin-Mocha-Standard-Blue-Dark";
+    #   # name = "Catppuccin-Frappe-Standard-Blue-light";
+    #   package = pkgs.catppuccin-gtk.override {
+    #     accents = [ "blue" ];
+    #     size = "standard"; # compact
+    #     tweaks = [ ];
+    #     variant = "mocha";
+    #   };
     };
 
     cursorTheme = {
@@ -58,10 +58,10 @@
   qt = {
     enable = true;
     platformTheme = "gtk";
-    style.name = "adwaita-gtk";
+    # style.name = "adwaita-gtk";
   };
 
   # home.sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-light";
-  home.sessionVariables.GTK_THEME = "Catppuccin-Mocha-Standard-Blue-Dark";
+  # home.sessionVariables.GTK_THEME = "Catppuccin-Mocha-Standard-Blue-Dark";
 
 }
