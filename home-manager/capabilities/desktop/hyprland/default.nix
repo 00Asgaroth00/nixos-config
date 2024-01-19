@@ -80,8 +80,8 @@ in {
         shadow_range = 4;
         shadow_render_power = 3;
         # "col.shadow" = "rgba(1a1a1aee)";
-        "col.shadow" = "0x44000000";
-        "col.shadow_inactive" = "0x66000000";
+        # "col.shadow" = "0x44000000";
+        # "col.shadow_inactive" = "0x66000000";
       };
 
       group = {
