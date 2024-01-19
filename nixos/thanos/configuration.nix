@@ -158,6 +158,8 @@
     # thermald
   ];
 
+  environment.shellAliases.rebuild = "sudo nixos-rebuild switch --flake /home/${username}/git_repos/nixos-config/#thanos --show-trace"
+
   # environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # fonts.fontDir.enable = true;
