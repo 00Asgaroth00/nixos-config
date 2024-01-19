@@ -30,7 +30,6 @@
     ./hardware-configuration.nix
     ./disko-config.nix
 
-    nix-colors.homeManagerModules.default
     ../global/locale
     ../global/pipewire
     ../global/xserver
