@@ -6,7 +6,9 @@
   lib,
   config,
   pkgs,
+  nix-colors,
   username,
+  colour_scheme,
   ...
 }: {
   # You can import other home-manager modules here
@@ -53,6 +55,8 @@
       allowUnfreePredicate = _: true;
     };
   };
+
+  colorscheme = nix-colours.colorScheme.${colour_scheme};
 
   # TODO: Set your username
   home = {

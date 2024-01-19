@@ -25,7 +25,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # TODO: Add any other flake you might need
-    hardware.url = "github:nixos/nixos-hardware";
+    nixos-hardware.url = "github:nixos/nixos-hardware";
 
     # Shameless plug: looking for a way to nixify your themes and make
     # everything match nicely? Try nix-colors!
@@ -46,6 +46,8 @@
     self,
     nixpkgs,
     nixpkgs-unstable,
+    nix-colors,
+    nixos-hardware,
     home-manager,
     disko,
     ...
@@ -64,6 +66,7 @@
     forAllSystems = nixpkgs.lib.genAttrs systems;
 
     username = "vzhsxn";
+    colour_scheme = "tokyo-night-dark";
   in {
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
@@ -86,7 +89,7 @@
     nixosConfigurations = {
       # DELL XPS 13 7390
       thanos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs username;};
+        specialArgs = { inherit inputs outputs nix-colors username colour_scheme; };
         modules = [
           # > Our main nixos configuration file <
           ./nixos/thanos/configuration.nix
@@ -95,7 +98,7 @@
             # home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = import ./home-manager/users/${username}/thanos.nix;
-            home-manager.extraSpecialArgs = { inherit inputs outputs username; };
+            home-manager.extraSpecialArgs = { inherit inputs outputs username colour_scheme; };
           }
         ];
       };

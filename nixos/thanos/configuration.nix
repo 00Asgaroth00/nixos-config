@@ -1,12 +1,15 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
+
 {
   inputs,
   outputs,
   lib,
   config,
   pkgs,
+  nix-colors,
   username,
+  colour_scheme,
   ...
 }: {
   # You can import other NixOS modules here
@@ -23,10 +26,11 @@
 
     # Import your generated (nixos-generate-config) hardware configuration
 
-    inputs.hardware.nixosModules.dell-xps-13-7390
+    inputs.nixos-hardware.nixosModules.dell-xps-13-7390
     ./hardware-configuration.nix
     ./disko-config.nix
 
+    nix-colors.homeManagerModules.default
     ../global/locale
     ../global/pipewire
     ../global/xserver
@@ -133,6 +137,8 @@
       extraGroups = ["wheel" "networkmanager"];
     };
   };
+
+  colorscheme = nix-colors.colorSchemes.${colour_scheme};
 
   environment.shells = [ pkgs.zsh pkgs.bash ];
   environment.systemPackages = with pkgs; [
