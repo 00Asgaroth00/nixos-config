@@ -16,7 +16,7 @@ in {
       remember_window_size = "no";
       hide_window_decorations = "yes";
       dynamic_background_opacity = "yes";
-      background_opacity = 1;
+      # background_opacity = 1;
       cursor_shape = "beam";
 
       # font_family = "Berkeley Mono";
