@@ -53,8 +53,8 @@ in {
         border_size = 2;
         # "col.active_border" = "rgb(78A8FF) rgb(7676FF) 45deg";
         # "col.inactive_border" = "rgba(585272aa)";
-        "col.active_border" = "0xff${color.base0C}";
-        "col.inactive_border" = "0xff${color.base02}";
+        # "col.active_border" = "0xff${color.base0C}";
+        # "col.inactive_border" = "0xff${color.base02}";
         layout = "dwindle";
         resize_on_border = true;
       };
@@ -87,8 +87,8 @@ in {
       group = {
         # "col.border_active" = "rgba(63F2F1aa)";
         # "col.border_inactive" = "rgba(585272aa)";
-        "col.border_active" = "0xff${color.base0B}";
-        "col.border_inactive" = "0xff${color.base04}";
+        # "col.border_active" = "0xff${color.base0B}";
+        # "col.border_inactive" = "0xff${color.base04}";
 
         groupbar = {
           font_family = "Iosevka";
