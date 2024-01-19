@@ -33,6 +33,8 @@
     ../global/xserver
     ../global/xdg
     ../global/hyprland
+    ../global/gtk
+    ../global/qt
   ];
 
   nixpkgs = {
