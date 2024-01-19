@@ -1,4 +1,4 @@
-{ pkgs, colour_scheme, ... }: {
+{ pkgs, config, colour_scheme, ... }: {
 
   stylix = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${colour_scheme}.yaml";
