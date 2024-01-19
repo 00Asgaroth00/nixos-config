@@ -27,6 +27,7 @@
     ../../capabilities/desktop
     ../../capabilities/shell.nix
     ../../capabilities/kitty
+    ../../capabilities/font_profiles
   ] ++ (builtins.attrValues outputs.homeManagerModules) ;
 
   nixpkgs = {
