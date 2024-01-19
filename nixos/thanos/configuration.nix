@@ -163,7 +163,7 @@
       layout = "gb";
       model = "pc104";
       variant = "";
-      xkb.options = "terminate:ctrl_alt_bksp";
+      options = "terminate:ctrl_alt_bksp";
     };
   };
 
