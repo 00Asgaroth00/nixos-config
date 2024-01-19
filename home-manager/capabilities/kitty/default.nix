@@ -1,8 +1,13 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.kitty = {
     enable = true;
+
+    font = {
+      name = config.fontProfiles.monospace.family;
+      size 12;
+    };
 
     settings = {
       # UI and Window Behavior
@@ -13,11 +18,11 @@
       background_opacity = 1;
       cursor_shape = "beam";
 
-      font_family = "Berkeley Mono";
-      bold_font = "Berkeley Mono Bold";
-      bold_italic_font = "Berkeley Mono Bold Italic";
-      italic_font = "Operator Mono Book Italic";
-      font_size = "13.0";
+      # font_family = "Berkeley Mono";
+      # bold_font = "Berkeley Mono Bold";
+      # bold_italic_font = "Berkeley Mono Bold Italic";
+      # italic_font = "Operator Mono Book Italic";
+      # font_size = "13.0";
 
       # Terminal Settings
       allow_remote_control = "yes";
@@ -25,6 +30,43 @@
       confirm_os_window_close = 0;
       copy_on_select = "clipboard";
       clipboard_control = "write-clipboard write-primary no-append";
+
+      foreground = "#${config.colorscheme.base05}";
+      background = "#${config.colorscheme.base00}";
+      selection_background = "#${config.colorscheme.base05}";
+      selection_foreground = "#${config.colorscheme.base00}";
+      url_color = "#${config.colorscheme.base04}";
+      cursor = "#${config.colorscheme.base05}";
+      active_border_color = "#${config.colorscheme.base03}";
+      inactive_border_color = "#${config.colorscheme.base01}";
+      active_tab_background = "#${config.colorscheme.base00}";
+      active_tab_foreground = "#${config.colorscheme.base05}";
+      inactive_tab_background = "#${config.colorscheme.base01}";
+      inactive_tab_foreground = "#${config.colorscheme.base04}";
+      tab_bar_background = "#${config.colorscheme.base01}";
+      color0 = "#${config.colorscheme.base00}";
+      color1 = "#${config.colorscheme.base08}";
+      color2 = "#${config.colorscheme.base0B}";
+      color3 = "#${config.colorscheme.base0A}";
+      color4 = "#${config.colorscheme.base0D}";
+      color5 = "#${config.colorscheme.base0E}";
+      color6 = "#${config.colorscheme.base0C}";
+      color7 = "#${config.colorscheme.base05}";
+      color8 = "#${config.colorscheme.base03}";
+      color9 = "#${config.colorscheme.base08}";
+      color10 = "#${config.colorscheme.base0B}";
+      color11 = "#${config.colorscheme.base0A}";
+      color12 = "#${config.colorscheme.base0D}";
+      color13 = "#${config.colorscheme.base0E}";
+      color14 = "#${config.colorscheme.base0C}";
+      color15 = "#${config.colorscheme.base07}";
+      color16 = "#${config.colorscheme.base09}";
+      color17 = "#${config.colorscheme.base0F}";
+      color18 = "#${config.colorscheme.base01}";
+      color19 = "#${config.colorscheme.base02}";
+      color20 = "#${config.colorscheme.base04}";
+      color21 = "#${config.colorscheme.base06}";
+
     };
 
     # environment = {
