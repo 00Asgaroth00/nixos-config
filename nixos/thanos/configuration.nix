@@ -89,6 +89,13 @@
     auto-optimise-store = true;
   };
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    # Keep the last 3 generations
+    options = "--delete-older-than +3";
+  };
+
   # FIXME: Add the rest of your current configuration
 
   networking.hostName = "thanos";
@@ -178,6 +185,8 @@
     };
   };
 
+  services.geoclue2.enable = true;
+
   services.zfs = {
     autoScrub.enable = true;
     trim.enable = true;
@@ -198,7 +207,7 @@
 
   # services.dbus.packages = [ pkgs.gcr ];
 
-  # programs.dconf.enable = true;
+  programs.dconf.enable = true;
 
   # services.auto-cpufreq.enable = true;
 
