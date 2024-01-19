@@ -7,7 +7,7 @@
   lib,
   config,
   pkgs,
-  nix-colors,
+  stylix,
   username,
   colour_scheme,
   ...
