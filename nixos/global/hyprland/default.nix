@@ -7,7 +7,7 @@
 
   programs.hyprland.enable = true;
 
-  # Hyprland specific xdg portal, augments ../xdg/default.nix
+  # Hyprland specific xdg portals, augments ../xdg/default.nix
   xdg = {
     portal = {
       extraPortals = with pkgs; [ 
