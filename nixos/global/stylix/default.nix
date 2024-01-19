@@ -11,15 +11,15 @@
     fonts = {
       serif = {
         package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
-        name = ""FiraCode Nerd Font";";
+        name = "FiraCode Nerd Font";
       }; 
       sansSerif = {
         package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
-        name = ""FiraCode Nerd Font";";
+        name = "FiraCode Nerd Font";
       }; 
       monospace = {
         package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
-        name = ""FiraCode Nerd Font";";
+        name = "FiraCode Nerd Font";
       }; 
     };
 
