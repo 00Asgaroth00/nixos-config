@@ -26,7 +26,6 @@
     inputs.hardware.nixosModules.dell-xps-13-7390
     ./hardware-configuration.nix
     ./disko-config.nix
-    # ./zfs.nix
 
     ../global/locale.nix
     ../global/pipewire.nix
@@ -35,6 +34,7 @@
     ../global/hyprland
     ../global/gtk
     ../global/qt
+    
   ];
 
   nixpkgs = {
