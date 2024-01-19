@@ -48,9 +48,10 @@
     self,
     nixpkgs,
     nixpkgs-unstable,
-    nix-colors,
+    # nix-colors,
     nixos-hardware,
     home-manager,
+    stylix,
     disko,
     ...
   } @ inputs: let
@@ -91,7 +92,7 @@
     nixosConfigurations = {
       # DELL XPS 13 7390
       thanos = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs nix-colors username colour_scheme; };
+        specialArgs = { inherit inputs outputs stylix username colour_scheme; };
         modules = [
           # > Our main nixos configuration file <
           stylix.nixosModules.stylix
@@ -101,7 +102,7 @@
             # home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = import ./home-manager/users/${username}/thanos.nix;
-            home-manager.extraSpecialArgs = { inherit inputs outputs nix-colors username colour_scheme; };
+            home-manager.extraSpecialArgs = { inherit inputs outputs stylix username colour_scheme; };
           }
         ];
       };
