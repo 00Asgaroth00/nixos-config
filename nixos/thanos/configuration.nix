@@ -27,13 +27,14 @@
     ./hardware-configuration.nix
     ./disko-config.nix
 
-    ../global/locale.nix
-    ../global/pipewire.nix
+    ../global/locale
+    ../global/pipewire
     ../global/xserver
     ../global/xdg
     ../global/hyprland
     ../global/gtk
     ../global/qt
+    ../global/fonts
     
   ];
 
@@ -153,7 +154,7 @@
 
   # environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-  fonts.fontDir.enable = true;
+  # fonts.fontDir.enable = true;
 
   
   programs.zsh.enable = true;

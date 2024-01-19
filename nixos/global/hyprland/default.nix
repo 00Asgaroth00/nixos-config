@@ -3,6 +3,7 @@
   hardware.opengl = {
     enable = true;
     driSupport = true;
+    driSupport32Bit = true;  # needed for steam
   };
 
   programs.hyprland.enable = true;
