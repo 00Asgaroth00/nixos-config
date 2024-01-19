@@ -145,8 +145,6 @@
     };
   };
 
-  colorscheme = config.lib.stylix.colors;
-
   environment.shells = [ pkgs.zsh pkgs.bash ];
   environment.systemPackages = with pkgs; [
     neovim
