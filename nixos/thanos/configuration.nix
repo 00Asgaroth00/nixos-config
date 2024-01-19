@@ -39,6 +39,7 @@
     ../global/gtk
     ../global/qt
     ../global/fonts
+    ../global/stylix
     
   ];
 

@@ -29,7 +29,9 @@
 
     # Shameless plug: looking for a way to nixify your themes and make
     # everything match nicely? Try nix-colors!
-    nix-colors.url = "github:misterio77/nix-colors";
+    # nix-colors.url = "github:misterio77/nix-colors";
+
+    stylix.url = "github:danth/stylix";
 
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
@@ -92,6 +94,7 @@
         specialArgs = { inherit inputs outputs nix-colors username colour_scheme; };
         modules = [
           # > Our main nixos configuration file <
+          stylix.nixosModules.stylix
           ./nixos/thanos/configuration.nix
           disko.nixosModules.disko
           home-manager.nixosModules.home-manager {
@@ -113,6 +116,7 @@
         extraSpecialArgs = {inherit inputs outputs username;};
         modules = [
           # > Our main home-manager configuration file <
+          stylix.homeManagerModules.stylix
           ./home-manager/users/${username}/thanos.nix
         ];
       };
