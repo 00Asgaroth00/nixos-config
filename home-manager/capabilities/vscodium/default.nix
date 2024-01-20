@@ -4,6 +4,7 @@
     enable = true;
     userSettings = {
       "window.titleBarStyle" = "custom";
+      "workbench.colorTheme" = "Tokyo Night";
     };
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
