@@ -1,5 +1,11 @@
-{ pkgs, username, ... }: 
+{ pkgs, ... }: 
 {
+
+  # application launcher
+  #
+  # see 
+  #   https://youtu.be/dvMsYCGzWaM 
+  # for more tweaks
 
   home.packages = with pkgs; [ ulauncher ];
 

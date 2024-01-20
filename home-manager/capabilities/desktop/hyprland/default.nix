@@ -11,7 +11,7 @@ in {
   ];
 
   home.packages = with pkgs; [
-    hyprpaper # wallpaper manager
+    # hyprpaper # wallpaper manager
 
     playerctl
     swaybg
