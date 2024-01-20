@@ -1,6 +1,6 @@
-{ config, home-manager, username, ... }: {
+{ config, username, ... }: {
 
-  home-manager.user.${username}.home.file.".config/hypr/hyprpaper.conf" = {
+  home.file.".config/hypr/hyprpaper.conf" = {
     text = ''
       preload = ~/git_repos/nixos-config/home-manager/capabilities/desktop/wallpapers/lofi-cafe.gif
 
