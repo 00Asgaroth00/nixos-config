@@ -8,7 +8,7 @@
     enable = true;
     profiles.${username} = {
       bookmarks = {};
-      extensions = with inputs.firefox-addons; [
+      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
         ublock-origin
       ];
       settings = {
