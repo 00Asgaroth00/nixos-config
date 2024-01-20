@@ -102,6 +102,7 @@
   networking.hostId = "a4e287fe";
   networking.useDHCP = lib.mkForce true;
   networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.backend = "iwd"; # default is "wpa_supplicant"
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
   boot.loader.systemd-boot.enable = true;
