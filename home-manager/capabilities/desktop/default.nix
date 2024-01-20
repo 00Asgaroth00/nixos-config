@@ -4,6 +4,7 @@
   imports = [
     # ./stylix
     ./hyprland
+    ./gtk
   ];
 
     home.packages = with pkgs; [
