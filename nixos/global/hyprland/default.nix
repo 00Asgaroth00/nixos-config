@@ -6,7 +6,7 @@
     driSupport32Bit = true;  # needed for steam
   };
 
-  # programs.hyprland.enable = true;
+  programs.hyprland.enable = true;
 
   # Hyprland specific xdg portals, augments ../xdg/default.nix
   xdg = {
