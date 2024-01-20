@@ -5,11 +5,11 @@
   ];
 
   home.packages = with pkgs; [
-    brightnessctl
-    pavucontrol
-    pamixer
-    iwgtk
-    blueberry
+    brightnessctl # brightness control from waybar
+    pavucontrol   # audio control from waybar
+    pamixer       # cli audio control
+    iwgtk         # wifi network management
+    blueberry     # bluetooth management
   ];
 
   programs.waybar = {

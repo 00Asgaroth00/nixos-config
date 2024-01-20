@@ -125,7 +125,7 @@
       	},
 
         "network": {
-          "interface": "wlp2s0",
+          "interface": "wlan0",
           "format-ethernet":  "󰣶  {ifname}",
           "format-wifi":  "󰖩 {ifname}",
           "interval": 1,
