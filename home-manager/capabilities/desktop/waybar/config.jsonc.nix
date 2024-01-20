@@ -104,7 +104,7 @@
           ],
           "on-scroll-up": "brightnessctl set +1%",
           "on-scroll-down": "brightnessctl set 1%-",
-          "on-click": "brightnessctl set 0",
+          "on-click": "brightnessctl set 50",
           "tooltip": false
         },
 
