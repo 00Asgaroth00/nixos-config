@@ -8,9 +8,9 @@
     enable = true;
     profiles.${username} = {
       bookmarks = {};
-      extensions = with pkgs.inputs.nur.repos.rycee.firefox-addons; [
-        ublock-origin
-      ];
+      # extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+      #   ublock-origin
+      # ];
       settings = {
         "browser.disableResetPrompt" = true;
         "browser.download.panel.shown" = true;
