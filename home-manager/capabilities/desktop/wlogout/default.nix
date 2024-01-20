@@ -49,11 +49,9 @@
     ];
   };
 
-  home.file.".config/hypr/per-app/wlogout.conf" = {
-    text = ''
-      bind = $mainMod, L, exec, ${pkgs.wlogout}/bin/wlogout -p layer-shell
-      windowrulev2 = animation snappy, float, fullscreen, class:^(wlogout)$
-    '';
-  };
+  xdg.configFile."hypr/per-app/wlogout.conf".text = ''
+    bind = $mainMod, L, exec, ${pkgs.wlogout}/bin/wlogout -p layer-shell
+    windowrulev2 = animation snappy, float, fullscreen, class:^(wlogout)$
+  '';
 
 }
