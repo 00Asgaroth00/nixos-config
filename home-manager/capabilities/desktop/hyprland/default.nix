@@ -225,7 +225,7 @@ in {
         ", XF86AudioNext, exec, playerctl next"
         ", XF86AudioPlay, exec, playerctl play-pause"
 
-        "$mainMod ALT CTRL, equal, exec, dunstctl set-paused toggle"
+        # "$mainMod ALT CTRL, equal, exec, dunstctl set-paused toggle"
         "$mainMod ALT CTRL, bracketright, exec, systemctl reboot"
 
         "$mainMod ALT CTRL SHIFT, 1, exec, grimblast copy area"
