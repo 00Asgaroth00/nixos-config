@@ -1,4 +1,6 @@
-{ pkgs, inputs, username, ... }: {
+{ pkgs, username, ... }: {
+
+  environment.sessionVariables = { MOZ_ENABLE_WAYLAND = "1"; };
 
   programs.firefox = {
     enable = true;
