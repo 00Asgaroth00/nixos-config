@@ -7,7 +7,6 @@
   config,
   pkgs,
   stylix,
-  firefox-addons,
   username,
   colour_scheme,
   ...
