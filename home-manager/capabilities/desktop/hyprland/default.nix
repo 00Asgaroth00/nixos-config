@@ -7,6 +7,7 @@ in {
     ../waybar
     ../dunst
     ../hyprpaper
+    ../ulauncher
   ];
 
   home.packages = with pkgs; [
