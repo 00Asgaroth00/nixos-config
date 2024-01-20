@@ -30,7 +30,7 @@ in {
     xwayland.enable = true;
     settings = {
       exec-once = [
-        "exec-once = hyprpaper"
+        "hyprpaper"
         "hyprctl setcursor Bibata-Modern-Ice 22"
         # "nm-applet"
         # "swaybg -i ~/wallpaper -m fill"
