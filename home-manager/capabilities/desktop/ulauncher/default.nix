@@ -1,6 +1,6 @@
-{ pkgs, config, username, ... }: {
+{ pkgs, username, ... }: {
 
-  config.users.users.${username}.packages = with pkgs; [ ulauncher ];
+  users.users.${username}.packages = with pkgs; [ ulauncher ];
 
   home.file.".config/hypr/per-app/ulauncher.conf" = {
     text = ''
