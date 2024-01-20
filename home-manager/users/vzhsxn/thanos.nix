@@ -63,9 +63,6 @@
     homeDirectory = "/home/${username}";
     # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
     stateVersion = "23.11";
-    packages = with pkgs; [
-      qview
-    ];
   };
 
   # Add stuff for your user as you see fit:

@@ -4,10 +4,11 @@ let
 in {
 
   imports = [
-    ../waybar
+    ../copyq
     ../dunst
     ../hyprpaper
     ../ulauncher
+    ../waybar
     ../wlogout
   ];
 
