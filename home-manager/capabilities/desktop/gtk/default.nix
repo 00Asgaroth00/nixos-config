@@ -9,7 +9,7 @@
     font = {
       size = 12;
     };
-    iconThem = {
+    iconTheme = {
       name = "Papirus";
       package = pkgs.papirus-icon-theme;
     };
