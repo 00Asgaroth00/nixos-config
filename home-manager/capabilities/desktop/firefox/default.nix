@@ -1,4 +1,4 @@
-{ pkgs, inputs, username, ... }: {
+{ pkgs, username, ... }: {
 
   home.sessionVariables = { 
     MOZ_ENABLE_WAYLAND = "1"; 
@@ -8,7 +8,7 @@
     enable = true;
     profiles.${username} = {
       bookmarks = {};
-      extensions = with pkgs.inputs.firefox-addons; [
+      extensions = with pkgs.firefox-addons; [
         ublock-origin
       ];
       settings = {
