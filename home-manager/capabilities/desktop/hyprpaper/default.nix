@@ -2,7 +2,7 @@
 
   # wallpaper manager
 
-  home.packages = with pkgs; = [ hyprpaper ];
+  home.packages = with pkgs; [ hyprpaper ];
 
   home.file.".config/hypr/hyprpaper.conf" = {
     text = ''
