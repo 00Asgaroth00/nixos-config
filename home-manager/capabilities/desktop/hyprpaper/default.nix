@@ -1,4 +1,4 @@
-{ config, username, ... }: {
+{ config, home-manager, username, ... }: {
 
   home-manager.user.${username}.home.file.".config/hypr/hyprpaper.conf" = {
     text = ''
