@@ -14,7 +14,7 @@
       package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = lib.mkDefault "Catppuccin-Mocha-Standard-Blue-Dark";
+      name = lib.mkForce "Catppuccin-Mocha-Standard-Blue-Dark";
       package = lib.mkForce pkgs.catppuccin-gtk;
       # package = pkgs.catppuccin-gtk.override {
       #   accents = [ "pink" ];
