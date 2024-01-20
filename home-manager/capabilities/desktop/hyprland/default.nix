@@ -8,6 +8,7 @@ in {
     ../dunst
     ../hyprpaper
     ../ulauncher
+    ../wlogout
   ];
 
   home.packages = with pkgs; [
