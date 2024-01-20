@@ -1,4 +1,4 @@
-{ lib, pkgs, config, inputs, username, ... }:
+{ lib, pkgs, config, inputs, home-manager, username, ... }:
 let
   color = config.lib.stylix.colors;
 in {
