@@ -1,5 +1,7 @@
 { pkgs, ... }: {
 
+  # to test, 'notify-send test "test message"'
+
   imports = [
     ./dunst_config.nix
   ];
