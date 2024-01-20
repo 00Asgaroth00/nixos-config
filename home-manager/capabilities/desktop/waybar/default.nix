@@ -6,7 +6,7 @@
 
   programs.waybar = {
     enable = true;
-    package = pkgs.waybar.override (oldAttrs: {pulseSupport = true});
+    package = pkgs.waybar.override ( oldAttrs: { pulseSupport = true; } );
   };
 
   home.file.".config/hypr/per-app/waybar.conf" = {
