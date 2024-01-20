@@ -10,7 +10,7 @@
       }
       {
           "label" : "reboot",
-          "action" : "dunstify -a wlogout \"rebooting in 5, please wait\" -u 2 && sleep 5 && systemctl reboot",
+          "action" : "dunstify -a wlogout 'rebooting in 5, please wait' -u 2 && sleep 5 && systemctl reboot",
           "text" : "󰜉",
           "keybind" : "r"
       }
