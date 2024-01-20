@@ -18,9 +18,14 @@
         name = "Fira Sans";
       }; 
       monospace = {
-        package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+        # package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+        package = pkgs.nerdfonts;
         name = "FiraCode Nerd Font";
-      }; 
+      };
+      emoji = {
+      package = pkgs.noto-fonts-emoji;
+      name = "Noto Color Emoji";
+    };
     };
 
   };
