@@ -9,7 +9,7 @@
       background_blur = "1";
       tab_bar_style = "powerline";
       tab_powerline_style = "round";
-      font_family = "Hack Nerd Font Mono";
+      # font_family = "Hack Nerd Font Mono";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
@@ -46,7 +46,7 @@
       # bind = $mainMod, Q, exec, kitty
       bind = ALT, Return, exec, kitty
       # bind = control, escape, exec, kitty -e btm
-      windowrule = float, title:zsh
+      # windowrule = float, title:zsh
     '';
   };
 
