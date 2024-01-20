@@ -43,7 +43,7 @@ in {
         # "[workspace 2 silent] firefox"
         # "webcord"
         # "[workspace special:term silent] kitty --title='kitty-scratch' --hold"
-        "kitty"
+        # "kitty"
         # "remind -z -k':notify-send -u critical \"Reminder!\" %s' ~/00-09-System/02-Logs/02.10-Journal/agenda.rem"
       ];
 
@@ -160,11 +160,11 @@ in {
       };
 
       windowrulev2 = [
-        "workspace 1,class:kitty"
+        # "workspace 1,class:kitty"
         # "workspace 2,title:^(Mozilla Firefox)(.*)$"
         # "workspace special:notes,title:^(kitty-delta)"
         # "workspace special:term,title:^(kitty-scratch)"
-        "workspace 3,class:Slack"
+        # "workspace 3,class:Slack"
         # "workspace 3,class:WebCord"
         # "float,title:(GnuCash Tip Of The Day)"
         # "float,title:(Firefox — Sharing Indicator)"
