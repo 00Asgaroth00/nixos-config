@@ -58,6 +58,7 @@
     nixos-hardware,
     home-manager,
     # firefox-addons,
+    rycee-nurpkgs,
     stylix,
     disko,
     ...
