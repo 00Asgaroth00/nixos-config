@@ -101,8 +101,20 @@
   networking.hostName = "thanos";
   networking.hostId = "a4e287fe";
   networking.useDHCP = lib.mkForce true;
+  # networking.wireless.iwd.enable = true;
   networking.networkmanager.enable = true;
   networking.networkmanager.wifi.backend = "iwd"; # default is "wpa_supplicant"
+  networking.wireless.iwd = {
+    enable = true;
+    settings = {
+      Network = {
+        EnableIPv6 = false; # default true
+      };
+      Settings = {
+        AutoConnect = true;
+      };
+    };
+  };
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
   boot.loader.systemd-boot.enable = true;
