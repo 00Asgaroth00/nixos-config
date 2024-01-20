@@ -6,10 +6,11 @@ in {
   imports = [
     ../copyq
     ../dunst
+    ../firefox
     ../hyprpaper
-    ../../kitty
+    ../kitty
     ../ulauncher
-    ../../vscodium
+    ../vscodium
     ../waybar
     ../wlogout
   ];
