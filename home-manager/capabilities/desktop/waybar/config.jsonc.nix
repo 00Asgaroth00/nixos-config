@@ -25,8 +25,10 @@
 
         "clock": {
           "interval": 1,
-          "format": " {:%I:%M} ",
-          "format-alt": " {:%A, %d %B} ",
+          format = "   {:%H:%M}";
+          format-alt = "󰃭  {:%Y-%m-%d}";
+          // "format": " {:%I:%M} ",
+          // "format-alt": " {:%A, %d %B} ",
           // "on-click": "gnome-calendar",
           "tooltip": true,
           "tooltip-format": "{calendar}",
