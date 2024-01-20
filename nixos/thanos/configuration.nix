@@ -216,8 +216,21 @@
     };
   };
 
+  services.gnome.gnome-keyring.enable = true;
+
+  security.pam.services = {
+    gdm.enableGnomeKeyring = true; # unlock keyring with gdm / gdm support for keyring
+    swaylock = {}; # enables pam for swaylock, otherwise cannot unlock system TODO swaylock ./home
+  };
 
   # services.dbus.packages = [ pkgs.gcr ];
+
+  programs = {
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+  };
 
   programs.dconf.enable = true;
 
