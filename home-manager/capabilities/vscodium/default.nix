@@ -17,11 +17,9 @@
     ];
   };
 
-  home.file.".config/hypr/per-app/vscodium.conf" = {
-    text = ''
-      windowrule = tile, title:VSCodium
-      bind = $mainMod, K, exec, codium
-    '';
-  };
+  xdg.configFile."hypr/per-app/vscodium.conf".text = ''
+    windowrule = tile, title:VSCodium
+    bind = $mainMod, K, exec, codium
+  '';
 
 }
