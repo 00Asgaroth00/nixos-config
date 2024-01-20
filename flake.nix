@@ -56,7 +56,7 @@
     # nix-colors,
     nixos-hardware,
     home-manager,
-    # firefox-addons,
+    firefox-addons,
     stylix,
     disko,
     ...
