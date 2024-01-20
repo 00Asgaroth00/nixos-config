@@ -23,9 +23,9 @@
         name = "FiraCode Nerd Font";
       };
       emoji = {
-      package = pkgs.noto-fonts-emoji;
-      name = "Noto Color Emoji";
-    };
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
+      };
     };
 
   };
