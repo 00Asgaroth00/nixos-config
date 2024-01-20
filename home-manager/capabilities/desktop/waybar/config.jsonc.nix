@@ -33,9 +33,9 @@
           "calendar": {
             "mode": "year",
             "mode-mon-col": 3,
-            // "format": {
-            //   "today": "<span color='#${config.colorScheme.colors.base0F}'>{}</span>"
-            // }
+            # "format": {
+            #   "today": "<span color='#${config.colorScheme.colors.base0F}'>{}</span>"
+            # }
           }
         },
         "modules-left": [
