@@ -238,6 +238,10 @@ in {
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
       ];
+
+      source = [
+        "~/.config/hypr/per-app/*.conf"
+      ];
     };
   };
 }
