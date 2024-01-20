@@ -75,6 +75,7 @@
     # pass to it, with each system as an argument
     forAllSystems = nixpkgs.lib.genAttrs systems;
 
+    # firefox-addons = pkgs.nur.repos.rycee.firefox-addons; # this not working
     username = "vzhsxn";
     colour_scheme = "tokyo-night-dark";
   in {
@@ -93,8 +94,6 @@
     # Reusable home-manager modules you might want to export
     # These are usually stuff you would upstream into home-manager
     homeManagerModules = import ./modules/home-manager;
-
-    firefox-addons = pkgs.nur.repos.rycee.firefox-addons;
 
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
