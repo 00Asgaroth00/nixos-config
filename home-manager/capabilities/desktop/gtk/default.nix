@@ -14,7 +14,8 @@
       package = pkgs.papirus-icon-theme;
     };
     theme = {
-      name = lib.mkDefault "Catppuccin-Macchiato-Compact-Pink-Dark";
+      name = lib.mkDefault "Catppuccin-Mocha-Standard-Blue-Dark";
+      package = pkgs.catppuccin-gtk
       # package = pkgs.catppuccin-gtk.override {
       #   accents = [ "pink" ];
       #   size = "compact";
