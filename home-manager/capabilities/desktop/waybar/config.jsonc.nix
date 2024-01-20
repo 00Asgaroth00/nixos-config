@@ -122,9 +122,10 @@
       		"on-click-right": "pamixer -t"
       	},
 
-        "network#wlp2s0": {
+        "network#interface": {
+          "format-ethernet" = "󰣶  {ifname}";
+          "format-wifi" = "󰖩 {ifname}";
           "interval": 1,
-          "interface": "wlan0",
           "format-icons": [
             "󰤯",
             "󰤟",
@@ -132,7 +133,7 @@
             "󰤥",
             "󰤨"
           ],
-          "format-wifi": " {icon}  ", // added multiple spaces to the right, was not aligning center correctly, still is not :(
+          
           "format-disconnected": "󰤮",
           "on-click": "iwgtk",
           "tooltip": true,

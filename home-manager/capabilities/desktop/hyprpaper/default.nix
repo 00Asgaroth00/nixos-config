@@ -6,7 +6,7 @@
 
   home.file.".config/hypr/per-app/hyprpaper.conf" = {
     text = ''
-      exec-once = hyprpaper
+      exec-once = ${pkgs.hyprpaper}/bin/hyprpaper
     '';
   };
 

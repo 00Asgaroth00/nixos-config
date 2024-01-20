@@ -153,7 +153,7 @@
     wget
     # yubikey-personalization
     # yubikey-manager
-    pavucontrol
+    # pavucontrol
     pulseaudio
     # jack2
     libcamera
