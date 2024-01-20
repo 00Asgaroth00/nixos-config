@@ -5,7 +5,7 @@
 #   user,
 #   ...
 { ... }: {
-{
+
   home.file.".config/waybar/config.jsonc" = {
     text = ''
       {
@@ -180,4 +180,5 @@
 
     '';
   };
+
 }
