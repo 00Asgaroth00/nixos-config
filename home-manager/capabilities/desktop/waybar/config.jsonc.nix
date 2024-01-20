@@ -123,8 +123,8 @@
       	},
 
         "network#interface": {
-          "format-ethernet" = "󰣶  {ifname}",
-          "format-wifi" = "󰖩 {ifname}",
+          "format-ethernet":  "󰣶  {ifname}",
+          "format-wifi":  "󰖩 {ifname}",
           "interval": 1,
           "format-icons": [
             "󰤯",
