@@ -77,7 +77,7 @@
 
     username = "vzhsxn";
     colour_scheme = "tokyo-night-dark";
-    firefox-addons = pkgs.nur.repos.rycee.firefox-addons;
+    
   in {
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
@@ -94,6 +94,8 @@
     # Reusable home-manager modules you might want to export
     # These are usually stuff you would upstream into home-manager
     homeManagerModules = import ./modules/home-manager;
+
+    firefox-addons = pkgs.nur.repos.rycee.firefox-addons;
 
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
