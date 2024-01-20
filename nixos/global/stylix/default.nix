@@ -3,10 +3,10 @@
   stylix = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${colour_scheme}.yaml";
     
-    wallpaper = stylix.mkAnimation {
-      animation = ../../../home-manager/capabilities/desktop/wallpapers/lofi-cafe.gif;
-      polarity = "dark";
-    };
+    # wallpaper = stylix.mkAnimation {
+    #   animation = ../../../home-manager/capabilities/desktop/wallpapers/lofi-cafe.gif;
+    #   polarity = "dark";
+    # };
     
     fonts = {
       serif = {

@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./stylix
     ./hyprland
   ];
 
