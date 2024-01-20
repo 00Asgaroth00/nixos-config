@@ -1,6 +1,6 @@
 { pkgs, ... }: {
 
-  import = [
+  imports = [
     ./dunst_config.nix
   ];
 
