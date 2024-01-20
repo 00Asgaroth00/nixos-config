@@ -4,8 +4,6 @@
     enable = true;
     userSettings = {
       "window.titleBarStyle" = "custom";
-      "terminal.integrated.fontFamily" = config.fontProfiles.monospace.family;
-      "editor.fontFamily" = config.fontProfiles.regular.family;
     };
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
