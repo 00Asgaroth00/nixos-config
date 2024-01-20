@@ -49,9 +49,9 @@
         ],
         "modules-right": [
 
-          // "cpu",
-          // "memory",
-          "network#interface",
+          "cpu",
+          "memory",
+          // "network#interface",
           "bluetooth",
           "backlight",
           // "pulseaudio#microphone",
