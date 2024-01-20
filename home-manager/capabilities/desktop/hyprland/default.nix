@@ -31,7 +31,7 @@ in {
     settings = {
       exec-once = [
         "hyprpaper"
-        "hyprctl setcursor Bibata-Modern-Ice 22"
+        # "hyprctl setcursor Bibata-Modern-Ice 22"
         # "nm-applet"
         # "swaybg -i ~/wallpaper -m fill"
         # "synology-drive"

@@ -3,7 +3,7 @@
   stylix = {
     base16Scheme = "${pkgs.base16-schemes}/share/themes/${colour_scheme}.yaml";
     
-    image = ../../../home-manager/capabilities/desktop/wallpapers/lofi-cafe.gif;
+    image = ../../../home-manager/capabilities/desktop/wallpapers/zi2Bbda-anime-dragon-wallpaper.jpg;
         
     fonts = {
       serif = {
