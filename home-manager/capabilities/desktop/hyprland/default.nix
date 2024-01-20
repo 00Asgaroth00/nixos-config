@@ -172,7 +172,7 @@ in {
 
       "$mainMod" = "SUPER";
       bind = [
-        "ALT, Return, exec, kitty"
+        # "ALT, Return, exec, kitty"
         "$mainMod, w, killactive,"
         "$mainMod SHIFT, q, exit,"
         "$mainMod, f, fullscreen, 0"
