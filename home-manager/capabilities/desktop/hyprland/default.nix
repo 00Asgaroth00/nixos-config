@@ -9,6 +9,8 @@ in {
   ];
 
   home.packages = with pkgs; [
+    hyprpaper # wallpaper manager
+
     playerctl
     swaybg
     wl-clipboard
@@ -20,6 +22,7 @@ in {
     libnotify
   ];
 
+  programs.hyprland.enable = true;
   programs.wofi.enable = true;
 
   wayland.windowManager.hyprland = {
