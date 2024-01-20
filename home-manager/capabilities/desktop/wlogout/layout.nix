@@ -4,13 +4,13 @@
     text = ''
       {
           "label" : "lock",
-          "action" : "sleep 0.4 && ${pkgs.swaylock}/bin/swaylock --screenshots --effect-blur 3x5 --fade-in 1 --effect-vignette 0.1:0.8",
+          "action" : "sleep 0.4 && swaylock --screenshots --effect-blur 3x5 --fade-in 1 --effect-vignette 0.1:0.8",
           "text" : "",
           "keybind" : "l"
       }
       {
           "label" : "reboot",
-          "action" : "${pkgs.dunst}/bin/dunstify -a ${pkgs.wlogout}/bin/wlogout \"rebooting in 5, please wait\" -u 2 && sleep 5 && systemctl reboot",
+          "action" : "dunstify -a wlogout \"rebooting in 5, please wait\" -u 2 && sleep 5 && systemctl reboot",
           "text" : "󰜉",
           "keybind" : "r"
       }
@@ -22,7 +22,7 @@
       }
       {
           "label" : "logout",
-          "action" : "${pkgs.hypr}/bin/hyprctl dispatch exit 0",
+          "action" : "hyprctl dispatch exit 0",
           "text" : "󰍃",
           "keybind" : "e"
       }
@@ -34,11 +34,11 @@
       }
       {
           "label" : "gem",
-          "action" : "sleep 0.4 && ${pkgs.dunst}/bin/dunstify -a ${pkgs.wlogout}/bin/wlogout -h gem activated",
+          "action" : "sleep 0.4 && dunstify -a wlogout -h gem activated",
           "text" : "󰮋",
           "keybind" : "q"
       }
     '';
   };
-  
+
 }
