@@ -10,7 +10,7 @@
     pamixer
     iwgtk
     blueberry
-  ]
+  ];
 
   programs.waybar = {
     enable = true;
