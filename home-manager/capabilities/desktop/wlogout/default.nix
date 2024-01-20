@@ -26,6 +26,18 @@
         keybind = "e";
       }
       {
+        label = "suspend";
+        action = "systemctl suspend";
+        text = "Suspend";
+        keybind = "u";
+      }
+      {
+        label = "hibernate";
+        action = "systemctl hibernate";
+        text = "Hibernate";
+        keybind = "h";
+      }
+      {
         label = "reboot";
         action = "dunstify -a wlogout 'rebooting in 5, please wait' -u 2 && sleep 5 && systemctl reboot";
         text = "Reboot";
@@ -37,12 +49,7 @@
         text = "Shutdown";
         keybind = "s";
       }
-      {
-        label = "suspend";
-        action = "systemctl suspend";
-        text = "󱖒";
-        keybind = "u";
-      }
+      
     ];
   };
 
