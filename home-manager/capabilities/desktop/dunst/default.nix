@@ -8,7 +8,10 @@
 
   services.dunst.enable = true;
 
-  home.packages = with pkgs; [ dunst ];
+  home.packages = with pkgs; [ 
+    libnotify
+    dunst 
+  ];
 
   home.file.".config/hypr/per-app/dunst.conf" = {
     text = ''

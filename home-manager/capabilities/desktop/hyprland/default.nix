@@ -21,7 +21,7 @@ in {
     inputs.hyprland-contrib.packages.x86_64-linux.grimblast
     neofetch
     rofi-emoji
-    libnotify
+    # libnotify
   ];
 
   programs.wofi.enable = true;
