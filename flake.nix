@@ -56,7 +56,7 @@
     # nix-colors,
     nixos-hardware,
     home-manager,
-    firefox-addons,
+    # firefox-addons,
     stylix,
     disko,
     ...
@@ -104,7 +104,6 @@
           stylix.nixosModules.stylix
           ./nixos/thanos/configuration.nix
           disko.nixosModules.disko
-          firefox-addons.nixosModules.firefox-addons
           home-manager.nixosModules.home-manager {
             # home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
