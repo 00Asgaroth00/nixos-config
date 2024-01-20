@@ -8,6 +8,7 @@ in {
     ../dunst
     ../hyprpaper
     ../ulauncher
+    ../../vscodium
     ../waybar
     ../wlogout
   ];
