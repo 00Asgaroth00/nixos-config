@@ -12,7 +12,7 @@
     iconThem = {
       name = "Papirus";
       package = pkgs.papirus-icon-theme;
-    }
+    };
     theme = {
       name = lib.mkDefault "Catppuccin-Macchiato-Compact-Pink-Dark";
       # package = pkgs.catppuccin-gtk.override {
