@@ -25,9 +25,9 @@
     # nix-colors.homeManagerModule
 
     ../../capabilities/desktop
-    ../../capabilities/shell.nix
-    ../../capabilities/kitty
     ../../capabilities/font_profiles
+    ../../capabilities/git
+    ../../capabilities/shell.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules) ;
 
   nixpkgs = {

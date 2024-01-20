@@ -7,6 +7,7 @@ in {
     ../copyq
     ../dunst
     ../hyprpaper
+    ../../kitty
     ../ulauncher
     ../../vscodium
     ../waybar
