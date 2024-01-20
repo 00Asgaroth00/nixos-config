@@ -1,4 +1,4 @@
-{ pkgs, config, username, ... }: {
+{ pkgs, config, home-manager, username, ... }: {
 
   config.users.users.${username}.packages = with pkgs; [ ulauncher ];
 
