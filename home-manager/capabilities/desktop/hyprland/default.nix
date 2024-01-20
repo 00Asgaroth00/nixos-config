@@ -6,6 +6,7 @@ in {
   imports = [
     ../waybar
     ../dunst
+    ../hyprpaper
   ];
 
   home.packages = with pkgs; [
