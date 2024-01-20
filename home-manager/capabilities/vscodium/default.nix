@@ -1,10 +1,10 @@
-{ pkgs, config, ... }: {
+{ pkgs, lib, ... }: {
 
   programs.vscode = {
     enable = true;
     userSettings = {
       "window.titleBarStyle" = "custom";
-      "workbench.colorTheme" = "Tokyo Night";
+      "workbench.colorTheme" = lib.mkForce "Tokyo Night";
     };
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
