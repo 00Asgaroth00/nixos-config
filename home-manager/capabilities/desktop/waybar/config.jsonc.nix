@@ -51,7 +51,7 @@
 
           "cpu",
           "memory",
-          // "network#interface",
+          "network",
           "bluetooth",
           "backlight",
           // "pulseaudio#microphone",
@@ -124,7 +124,8 @@
       		"on-click-right": "pamixer -t"
       	},
 
-        "network#interface": {
+        "network": {
+          "interface": "wlp2s0",
           "format-ethernet":  "󰣶  {ifname}",
           "format-wifi":  "󰖩 {ifname}",
           "interval": 1,
