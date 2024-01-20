@@ -7,7 +7,7 @@
   programs.wlogout.enable = true;
 
   home.packages = with pkgs; [
-    swaylock
+    swaylock-effects
     dunst
   ];
 
