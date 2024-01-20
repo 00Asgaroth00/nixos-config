@@ -77,6 +77,7 @@
 
     username = "vzhsxn";
     colour_scheme = "tokyo-night-dark";
+    firefox-addons = pkgs.nur.repos.rycee.firefox-addons;
   in {
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
