@@ -88,13 +88,6 @@
     }
   ];
 
-  services.gnome.gnome-keyring.enable = true;
-
-  security.pam.services = {
-    gdm.enableGnomeKeyring = true; # unlock keyring with gdm / gdm support for keyring
-    swaylock = {}; # enables pam for swaylock, otherwise cannot unlock system TODO swaylock ./home
-  };
-
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
