@@ -1,9 +1,5 @@
 { pkgs, ... }: {
 
-  # imports = [
-  #   ./layout.nix
-  # ];
-
   home.packages = with pkgs; [
     swaylock-effects
     dunst
