@@ -4,6 +4,12 @@
 
   home.packages = with pkgs; [ hyprpaper ];
 
+  home.file.".config/hypr/per-app/hyprpaper.conf" = {
+    text = ''
+      exec-once = hyprpaper
+    '';
+  };
+
   home.file.".config/hypr/hyprpaper.conf" = {
     text = ''
       preload = ~/git_repos/nixos-config/home-manager/capabilities/desktop/wallpapers/zi2Bbda-anime-dragon-wallpaper.jpg

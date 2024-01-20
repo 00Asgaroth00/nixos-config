@@ -31,12 +31,12 @@ in {
     xwayland.enable = true;
     settings = {
       exec-once = [
-        "hyprpaper"
+        # "hyprpaper"
         # "hyprctl setcursor Bibata-Modern-Ice 22"
         # "nm-applet"
         # "swaybg -i ~/wallpaper -m fill"
         # "synology-drive"
-        "waybar"
+        # "waybar"
         # "[workspace 2 silent] firefox"
         # "webcord"
         # "[workspace special:term silent] kitty --title='kitty-scratch' --hold"
