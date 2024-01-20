@@ -1,9 +1,9 @@
-{ pkgs, config, home-manager, username, ... }: 
+{ pkgs, home-manager, username, ... }: 
 let
   hm = home-manager.nixosModules.home-manager.home-manager;
 in {
 
-  config.users.users.${username}.packages = with pkgs; [ ulauncher ];
+  users.users.${username}.packages = with pkgs; [ ulauncher ];
 
   hm.users.${username}.home.file.".config/hypr/per-app/ulauncher.conf" = {
     text = ''
