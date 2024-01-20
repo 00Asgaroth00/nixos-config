@@ -34,7 +34,7 @@
       }
       {
           "label" : "gem",
-          "action" : "sleep 0.4 && dunstify -a wlogout -h 'gem activated'",
+          "action" : "sleep 0.4 && dunstify -a wlogout -h gem activated",
           "text" : "󰮋",
           "keybind" : "q"
       }
