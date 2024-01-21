@@ -8,6 +8,7 @@ in {
     ../dunst
     ../firefox
     ../hyprpaper
+    ../keepassxc
     ../kitty
     ../ulauncher
     ../vscodium
