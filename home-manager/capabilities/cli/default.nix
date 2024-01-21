@@ -2,10 +2,15 @@
 
   imports = [
     ./bat
+    ./zsh
   ];
 
   home.packages = with pkgs; [
-    ripgrep     # enhanced grep replacement
+    entr        # run arbitrary commands when files change
+    fd          # enhanced alternative to find
+    miller      # awk/sed/cut/join/sort for data formats like csv/tsv/json
+    ripgrep     # enhanced alternative to grep
+    toilet      # display colourfull characters in text mode
   ];
 
 }

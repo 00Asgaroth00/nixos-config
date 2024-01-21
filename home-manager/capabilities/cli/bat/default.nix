@@ -9,8 +9,4 @@
     };
   };
 
-  home.shellAliases = {
-    cat = "bat --paging=never";
-  };
-
 }
