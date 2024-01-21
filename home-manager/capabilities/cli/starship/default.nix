@@ -61,7 +61,7 @@
       #     symbol = " ";
       #     style = "bold blue";
       #   };
-      };
+      # };
 
       character = {
         error_symbol = "[~~>](bold red)";
