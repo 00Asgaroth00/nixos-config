@@ -2,7 +2,9 @@
 
   imports = [
     ./bat
+    ./btop
     ./direnv
+    ./eza
     ./fzf
     ./nnn
     ./starship

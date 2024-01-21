@@ -205,21 +205,21 @@
   #   defaultOptions = [ "--reverse" "--ansi" ];
   # };
 
-  programs.eza = {
-    enable = true;
-    enableAliases = true;
-    icons = true;
-    extraOptions = [ "--group-directories-first" "--header" ];
-    git = true;
-  };
+  # programs.eza = {
+  #   enable = true;
+  #   enableAliases = true;
+  #   icons = true;
+  #   extraOptions = [ "--group-directories-first" "--header" ];
+  #   git = true;
+  # };
 
-  programs.btop = {
-    enable = true;
-    settings = {
-      color_theme = "embark";
-      vim_keys = true;
-    };
-  };
+  # programs.btop = {
+  #   enable = true;
+  #   settings = {
+  #     color_theme = "embark";
+  #     vim_keys = true;
+  #   };
+  # };
 
   xdg.configFile."btop/themes/embark.theme".source = pkgs.fetchFromGitHub
     {
