@@ -7,9 +7,14 @@
   programs.firefox = {
     enable = true;
     profiles.${username} = {
+      id = 0; # default profile
       bookmarks = {};
+      # https://discourse.nixos.org/t/firefox-extensions-with-home-manager/34108
       extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
         ublock-origin
+        privacy-badger
+        i-dont-care-about-cookies # auto-accept cookies, use only with ublock-origin and provacy-badger
+        unpaywall
       ];
       settings = {
         "browser.disableResetPrompt" = true;
