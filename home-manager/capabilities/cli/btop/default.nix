@@ -14,6 +14,6 @@
       repo = "btop";
       rev = "master";
       sha256 = "sha256-9tSSfgJ8d3Gz/nH6AWlF8+4y3KvD8JnMLOW2WfJ0k6c=";
-    } + "/tokyo-night.theme";
+    } + "/themes/tokyo-night.theme";
 
 }
