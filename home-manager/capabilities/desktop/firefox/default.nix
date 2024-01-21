@@ -14,7 +14,9 @@
         ublock-origin
         privacy-badger
         i-dont-care-about-cookies # auto-accept cookies, use only with ublock-origin and provacy-badger
+        fastforwardteam
         unpaywall
+        keepassxc-browser
       ];
       settings = {
         "browser.disableResetPrompt" = true;
