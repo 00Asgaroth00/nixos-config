@@ -6,6 +6,7 @@
     ./direnv
     ./eza
     ./fzf
+    ./git
     ./nnn
     ./starship
     ./zsh

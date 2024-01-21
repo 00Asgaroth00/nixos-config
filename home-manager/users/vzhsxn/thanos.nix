@@ -24,6 +24,7 @@
 
     # nix-colors.homeManagerModule
 
+    ../../capabilities/common
     ../../capabilities/cli
     ../../capabilities/desktop
     ../../capabilities/font_profiles
@@ -72,11 +73,11 @@
 
   # fonts.fontconfig.enable = true;
 
-  xdg.enable = true;
+  # xdg.enable = true;
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
-  programs.git.enable = true;
+  # programs.git.enable = true;
 
   monitors = [
     {
