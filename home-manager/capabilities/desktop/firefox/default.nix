@@ -58,6 +58,7 @@
   xdg.configFile."hypr/per-app/firefox.conf".text = ''
     bind = $mainMod, F, exec, firefox
     # bind = $mainMod, W, exec, firefox -p work
+    exec-once = [workspace 2 silent] firefox
   '';
 
 }
