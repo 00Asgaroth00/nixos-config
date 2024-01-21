@@ -23,6 +23,7 @@
     wireshark       # network anaylyzer
     twinkle         # voip soft phone
     openlens        # kubernetes ide
+    discord         # cross platform voice/text chat
   ];
 
   # dconf.settings = {
