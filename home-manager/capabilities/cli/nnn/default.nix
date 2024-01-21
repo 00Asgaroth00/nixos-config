@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
 
   programs.nnn = {
     package = pkgs.nnn.override ({ withNerdIcons = true; extraMakeFlags = [ "O_NAMEFIRST=1" ]; });
