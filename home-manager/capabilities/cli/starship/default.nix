@@ -4,7 +4,6 @@
     enable = true;
     enableZshIntegration = true;
     settings = {
-      settings = {
       format =
         let
           git = "$git_branch$git_commit$git_state$git_status";
