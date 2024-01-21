@@ -123,62 +123,62 @@
   #   '';
   # };
 
-  programs.starship = {
-    enable = true;
-    enableZshIntegration = true;
-    settings = {
-      add_newline = true;
-      format = "$character$jobs$directory$git_branch ";
-      character = {
-        format = "$symbol";
-        error_symbol = "[   ](bold fg:red bg:#19172C)";
-        success_symbol = "[   ](bold fg:green bg:#19172C)";
-        vimcmd_symbol = "[   ](bold fg:yellow bg:#19172C)";
-      };
-      directory = {
-        format = "[   $path ](bg:#2D2B40 fg:bright-white)[](fg:#2D2B40)";
-      };
-      git_branch = {
-        format = "[  $branch ](fg:bright-white)";
-      };
-      jobs = {
-        symbol = " 󰠜 ";
-        style = "bright-white";
-      };
-      status = {
-        format = "[ $symbol$status ](fg:bright-white bg:#2D2B40)";
-        disabled = false;
-        symbol = " ";
-      };
-      hostname = {
-        ssh_only = false;
-        format = "[ $hostname ](italic fg:bright-white bg:#19172C)";
-      };
-    };
-  };
+  # programs.starship = {
+  #   enable = true;
+  #   enableZshIntegration = true;
+  #   settings = {
+  #     add_newline = true;
+  #     format = "$character$jobs$directory$git_branch ";
+  #     character = {
+  #       format = "$symbol";
+  #       error_symbol = "[   ](bold fg:red bg:#19172C)";
+  #       success_symbol = "[   ](bold fg:green bg:#19172C)";
+  #       vimcmd_symbol = "[   ](bold fg:yellow bg:#19172C)";
+  #     };
+  #     directory = {
+  #       format = "[   $path ](bg:#2D2B40 fg:bright-white)[](fg:#2D2B40)";
+  #     };
+  #     git_branch = {
+  #       format = "[  $branch ](fg:bright-white)";
+  #     };
+  #     jobs = {
+  #       symbol = " 󰠜 ";
+  #       style = "bright-white";
+  #     };
+  #     status = {
+  #       format = "[ $symbol$status ](fg:bright-white bg:#2D2B40)";
+  #       disabled = false;
+  #       symbol = " ";
+  #     };
+  #     hostname = {
+  #       ssh_only = false;
+  #       format = "[ $hostname ](italic fg:bright-white bg:#19172C)";
+  #     };
+  #   };
+  # };
 
-  programs.nnn = {
-    package = pkgs.nnn.override ({ withNerdIcons = true; extraMakeFlags = [ "O_NAMEFIRST=1" ]; });
-    enable = true;
-    bookmarks = {
-      d = "~/Documents";
-      o = "~/Downloads";
-      # n = "~/50-59-Reference/";
-      # f = "~/10-19-Life/10-Finance/10.12-Statements/$(date +%Y)";
-      # w = "~/80-89-Media/80-Pictures/80.10-Wallpapers";
-    };
-    plugins = {
-      mappings = {
-        p = "preview-tui";
-      };
-      src = (pkgs.fetchFromGitHub {
-        owner = "jarun";
-        repo = "nnn";
-        rev = "master";
-        sha256 = "sha256-VVVHbRsml/2ugQnp/WL828S8ODwskg9uajaR2D7Q7G8=";
-      }) + "/plugins";
-    };
-  };
+  # programs.nnn = {
+  #   package = pkgs.nnn.override ({ withNerdIcons = true; extraMakeFlags = [ "O_NAMEFIRST=1" ]; });
+  #   enable = true;
+  #   bookmarks = {
+  #     d = "~/Documents";
+  #     o = "~/Downloads";
+  #     # n = "~/50-59-Reference/";
+  #     # f = "~/10-19-Life/10-Finance/10.12-Statements/$(date +%Y)";
+  #     # w = "~/80-89-Media/80-Pictures/80.10-Wallpapers";
+  #   };
+  #   plugins = {
+  #     mappings = {
+  #       p = "preview-tui";
+  #     };
+  #     src = (pkgs.fetchFromGitHub {
+  #       owner = "jarun";
+  #       repo = "nnn";
+  #       rev = "master";
+  #       sha256 = "sha256-VVVHbRsml/2ugQnp/WL828S8ODwskg9uajaR2D7Q7G8=";
+  #     }) + "/plugins";
+  #   };
+  # };
 
   programs.direnv = {
     enable = true;

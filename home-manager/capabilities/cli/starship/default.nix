@@ -1,5 +1,7 @@
 { pkgs, lib, ... }: {
 
+  # shell prompt configuration
+
   programs.starship = {
     enable = true;
     enableZshIntegration = true;

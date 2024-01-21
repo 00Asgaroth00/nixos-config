@@ -2,6 +2,7 @@
 
   imports = [
     ./bat
+    ./nnn
     ./starship
     ./zsh
   ];
