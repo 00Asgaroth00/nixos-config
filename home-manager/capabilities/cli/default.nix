@@ -2,6 +2,8 @@
 
   imports = [
     ./bat
+    ./direnv
+    ./fzf
     ./nnn
     ./starship
     ./zsh

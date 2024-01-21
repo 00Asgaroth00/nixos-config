@@ -2,6 +2,12 @@
 
   # zsh shell configuration
 
+  home.packages = with pkgs; [
+    bat
+    neovim
+    nnn
+  ];
+
   programs.zsh = {
     enable = true;
     enableAutosuggestions = true;
@@ -25,10 +31,10 @@
       cp = "cp -iv";
       rm = "rm -v";
       v = "nvim";
-      m = "iex -S mix";
-      ms = "iex -S mix phx.server";
-      mdg = "mix deps.get";
-      mdc = "mix deps.clean --all";
+      # m = "iex -S mix";
+      # ms = "iex -S mix phx.server";
+      # mdg = "mix deps.get";
+      # mdc = "mix deps.clean --all";
     };
     history = {
       path = "${config.xdg.dataHome}/zsh/zsh_history";
