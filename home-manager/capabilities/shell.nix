@@ -5,18 +5,18 @@
   #   BROWSER = "firefox";
   # };
 
-  home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "RobotoMono" "Iosevka" ]; })
-    ibm-plex
-    iosevka
-    ripgrep
-    unzip
-    jq
-    miller
-    entr
-    fd
-    # md-tangle
-  ];
+  # home.packages = with pkgs; [
+  #   (nerdfonts.override { fonts = [ "RobotoMono" "Iosevka" ]; })
+  #   ibm-plex
+  #   iosevka
+  #   ripgrep
+  #   unzip
+  #   jq
+  #   miller
+  #   entr
+  #   fd
+  #   # md-tangle
+  # ];
 
   # programs.bat = {
   #   enable = true;
@@ -221,11 +221,11 @@
   #   };
   # };
 
-  xdg.configFile."btop/themes/embark.theme".source = pkgs.fetchFromGitHub
-    {
-      owner = "embark-theme";
-      repo = "bashtop";
-      rev = "master";
-      sha256 = "sha256-HHoCVdCH4jCIK0JzoYagURcU722sBARtFkNeGPXuCNM=";
-    } + "/embark.theme";
+  # xdg.configFile."btop/themes/embark.theme".source = pkgs.fetchFromGitHub
+  #   {
+  #     owner = "embark-theme";
+  #     repo = "bashtop";
+  #     rev = "master";
+  #     sha256 = "sha256-HHoCVdCH4jCIK0JzoYagURcU722sBARtFkNeGPXuCNM=";
+  #   } + "/embark.theme";
 }
