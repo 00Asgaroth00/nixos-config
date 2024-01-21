@@ -8,13 +8,14 @@
     };
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
-      enkia.tokyo-night
-      yzhang.markdown-all-in-one
-      kamadorueda.alejandra
       bbenoist.nix
+      enkia.tokyo-night
+      kamadorueda.alejandra
       mkhl.direnv
-      ms-vscode-remote.remote-ssh
       ms-vscode-remote.remote-containers
+      ms-vscode-remote.remote-ssh
+      timonwong.shellcheck
+      yzhang.markdown-all-in-one
     ];
   };
 
