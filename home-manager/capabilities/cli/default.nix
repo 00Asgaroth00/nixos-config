@@ -32,6 +32,7 @@
     kubectl     # kubernetes cli
     talosctl    # talos cli mgmt tool
     k9s         # tui kubernets tool
+    fluxcd      # CD tool for kubernetes
   ];
 
 }

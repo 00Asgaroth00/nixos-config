@@ -12,6 +12,7 @@
       yzhang.markdown-all-in-one
       kamadorueda.alejandra
       bbenoist.nix
+      mkhl.direnv
       ms-vscode-remote.remote-ssh
       ms-vscode-remote.remote-containers
     ];
