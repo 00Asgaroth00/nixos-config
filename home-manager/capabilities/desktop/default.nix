@@ -20,7 +20,8 @@
     mpv
     # tidal-hifi
     font-manager
-    wireshark
+    wireshark       # network anaylyzer
+    twinkle         # voip soft phone
   ];
 
   # dconf.settings = {
