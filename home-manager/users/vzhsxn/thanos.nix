@@ -24,7 +24,7 @@
 
     # nix-colors.homeManagerModule
 
-    ../../capabillities/cli
+    ../../capabilities/cli
     ../../capabilities/desktop
     ../../capabilities/font_profiles
     # ../../capabilities/git
