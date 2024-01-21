@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ config, ... }: {
 
   xdg = {
     enable = true;
