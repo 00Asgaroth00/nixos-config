@@ -39,6 +39,7 @@
     ../global/qt
     ../global/fonts
     ../global/stylix
+    ../global/virtualisation
     
   ];
 
