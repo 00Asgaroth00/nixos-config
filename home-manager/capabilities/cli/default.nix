@@ -28,7 +28,6 @@
     sipp        # sip testing tool
     sipsak      # sip swiss army knife
     sipexer     # modern sip cli tool
-    tshark      # wiresharck-cli
   ];
 
 }
