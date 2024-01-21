@@ -5,7 +5,7 @@
   home.packages = with pkgs; [
     bat
     neovim
-    nnn
+    # nnn
   ];
 
   programs.zsh = {
