@@ -13,7 +13,7 @@
       owner = "aristocratos";
       repo = "btop";
       rev = "master";
-      sha256 = "000000000000000000000000000000000000000000000000000";
+      # sha256 = "000000000000000000000000000000000000000000000000000";
       # sha256 = "sha256-HHoCVdCH4jCIK0JzoYagURcU722sBARtFkNeGPXuCNM=";
     } + "/tokyo-night.theme";
 
