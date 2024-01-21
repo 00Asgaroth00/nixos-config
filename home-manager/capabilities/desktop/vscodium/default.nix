@@ -12,6 +12,7 @@
       enkia.tokyo-night
       kamadorueda.alejandra
       mkhl.direnv
+      ms-azuretools.vscode-docker
       ms-vscode-remote.remote-containers
       ms-vscode-remote.remote-ssh
       timonwong.shellcheck
