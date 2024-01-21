@@ -29,6 +29,9 @@
     sipsak      # sip swiss army knife
     sipexer     # modern sip cli tool
     termshark   # terminal ui for wireshark-cli
+    kubectl     # kubernetes cli
+    talosctl    # talos cli mgmt tool
+    k9s         # tui kubernets tool
   ];
 
 }

@@ -22,6 +22,7 @@
     font-manager
     wireshark       # network anaylyzer
     twinkle         # voip soft phone
+    openlense       # kubernetes ide
   ];
 
   # dconf.settings = {
