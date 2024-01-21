@@ -20,6 +20,7 @@
     mpv
     # tidal-hifi
     font-manager
+    wireshark
   ];
 
   # dconf.settings = {
