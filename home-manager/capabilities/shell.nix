@@ -18,32 +18,32 @@
     # md-tangle
   ];
 
-  programs.bat = {
-    enable = true;
-    config = {
-      theme = "embark";
-    };
-    themes = {
-      catppuccin-mocha = {
-        src = pkgs.fetchFromGitHub {
-          owner = "catppuccin";
-          repo = "bat";
-          rev = "main";
-          sha256 = "sha256-6WVKQErGdaqb++oaXnY3i6/GuH2FhTgK0v4TN4Y0Wbw=";
-        };
-        file = "Catppuccin-mocha.tmTheme";
-      };
-      embark = {
-        src = pkgs.fetchFromGitHub {
-          owner = "embark-theme";
-          repo = "bat";
-          rev = "fae7e23";
-          sha256 = "sha256-7xKdf5IRwRQo7nVc9hXb+ziULBtwhAn3pbOy4FiRbiQ=";
-        };
-        file = "Embark.tmTheme";
-      };
-    };
-  };
+  # programs.bat = {
+  #   enable = true;
+  #   config = {
+  #     theme = "embark";
+  #   };
+  #   themes = {
+  #     catppuccin-mocha = {
+  #       src = pkgs.fetchFromGitHub {
+  #         owner = "catppuccin";
+  #         repo = "bat";
+  #         rev = "main";
+  #         sha256 = "sha256-6WVKQErGdaqb++oaXnY3i6/GuH2FhTgK0v4TN4Y0Wbw=";
+  #       };
+  #       file = "Catppuccin-mocha.tmTheme";
+  #     };
+  #     embark = {
+  #       src = pkgs.fetchFromGitHub {
+  #         owner = "embark-theme";
+  #         repo = "bat";
+  #         rev = "fae7e23";
+  #         sha256 = "sha256-7xKdf5IRwRQo7nVc9hXb+ziULBtwhAn3pbOy4FiRbiQ=";
+  #       };
+  #       file = "Embark.tmTheme";
+  #     };
+  #   };
+  # };
 
   programs.zsh = {
     enable = true;

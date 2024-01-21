@@ -24,10 +24,11 @@
 
     # nix-colors.homeManagerModule
 
+    ../../capabillities/cli
     ../../capabilities/desktop
     ../../capabilities/font_profiles
-    ../../capabilities/git
-    ../../capabilities/shell.nix
+    # ../../capabilities/git
+    # ../../capabilities/shell.nix
   ] ++ (builtins.attrValues outputs.homeManagerModules) ;
 
   nixpkgs = {

@@ -2,7 +2,6 @@
 
 {
   imports = [
-    # ./stylix
     ./hyprland
     ./gtk
   ];
