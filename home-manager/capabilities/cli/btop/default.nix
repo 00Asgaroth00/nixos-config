@@ -8,4 +8,12 @@
     };
   };
 
+  xdg.configFile."btop/themes/tokyo-night.theme".source = pkgs.fetchFromGitHub
+    {
+      owner = "aristocratos";
+      repo = "btop";
+      rev = "master";
+      sha256 = "sha256-HHoCVdCH4jCIK0JzoYagURcU722sBARtFkNeGPXuCNM=";
+    } + "/tokyo-night.theme";
+
 }
