@@ -3,6 +3,8 @@
   # https://github.com/fabioluciano/tmux-tokyo-night
   # https://github.com/tmux-plugins/tmux-sensible
   # https://github.com/tmux-plugins/tmux-pain-control
+  # https://github.com/ryanoasis/vim-devicons
+  # https://github.com/dense-analysis/ale
 
   let
     tmux-tokyo-night = pkgs.tmuxPlugins.mkTmuxPlugin {
@@ -45,6 +47,8 @@
     ];
     extraConfig = ''
       set -ga terminal-overrides ",xterm-256color:Tc"
+      set -g utf8 on
+      set -g status-utf8 on
     '';
   };
 
