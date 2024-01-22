@@ -4,7 +4,7 @@
 
   home.packages = with pkgs; [
     bat
-    neovim
+    # neovim
     # nnn
   ];
 
