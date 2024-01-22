@@ -24,6 +24,15 @@
         '';
       }
       {
+        plugin = lualine-nvim; # Status Lin
+        type = "lua";
+        config = ''
+          require('lualine').setup{
+            options = { theme = 'tokyonight-night' }
+          }
+        '';
+      }
+      {
         plugin = nvim-treesitter.withAllGrammars; # Syntax Highlighting
         type = "lua";
         config = ''
