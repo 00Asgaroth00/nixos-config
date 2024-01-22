@@ -40,6 +40,7 @@
     ../global/fonts
     ../global/stylix
     ../global/virtualisation
+    ../global/neovim
     
   ];
 
