@@ -13,7 +13,12 @@
     # vimAlias = true;
     
     plugins = with pkgs.vimPlugins; [
-      tokyonight-nvim
+      {
+        plugin = tokyonight-nvim;
+        config = ''
+          colorscheme = tokyonight-night
+        ''
+      }
     ];
   };
 
