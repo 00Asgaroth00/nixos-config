@@ -1,12 +1,7 @@
 { pkgs, ... }: {
 
   # https://github.com/folke/tokyonight.nvim/
-
-  # environment = {
-  #   variables = {
-  #     EDITOR = "nvim";
-  #   };
-  # };
+  # https://github.com/nvim-lualine/lualine.nvim
 
   programs.neovim = {
     enable = true;
