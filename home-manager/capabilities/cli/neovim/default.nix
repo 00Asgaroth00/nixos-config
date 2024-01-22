@@ -19,7 +19,7 @@
         '';
       }
       {
-        plugin = lualine-nvim; # Status Lin
+        plugin = lualine-nvim; # Status Line
         type = "lua";
         config = ''
           require('lualine').setup{
