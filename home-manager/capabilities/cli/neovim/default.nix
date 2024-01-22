@@ -18,7 +18,7 @@
         config = ''
           colorscheme = tokyonight-night
         ''
-      }
+      };
     ];
   };
 
