@@ -15,8 +15,10 @@
     plugins = with pkgs.vimPlugins; [
       {
         plugin = tokyonight-nvim;
+        type = lua;
         config = ''
-          colorscheme = tokyonight-night
+          require("tokyonight").setup{}
+          vim.cmd[[colorscheme tokyonight-night]]
         '';
       }
     ];
