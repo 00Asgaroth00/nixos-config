@@ -163,7 +163,7 @@
 
   environment.shells = [ pkgs.zsh pkgs.bash ];
   environment.systemPackages = with pkgs; [
-    neovim
+    # neovim
     git
     wget
     # yubikey-personalization
