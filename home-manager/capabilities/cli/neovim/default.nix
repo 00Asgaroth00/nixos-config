@@ -17,8 +17,8 @@
         plugin = tokyonight-nvim;
         config = ''
           colorscheme = tokyonight-night
-        ''
-      };
+        '';
+      }
     ];
   };
 
