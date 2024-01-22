@@ -1,5 +1,6 @@
 { pkgs, ... }: 
 
+  # https://github.com/fabioluciano/tmux-tokyo-night
   # https://github.com/tmux-plugins/tmux-sensible
   # https://github.com/tmux-plugins/tmux-pain-control
 
@@ -35,7 +36,8 @@
       {
         plugin = tmux-tokyo-night;
         extraConfig = ''
-          set -g @theme_variation 'moon'
+          set -g @theme_enable_icons 1
+          set -g @theme_variation 'night'
           set -g @theme_left_separator ''
           set -g @theme_right_separator ''
         '';
