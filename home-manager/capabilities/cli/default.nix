@@ -10,6 +10,7 @@
     ./neovim
     ./nnn
     ./starship
+    ./tmux
     ./zsh
   ];
 

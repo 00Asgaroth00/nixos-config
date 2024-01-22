@@ -40,7 +40,7 @@
     ../global/fonts
     ../global/stylix
     ../global/virtualisation
-    ../global/neovim # Managed by home manager
+    ../global/neovim # Managed by home manager as well
     
   ];
 
