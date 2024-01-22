@@ -7,7 +7,7 @@
     ./eza
     ./fzf
     ./git
-    ./neovim
+    # ./neovim
     ./nnn
     ./starship
     ./zsh
