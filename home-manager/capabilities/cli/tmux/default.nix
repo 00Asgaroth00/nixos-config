@@ -4,7 +4,7 @@
   # https://github.com/tmux-plugins/tmux-pain-control
 
   let
-    tmux-toko-night = pkgs.tmuxPlugins.mkTmuxPlugin {
+    tmux-tokyo-night = pkgs.tmuxPlugins.mkTmuxPlugin {
       pluginName = "tmux-tokyo-night";
       version = "unstable-2024-01-22";
       rtpFilePath = "tmux-tokyo-night.tmux";
