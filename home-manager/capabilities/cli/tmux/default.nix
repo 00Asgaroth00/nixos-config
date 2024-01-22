@@ -2,7 +2,7 @@
 
   programs.tmux = {
     enable = true;
-    package = with pkgs; [ tmux ];
+    # package = with pkgs; [ tmux ];
     keyMode = "vi";
     baseIndex = 1;
     clock24 = true;
