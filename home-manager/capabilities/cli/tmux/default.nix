@@ -13,7 +13,6 @@
     shell = "${pkgs.zsh}/bin/zsh";
     terminal = "xterm-256color";
     plugins = with pkgs.tmuxPlugins; [
-      sensible
       pain-control
     ];
     extraConfig = ''
