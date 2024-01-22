@@ -40,7 +40,7 @@
     ../global/fonts
     ../global/stylix
     ../global/virtualisation
-    ../global/neovim
+    # ../global/neovim # Managed by home manager
     
   ];
 
@@ -163,7 +163,7 @@
 
   environment.shells = [ pkgs.zsh pkgs.bash ];
   environment.systemPackages = with pkgs; [
-    # neovim
+    neovim
     git
     wget
     # yubikey-personalization
