@@ -1,5 +1,7 @@
 { pkgs, ... }: {
 
+  # https://github.com/folke/tokyonight.nvim/
+
   # environment = {
   #   variables = {
   #     EDITOR = "nvim";
@@ -17,8 +19,10 @@
         plugin = tokyonight-nvim;
         type = lua;
         config = ''
-          require("tokyonight").setup{}
-          vim.cmd[[colorscheme tokyonight-night]]
+          require("tokyonight").setup({
+              style = "night",
+            })
+          vim.cmd[[colorscheme tokyonight]]
         '';
       }
     ];
