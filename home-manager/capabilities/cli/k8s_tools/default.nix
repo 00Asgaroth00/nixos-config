@@ -6,7 +6,7 @@
     hubble
     kustomize
     cmctl
-    helm
+    kubernetes-helm
     fluxcd
     talosctl
   ];
