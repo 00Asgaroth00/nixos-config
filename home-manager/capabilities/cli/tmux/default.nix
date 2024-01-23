@@ -46,9 +46,25 @@
       }
     ];
     extraConfig = ''
+      # Enable true colour support
       set -ga terminal-overrides ",xterm-256color:Tc"
-      set -g utf8 on
-      set -g status-utf8 on
+      
+      # Shift arrow to switch windows
+      bind -n S-Left  previous-window
+      bind -n S-Right next-window
+
+      # Use Alt-arrow keys without prefix key to switch panes
+      bind -n M-Left select-pane -L
+      bind -n M-Right select-pane -R
+      bind -n M-Up select-pane -U
+      bind -n M-Down select-pane -D
+
+      # Enable vim style splitting
+      bind-key v split-window -h
+      bind-key s split-window -v
+
+      # Bind Ctl-B Ctl-Y to toggle broadcast to all panes
+      bind C-Y set-window-option synchronize-panes
     '';
   };
 
