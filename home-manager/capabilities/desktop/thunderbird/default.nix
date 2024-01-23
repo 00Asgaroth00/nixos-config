@@ -2,7 +2,7 @@
 
   accounts.email.accounts = {
     Asgaroth = {
-      primary = false;
+      primary = true;
       userName = "00asgaroth00@gmail.com";
       realName = "Asgaroth";
       address = "00asgaroth00@gmail.com";
