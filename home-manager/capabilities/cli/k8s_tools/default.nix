@@ -3,7 +3,7 @@
   home.packages = with pkgs; [
     kubectl
     cilium-cli
-    hubble-cli
+    hubble
     kustomize
     cmctl
     helm
