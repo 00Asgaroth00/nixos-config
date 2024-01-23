@@ -25,7 +25,7 @@
     enable = true;
     profiles = {
       home.isDefault = true;
-    }
+    };
   };
 
   xdg.configFile."hypr/per-app/thunderbird.conf".text = ''
