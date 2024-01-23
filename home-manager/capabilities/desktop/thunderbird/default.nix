@@ -25,7 +25,17 @@
       userName = "voidburn@hotmail.com";
       realName = "VoidBurn";
       address = "voidburn@hotmail.com";
-      flavor = "outlook.office365.com";
+      flavor = "plain";
+      imap = {
+        host = "imap-mail.outlook.com";
+        port = 993;
+        tls.useStartTls = true;
+      };
+      smtp = {
+        host = "pop-mail.outlook.com";
+        port = lib.mkForce 995;
+        tls.useStartTls = true;
+      };
       thunderbird.enable = true;
       thunderbird.profiles = [ "home" ];
     };
