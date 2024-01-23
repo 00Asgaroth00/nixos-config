@@ -10,6 +10,7 @@ in {
     ../hyprpaper
     ../keepassxc
     ../kitty
+    ../thunderbird
     ../ulauncher
     ../vscodium
     ../waybar
