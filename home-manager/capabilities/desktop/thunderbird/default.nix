@@ -2,6 +2,7 @@
 
   accounts.email.accounts = {
     Asgaroth = {
+      # Need to change auth type to oath2
       primary = true;
       userName = "00asgaroth00@gmail.com";
       realName = "Asgaroth";
@@ -21,6 +22,7 @@
       thunderbird.profiles = [ "home" ];
     };
     VoidBurn = {
+      # Need app password for this one
       primary = false;
       userName = "voidburn@hotmail.com";
       realName = "VoidBurn";
