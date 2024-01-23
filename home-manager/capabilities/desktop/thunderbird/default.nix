@@ -32,8 +32,8 @@
         tls.useStartTls = true;
       };
       smtp = {
-        host = "pop-mail.outlook.com";
-        port = lib.mkForce 995;
+        host = "smtp-mail.outlook.com";
+        port = lib.mkForce 587;
         tls.useStartTls = true;
       };
       thunderbird.enable = true;
