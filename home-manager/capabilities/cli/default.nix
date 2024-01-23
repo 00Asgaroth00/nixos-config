@@ -7,6 +7,7 @@
     ./eza
     ./fzf
     ./git
+    ./k8s_tools
     ./k9s
     ./neovim
     ./nnn
@@ -33,10 +34,10 @@
     sipsak      # sip swiss army knife
     sipexer     # modern sip cli tool
     termshark   # terminal ui for wireshark-cli
-    kubectl     # kubernetes cli
-    talosctl    # talos cli mgmt tool
-    k9s         # tui kubernets tool
-    fluxcd      # CD tool for kubernetes
+    # kubectl     # kubernetes cli
+    # talosctl    # talos cli mgmt tool
+    # k9s         # tui kubernets tool
+    # fluxcd      # CD tool for kubernetes
   ];
 
 }
