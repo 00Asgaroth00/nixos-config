@@ -10,7 +10,7 @@
       imap = {
         host = "imap.gmail.com";
         port = 993;
-        tls.useStartTls = true;
+        tls.enable = true;
       };
       smtp = {
         host = "smtp.gmail.com";
@@ -25,14 +25,14 @@
       userName = "voidburn@hotmail.com";
       realName = "VoidBurn";
       address = "voidburn@hotmail.com";
-      flavor = "plain";
+      flavor = "outlook.office365.com";
       imap = {
-        host = "imap-mail.outlook.com";
+        host = "outlook.office365.com";
         port = 993;
-        tls.useStartTls = true;
+        tls.enable = true;
       };
       smtp = {
-        host = "smtp-mail.outlook.com";
+        host = "smtp.office365.com";
         port = lib.mkForce 587;
         tls.useStartTls = true;
       };
