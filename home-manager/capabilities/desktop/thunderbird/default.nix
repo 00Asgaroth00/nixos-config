@@ -3,7 +3,7 @@
   accounts.email.accounts = {
     Asgaroth = {
       primary = false;
-      username = "00asgaroth00@gmail.com";
+      userName = "00asgaroth00@gmail.com";
       realName = "Asgaroth";
       address = "00asgaroth00@gmail.com";
       flavor = "gmail.com";
@@ -12,7 +12,7 @@
     };
     VoidBurn = {
       primary = false;
-      username = "voidburn@hotmail.com";
+      userName = "voidburn@hotmail.com";
       realName = "VoidBurn";
       address = "voidburn@hotmail.com";
       flavor = "outlook.office365.com";
