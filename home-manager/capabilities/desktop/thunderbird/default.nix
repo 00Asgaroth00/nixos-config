@@ -7,6 +7,16 @@
       realName = "Asgaroth";
       address = "00asgaroth00@gmail.com";
       flavor = "gmail.com";
+      imap = {
+        host = "imap.gmail.com";
+        port = 993;
+        tls.useStartTls = true;
+      };
+      smtp = {
+        host = "smtp.gmail.com";
+        port = 465;
+        tls.useStartTls = true;
+      };
       thunderbird.enable = true;
       thunderbird.profiles = [ "home" ];
     };
