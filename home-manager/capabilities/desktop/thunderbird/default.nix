@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ lib, pkgs, ... }: {
 
   accounts.email.accounts = {
     Asgaroth = {
@@ -14,7 +14,7 @@
       };
       smtp = {
         host = "smtp.gmail.com";
-        port = 465;
+        port = lib.mkForce 465;
         tls.useStartTls = true;
       };
       thunderbird.enable = true;
