@@ -3,7 +3,7 @@
   services.playerctld = {
     enable = true;
     package = pkgs.playerctl;
-  }
+  };
 
   xdg.configFile."hypr/per-app/playerctl.conf".text = ''
     # Media control
