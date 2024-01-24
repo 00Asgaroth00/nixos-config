@@ -4,6 +4,7 @@ let
 in {
 
   imports = [
+    ../bemoji
     ../copyq
     ../dunst
     ../firefox
@@ -15,15 +16,16 @@ in {
     ../vscodium
     ../waybar
     ../wlogout
+    ../wofi
   ];
 
   home.packages = with pkgs; [
     # hyprpaper # wallpaper manager
     wev           # wayland event viewer
     strawberry    # media player
-    bemoji        # Emoji selector
-    wtype         # xdotool for wayland
-    wl-clipboard  # cli copy/paste tools for wayland
+    # bemoji        # Emoji selector
+    # wtype         # xdotool for wayland
+    # wl-clipboard  # cli copy/paste tools for wayland
 
     # playerctl
     # swaybg
@@ -35,8 +37,6 @@ in {
     # rofi-emoji
     # libnotify
   ];
-
-  programs.wofi.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -257,13 +257,4 @@ in {
     };
   };
 
-  home.sessionVariables = {
-    BEMOJI_PICKER_CMD = "${pkgs.wofi}/bin/wofi";
-    BEMOJI_CLIP_CMD = "${pkgs.wl-clipboard}/bin/wl-copy";
-    BEMOJI_TYPE_CMD = "${pkgs.wtype}/bin/wtype";
-  };
-  
-  xdg.configFile."hypr/per-app/bemoji.conf".text = ''
-    bind = ALT, e, exec, ${pkgs.bemoji}/bin/bemoji -t
-  '';
 }
