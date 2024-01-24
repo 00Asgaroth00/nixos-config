@@ -11,6 +11,7 @@ in {
     ../hyprpaper
     ../keepassxc
     ../kitty
+    ../strawberry
     ../thunderbird
     ../ulauncher
     ../vscodium
