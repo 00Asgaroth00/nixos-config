@@ -187,7 +187,7 @@ in {
         # "$mainMod, f, fullscreen, 0"
         # "$mainMod, m, fullscreen, 1"
         "$mainMod SHIFT, t, togglefloating,"
-        "ALT, d, exec, wofi --show drun -I"
+        # "ALT, d, exec, wofi --show drun -I"
         # "ALT, e, exec, wofi-emoji"
         "$mainMod, e, exec, thunar"
         "$mainMod, P, pseudo, # dwindle"
