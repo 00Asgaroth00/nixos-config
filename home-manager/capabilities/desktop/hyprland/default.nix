@@ -19,16 +19,20 @@ in {
 
   home.packages = with pkgs; [
     # hyprpaper # wallpaper manager
-    wev   # wayland event viewer
+    wev           # wayland event viewer
+    strawberry    # media player
+    bemoji        # Emoji selector
+    wtype         # xdotool for wayland
+    wl-clipboard  # cli copy/paste tools for wayland
 
-    playerctl
-    swaybg
-    wl-clipboard
+    # playerctl
+    # swaybg
+    
     grim
     slurp
     inputs.hyprland-contrib.packages.x86_64-linux.grimblast
     neofetch
-    rofi-emoji
+    # rofi-emoji
     # libnotify
   ];
 
@@ -184,7 +188,7 @@ in {
         # "$mainMod, m, fullscreen, 1"
         "$mainMod SHIFT, t, togglefloating,"
         "ALT, d, exec, wofi --show drun -I"
-        "ALT, e, exec, wofi-emoji"
+        # "ALT, e, exec, wofi-emoji"
         "$mainMod, e, exec, thunar"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, s, togglespecialworkspace, notes"
@@ -252,4 +256,8 @@ in {
       ];
     };
   };
+
+  xdg.configFile."hypr/per-app/bemoji.conf".text = ''
+    bind = "ALT, e, exec, bemoji -t"
+  '';
 }
