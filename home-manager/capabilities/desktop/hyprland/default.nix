@@ -23,7 +23,7 @@ in {
   home.packages = with pkgs; [
     # hyprpaper # wallpaper manager
     wev           # wayland event viewer
-    strawberry    # media player
+    # strawberry    # media player
     # bemoji        # Emoji selector
     # wtype         # xdotool for wayland
     # wl-clipboard  # cli copy/paste tools for wayland
