@@ -11,6 +11,7 @@ in {
     ../hyprpaper
     ../keepassxc
     ../kitty
+    ../playerctl
     ../strawberry
     ../thunderbird
     ../ulauncher
@@ -234,9 +235,9 @@ in {
         "$mainMod ALT, 8, movetoworkspace, 8"
         "$mainMod ALT, 9, movetoworkspace, 9"
         "$mainMod ALT, 0, movetoworkspace, 10"
-        ", XF86AudioPrev, exec, playerctl previous"
-        ", XF86AudioNext, exec, playerctl next"
-        ", XF86AudioPlay, exec, playerctl play-pause"
+        # ", XF86AudioPrev, exec, playerctl previous"
+        # ", XF86AudioNext, exec, playerctl next"
+        # ", XF86AudioPlay, exec, playerctl play-pause"
 
         # "$mainMod ALT CTRL, equal, exec, dunstctl set-paused toggle"
         "$mainMod ALT CTRL, bracketright, exec, systemctl reboot"

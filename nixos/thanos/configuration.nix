@@ -1,6 +1,8 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
 
+# https://www.reddit.com/r/linuxhardware/comments/f56wr6/xps_13_7390_late_2019_sixweek_review_tips_and/
+
 {
   inputs,
   outputs,
@@ -191,6 +193,11 @@
   # settings specific to this machine, augments ../global/xserver/default.nix
   services.xserver = {
     videoDrivers = [ "i915" ];
+    # Dell XPS 13 7390 Fn key shortcuts
+    # Fn + esc = Toggle Fn-key lock
+    # Fn + b = Pause/Break
+    # Fn + s = Toggle scroll lock
+    # Fn + r = System request
     xkb = {
       layout = "gb";
       model = "pc104";
