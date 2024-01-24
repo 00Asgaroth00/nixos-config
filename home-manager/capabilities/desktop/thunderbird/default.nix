@@ -2,7 +2,7 @@
 
   accounts.email.accounts = {
     Asgaroth = {
-      # Need to change auth type to oath2
+      # Need to change auth type to oauth2
       primary = true;
       userName = "00asgaroth00@gmail.com";
       realName = "Asgaroth";
@@ -23,6 +23,7 @@
     };
     VoidBurn = {
       # Need app password for this one
+      # see https://support.microsoft.com/en-us/account-billing/using-app-passwords-with-apps-that-don-t-support-two-step-verification-5896ed9b-4263-e681-128a-a6f2979a7944
       primary = false;
       userName = "voidburn@hotmail.com";
       realName = "VoidBurn";

@@ -19,6 +19,7 @@ in {
 
   home.packages = with pkgs; [
     # hyprpaper # wallpaper manager
+    wev   # wayland event viewer
 
     playerctl
     swaybg
