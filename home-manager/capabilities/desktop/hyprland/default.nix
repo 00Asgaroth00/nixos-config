@@ -8,6 +8,7 @@ in {
     ../copyq
     ../dunst
     ../firefox
+    ../flameshot
     ../hyprpaper
     ../keepassxc
     ../kitty
