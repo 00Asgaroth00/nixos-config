@@ -35,6 +35,7 @@
   };
 
   xdg.configFile."hypr/per-app/alacritty.conf".text = ''
+    exec-once = ${pkgs.alacritty}/bin/alacritty
     windowrulev2 = workspace 1,class:^(alacritty)$
     windowrulev2 = opacity 0.8 0.8, class:^(alacritty)$
     bind = ALT, Return, exec, alacritty
