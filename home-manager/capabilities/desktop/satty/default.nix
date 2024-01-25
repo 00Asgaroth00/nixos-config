@@ -2,8 +2,8 @@
 
   home.packages = with pkgs; [
     satty   # screenshot tool
-    # inputs.hyprland-contrib.packages.x86_64-linux.grimblast
-    hyprland-contrib.grimblast
+    inputs.hyprland-contrib.packages.x86_64-linux.grimblast
+    # hyprland-contrib.grimblast
   ];
 
   xdg.configFile."hypr/per-app/satty.conf".text = ''
