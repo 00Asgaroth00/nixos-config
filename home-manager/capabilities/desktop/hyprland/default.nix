@@ -8,11 +8,12 @@ in {
     ../copyq
     ../dunst
     ../firefox
-    ../flameshot
+    # ../flameshot    # screenshot tool (issues on hyprland)
     ../hyprpaper
     ../keepassxc
     ../kitty
     ../playerctl
+    ../satty        # screenshot tool
     ../strawberry
     ../thunderbird
     ../ulauncher
@@ -33,10 +34,10 @@ in {
     # playerctl
     # swaybg
     
-    grim
-    slurp
-    inputs.hyprland-contrib.packages.x86_64-linux.grimblast
-    neofetch
+    # grim
+    # slurp
+    # inputs.hyprland-contrib.packages.x86_64-linux.grimblast
+    # neofetch
     # rofi-emoji
     # libnotify
   ];

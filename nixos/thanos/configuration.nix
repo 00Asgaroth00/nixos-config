@@ -168,6 +168,7 @@
     # neovim
     git
     wget
+    neofetch
     # yubikey-personalization
     # yubikey-manager
     # pavucontrol
