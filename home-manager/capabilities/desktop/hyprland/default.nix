@@ -8,12 +8,12 @@ in {
     ../copyq
     ../dunst
     ../firefox
-    # ../flameshot    # screenshot tool (issues on hyprland)
+    ../flameshot    # screenshot tool (issues on hyprland)
     ../hyprpaper
     ../keepassxc
     ../kitty
     ../playerctl
-    ../satty        # screenshot tool
+    # ../satty        # screenshot tool
     ../strawberry
     ../thunderbird
     ../ulauncher
