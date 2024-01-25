@@ -1,5 +1,7 @@
 { lib, pkgs, ... }: {
 
+  # https://alacritty.org/config-alacritty.html
+
   home.packages = with pkgs; [
     alacritty-theme
   ];
@@ -14,6 +16,20 @@
       shell = {
         program = "${pkgs.zsh}/bin/zsh";
         args = [ "-l" ];
+      };
+      scrolling = {
+        history = 100000;
+        multiplier = 3;
+      };
+      selection = {
+        save_to_clipboard = true;
+      };
+      cursor = {
+        style = {
+          shape = "block";
+          blinking = "on"
+        };
+        unfocused_hollow = true;
       };
     };
   };
