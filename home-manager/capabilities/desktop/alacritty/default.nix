@@ -7,6 +7,15 @@
   programs.alacritty = {
     enable = true;
     package = pkgs.alacritty;
+    settings = {
+      window = {
+        opacity = 0.8;
+      };
+      shell = {
+        program = "${pkgs.zsh}/bin/zsh";
+        args = [ "-l" ];
+      }
+    };
   };
 
   xdg.configFile."hypr/per-app/alacritty.conf".text = ''
