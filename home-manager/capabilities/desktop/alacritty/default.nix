@@ -6,9 +6,9 @@
 
   programs.alacritty = {
     enable = true;
-    package = pkgs.alacritty
+    package = pkgs.alacritty;
     settings = {
-      import = [ "${xdg.configFile}/alacritty/themes/tokyo-night.toml" ];
+      import = [ ${xdg.configFile}/alacritty/themes/tokyo-night.toml ];
     };
   };
 
