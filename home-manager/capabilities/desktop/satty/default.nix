@@ -8,7 +8,7 @@
 
   xdg.configFile."hypr/per-app/satty.conf".text = ''
     # Media control
-    bind = Print, XF86AudioPrev, exec, grim -g "$(slurp -o -r -c '#ff0000ff')" - | satty --filename - --fullscreen --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png
+    bind = , Print, exec, grim -g "$(slurp -o -r -c '#ff0000ff')" - | satty --filename - --fullscreen --output-filename ~/Pictures/Screenshots/satty-$(date '+%Y%m%d-%H:%M:%S').png
   '';
 
 }
