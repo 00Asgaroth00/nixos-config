@@ -4,6 +4,7 @@ let
 in {
 
   imports = [
+    ../alacritty
     ../bemoji
     ../copyq
     ../dunst
@@ -11,7 +12,7 @@ in {
     ../flameshot    # screenshot tool (issues on hyprland)
     ../hyprpaper
     ../keepassxc
-    ../kitty
+    # ../kitty
     ../playerctl
     # ../satty        # screenshot tool
     ../strawberry
