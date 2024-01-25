@@ -27,7 +27,7 @@
       cursor = {
         style = {
           shape = "block";
-          blinking = "on"
+          blinking = "on";
         };
         unfocused_hollow = true;
       };
