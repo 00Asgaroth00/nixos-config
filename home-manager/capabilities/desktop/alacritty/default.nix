@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ lib, pkgs, ... }: {
 
   home.packages = with pkgs; [
     alacritty-theme
@@ -9,7 +9,7 @@
     package = pkgs.alacritty;
     settings = {
       window = {
-        opacity = 0.8;
+        opacity = lib.mkForce 0.8;
       };
       shell = {
         program = "${pkgs.zsh}/bin/zsh";
