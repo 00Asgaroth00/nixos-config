@@ -1,8 +1,6 @@
 # This is your system's configuration file.
 # Use this to configure your system environment (it replaces /etc/nixos/configuration.nix)
-
 # https://www.reddit.com/r/linuxhardware/comments/f56wr6/xps_13_7390_late_2019_sixweek_review_tips_and/
-
 {
   inputs,
   outputs,
@@ -46,7 +44,6 @@
     ../global/stylix
     ../global/virtualisation
     ../global/neovim # Managed by home manager as well
-    
   ];
 
   nixpkgs = {
@@ -131,7 +128,7 @@
   # configure nixos with the specified devices
   # should be true if the system is booted with those devices
   # should be false on an installer image etc.
-  disko.enableConfig = true; 
+  disko.enableConfig = true;
 
   hardware.enableRedistributableFirmware = true;
 
@@ -161,12 +158,12 @@
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
       # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-      extraGroups = ["wheel" "networkmanager" "systemd-journal" ];
-      packages = [ pkgs.home-manager ];
+      extraGroups = ["wheel" "networkmanager" "systemd-journal"];
+      packages = [pkgs.home-manager];
     };
   };
 
-  environment.shells = [ pkgs.zsh pkgs.bash ];
+  environment.shells = [pkgs.zsh pkgs.bash];
   environment.systemPackages = with pkgs; [
     # neovim
     git
@@ -194,17 +191,11 @@
 
   # fonts.fontDir.enable = true;
 
-  
   programs.zsh.enable = true;
 
   # settings specific to this machine, augments ../global/xserver/default.nix
   services.xserver = {
-    videoDrivers = [ "nvidia" ];
-    # Dell XPS 13 7390 Fn key shortcuts
-    # Fn + esc = Toggle Fn-key lock
-    # Fn + b = Pause/Break
-    # Fn + s = Toggle scroll lock
-    # Fn + r = System request
+    videoDrivers = ["nvidia"];
     xkb = {
       layout = "gb";
       model = "pc104";
@@ -280,23 +271,23 @@
   services.fwupd.enable = true;
 
   # xdg.portal = {
-  #   extraPortals = [ 
-  #     pkgs.xdg-desktop-portal-gtk 
-  #     pkgs.xdg-desktop-portal-wlr 
+  #   extraPortals = [
+  #     pkgs.xdg-desktop-portal-gtk
+  #     pkgs.xdg-desktop-portal-wlr
   #   ];
   # };
-  
+
   # programs.hyprland.enable = true;
   # xdg = {
   #   mime.enable = true;
   #   portal = {
-  #     extraPortals = [ 
-  #       pkgs.xdg-desktop-portal-hyprland 
+  #     extraPortals = [
+  #       pkgs.xdg-desktop-portal-hyprland
   #       pkgs.xdg-desktop-portal-wlr
   #     ];
   #     configPackages = [ pkgs.hyprland ];
   #   };
-    
+
   # };
 
   # Ensure that we can find stuff with `man -k`
