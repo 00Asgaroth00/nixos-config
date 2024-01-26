@@ -4,6 +4,7 @@
   config,
   inputs,
   home-manager,
+  osConfig,
   username,
   ...
 }: let
@@ -28,6 +29,8 @@ in {
     ../waybar
     ../wlogout
     ../wofi
+
+    (./. + "/${osConfig.networking.hostName}.nix")
   ];
 
   home.packages = with pkgs; [
