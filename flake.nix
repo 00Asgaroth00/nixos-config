@@ -122,7 +122,7 @@
         modules = [
           # > Our main nixos configuration file <
           stylix.nixosModules.stylix
-          ./nixos/thanos/configuration.nix
+          ./nixos/arakasi/configuration.nix
           disko.nixosModules.disko
           home-manager.nixosModules.home-manager {
             # home-manager.useGlobalPkgs = true;
