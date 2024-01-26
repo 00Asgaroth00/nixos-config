@@ -106,7 +106,7 @@
   # FIXME: Add the rest of your current configuration
 
   networking.hostName = "arakasi";
-  networking.hostId = "a4e287fe";
+  networking.hostId = "a5569f6b";
   networking.useDHCP = lib.mkForce true;
   # networking.wireless.iwd.enable = true;
   networking.networkmanager.enable = true;
