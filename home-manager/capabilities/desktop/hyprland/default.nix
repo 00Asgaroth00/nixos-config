@@ -31,42 +31,19 @@ in {
   ];
 
   home.packages = with pkgs; [
-    # hyprpaper # wallpaper manager
     wev # wayland event viewer
-    # strawberry    # media player
-    # bemoji        # Emoji selector
-    # wtype         # xdotool for wayland
-    # wl-clipboard  # cli copy/paste tools for wayland
-
-    # playerctl
-    # swaybg
-
-    # grim
-    # slurp
-    # inputs.hyprland-contrib.packages.x86_64-linux.grimblast
-    # neofetch
-    # rofi-emoji
-    # libnotify
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
-    xwayland.enable = true;
+    sourceFirst = false;
+    systemd = {
+      enable = true;
+    };
+    xwayland = {
+      enable = true;
+    };
     settings = {
-      exec-once = [
-        # "hyprpaper"
-        # "hyprctl setcursor Bibata-Modern-Ice 22"
-        # "nm-applet"
-        # "swaybg -i ~/wallpaper -m fill"
-        # "synology-drive"
-        # "waybar"
-        # "[workspace 2 silent] firefox"
-        # "webcord"
-        # "[workspace special:term silent] kitty --title='kitty-scratch' --hold"
-        # "kitty"
-        # "remind -z -k':notify-send -u critical \"Reminder!\" %s' ~/00-09-System/02-Logs/02.10-Journal/agenda.rem"
-      ];
-
       workspace = lib.lists.flatten (map
         (
           m:
@@ -80,10 +57,6 @@ in {
         gaps_in = 5;
         gaps_out = 5;
         border_size = 2;
-        # "col.active_border" = "rgb(78A8FF) rgb(7676FF) 45deg";
-        # "col.inactive_border" = "rgba(585272aa)";
-        # "col.active_border" = "0xff${color.base0C}";
-        # "col.inactive_border" = "0xff${color.base02}";
         layout = "dwindle";
         resize_on_border = true;
       };
@@ -108,9 +81,6 @@ in {
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        # "col.shadow" = "rgba(1a1a1aee)";
-        # "col.shadow" = "0x44000000";
-        # "col.shadow_inactive" = "0x66000000";
       };
 
       group = {
@@ -120,7 +90,7 @@ in {
         # "col.border_inactive" = "0xff${color.base04}";
 
         groupbar = {
-          font_family = "Iosevka";
+          # font_family = "Iosevka";
           font_size = 13;
           # "col.active" = "rgba(63F2F1aa)";
           # "col.inactive" = "rgba(585272aa)";
@@ -150,12 +120,6 @@ in {
         workspace_swipe = true;
       };
 
-      # "device:getech-huge-trackball-1" = {
-      #   "scroll_method" = "on_button_down";
-      #   "scroll_button" = 279;
-      #   "natural_scroll" = true;
-      # };
-
       monitor =
         map
         (
@@ -184,17 +148,6 @@ in {
         ];
       };
 
-      windowrulev2 = [
-        # "workspace 1,class:kitty"
-        # "workspace 2,title:^(Mozilla Firefox)(.*)$"
-        # "workspace special:notes,title:^(kitty-delta)"
-        # "workspace special:term,title:^(kitty-scratch)"
-        # "workspace 3,class:Slack"
-        # "workspace 3,class:WebCord"
-        # "float,title:(GnuCash Tip Of The Day)"
-        # "float,title:(Firefox — Sharing Indicator)"
-      ];
-
       "$mainMod" = "SUPER";
       bind = [
         # "ALT, Return, exec, kitty"
@@ -207,9 +160,9 @@ in {
         # "ALT, e, exec, wofi-emoji"
         "$mainMod, e, exec, thunar"
         "$mainMod, P, pseudo, # dwindle"
-        "$mainMod, s, togglespecialworkspace, notes"
-        "$mainMod SHIFT, S, movetoworkspace, special:notes"
-        "$mainMod CTRL, t, togglespecialworkspace, term"
+        # "$mainMod, s, togglespecialworkspace, notes"
+        # "$mainMod SHIFT, S, movetoworkspace, special:notes"
+        # "$mainMod CTRL, t, togglespecialworkspace, term"
         "$mainMod, g, togglegroup"
         "$mainMod, TAB, changegroupactive, f"
         "$mainMod SHIFT, TAB, changegroupactive, b"
@@ -254,12 +207,12 @@ in {
         # ", XF86AudioPlay, exec, playerctl play-pause"
 
         # "$mainMod ALT CTRL, equal, exec, dunstctl set-paused toggle"
-        "$mainMod ALT CTRL, bracketright, exec, systemctl reboot"
+        # "$mainMod ALT CTRL, bracketright, exec, systemctl reboot"
 
-        "$mainMod ALT CTRL SHIFT, 1, exec, grimblast copy area"
-        "$mainMod ALT CTRL SHIFT, 2, exec, grimblast save area"
-        "$mainMod ALT CTRL SHIFT, 3, exec, grimblast copy active"
-        "$mainMod ALT CTRL SHIFT, 4, exec, grimblast copy output"
+        # "$mainMod ALT CTRL SHIFT, 1, exec, grimblast copy area"
+        # "$mainMod ALT CTRL SHIFT, 2, exec, grimblast save area"
+        # "$mainMod ALT CTRL SHIFT, 3, exec, grimblast copy active"
+        # "$mainMod ALT CTRL SHIFT, 4, exec, grimblast copy output"
       ];
 
       bindm = [

@@ -12,25 +12,27 @@
   ...
 }: {
   # You can import other home-manager modules here
-  imports = [
-    # If you want to use modules your own flake exports (from modules/home-manager):
-    # outputs.homeManagerModules.example
+  imports =
+    [
+      # If you want to use modules your own flake exports (from modules/home-manager):
+      # outputs.homeManagerModules.example
 
-    # Or modules exported from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModules.default
+      # Or modules exported from other flakes (such as nix-colors):
+      # inputs.nix-colors.homeManagerModules.default
 
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
+      # You can also split up your configuration and import pieces of it here:
+      # ./nvim.nix
 
-    # nix-colors.homeManagerModule
+      # nix-colors.homeManagerModule
 
-    ../../capabilities/common
-    ../../capabilities/cli
-    ../../capabilities/desktop
-    ../../capabilities/font_profiles
-    # ../../capabilities/git
-    # ../../capabilities/shell.nix
-  ] ++ (builtins.attrValues outputs.homeManagerModules) ;
+      ../../capabilities/common
+      ../../capabilities/cli
+      ../../capabilities/desktop
+      ../../capabilities/font_profiles
+      # ../../capabilities/git
+      # ../../capabilities/shell.nix
+    ]
+    ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
     # You can add overlays here
@@ -59,7 +61,7 @@
     };
   };
 
-    # TODO: Set your username
+  # TODO: Set your username
   home = {
     username = "${username}";
     homeDirectory = "/home/${username}";
@@ -89,7 +91,7 @@
       x = 1440;
       y = 180;
       scale = "1";
-      workspaces = [ "1" "2" "3" "4" ];
+      workspaces = ["1" "2" "3" "4"];
     }
     {
       name = "DP-1";
@@ -100,7 +102,7 @@
       y = 0;
       scale = "1.50";
       transform = 3;
-      workspaces = [ "5" "6" ];
+      workspaces = ["5" "6"];
     }
     {
       name = "HDMI-A-2";
@@ -110,11 +112,10 @@
       x = 4000;
       y = 180;
       scale = "1.50";
-      workspaces = [ "7" "8" ];
+      workspaces = ["7" "8"];
     }
   ];
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
-
 }
