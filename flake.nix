@@ -117,6 +117,21 @@
           }
         ];
       };
+      arakasi = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs outputs stylix username colour_scheme; };
+        modules = [
+          # > Our main nixos configuration file <
+          stylix.nixosModules.stylix
+          ./nixos/thanos/configuration.nix
+          disko.nixosModules.disko
+          home-manager.nixosModules.home-manager {
+            # home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.${username} = import ./home-manager/users/${username}/arakasi.nix
+            home-manager.extraSpecialArgs = { inherit inputs outputs stylix username colour_scheme; };
+          }
+        ];
+      };
     };
 
     # Standalone home-manager configuration entrypoint
