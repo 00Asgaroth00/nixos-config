@@ -39,6 +39,19 @@ in
           type = types.str;
           default = "1";
         };
+	transform = mkOption {
+	  # normal (no transforms) -> 0
+          # 90 degrees -> 1
+          # 180 degrees -> 2
+          # 270 degrees -> 3
+          # flipped -> 4
+          # flipped + 90 degrees -> 5
+          # flipped + 180 degrees -> 6
+          # flipped + 270 degrees -> 7
+
+	  type = types.int;
+	  default = 0;
+	};
         workspaces = mkOption {
           type = types.listOf types.str;
           example = [ "1" "4" ];

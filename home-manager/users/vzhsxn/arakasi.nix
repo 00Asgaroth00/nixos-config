@@ -99,6 +99,7 @@
       x = 0;
       y = 0;
       scale = "1.50";
+      transform = 3;
       workspaces = [ "5" "6" ];
     }
     {
