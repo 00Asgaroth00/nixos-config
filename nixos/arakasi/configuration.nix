@@ -294,7 +294,7 @@
   documentation.man.generateCaches = true;
 
   systemd.tmpfiles.rules = [
-    "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/vzhsx/arakasi_monitors_gdm.xml"
+    "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm.xml"
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
