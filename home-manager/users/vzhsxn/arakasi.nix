@@ -93,7 +93,7 @@
       width = 3840;
       height = 2160;
       refreshRate = 60;
-      scale = "1.50";
+      scale = "2";
       workspaces = [ "5" "6" ];
     }
     {
@@ -101,7 +101,7 @@
       width = 3840;
       height = 2160;
       refreshRate = 60;
-      scale = "1.50";
+      scale = "2";
       workspaces = [ "7" "8" ];
     }
   ];
