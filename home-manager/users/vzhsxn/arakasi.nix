@@ -79,12 +79,15 @@
   programs.home-manager.enable = true;
   # programs.git.enable = true;
 
+  # configure with nwg-displays
   monitors = [
     {
       name = "HDMI-A-1";
       width = 2560;
       height = 1440;
       refreshRate = 120;
+      x = 1440;
+      y = 180;
       scale = "1";
       workspaces = [ "1" "2" "3" "4" ];
     }
@@ -93,7 +96,9 @@
       width = 3840;
       height = 2160;
       refreshRate = 60;
-      scale = "2";
+      x = 0;
+      y = 0;
+      scale = "1.50";
       workspaces = [ "5" "6" ];
     }
     {
@@ -101,7 +106,9 @@
       width = 3840;
       height = 2160;
       refreshRate = 60;
-      scale = "2";
+      x = 4000;
+      y = 180;
+      scale = "1.50";
       workspaces = [ "7" "8" ];
     }
   ];
