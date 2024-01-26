@@ -299,7 +299,7 @@
 
   systemd.packages = [
     (pkgs.writeTextFile {
-      name = monitors.conf;
+      name = "monitors.conf";
       destination = "/etc/systemd/system/gdm.service.d/monitors.conf";
       text = ''
         [Service]
