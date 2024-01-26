@@ -1,15 +1,21 @@
-{ lib, pkgs, config, inputs, home-manager, username, ... }:
-let
+{
+  lib,
+  pkgs,
+  config,
+  inputs,
+  home-manager,
+  username,
+  ...
+}: let
   color = config.lib.stylix.colors;
 in {
-
   imports = [
     ../alacritty
     ../bemoji
     ../copyq
     ../dunst
     ../firefox
-    ../flameshot    # screenshot tool (issues on hyprland)
+    ../flameshot # screenshot tool (issues on hyprland)
     ../hyprpaper
     ../keepassxc
     # ../kitty
@@ -26,7 +32,7 @@ in {
 
   home.packages = with pkgs; [
     # hyprpaper # wallpaper manager
-    wev           # wayland event viewer
+    wev # wayland event viewer
     # strawberry    # media player
     # bemoji        # Emoji selector
     # wtype         # xdotool for wayland
@@ -34,7 +40,7 @@ in {
 
     # playerctl
     # swaybg
-    
+
     # grim
     # slurp
     # inputs.hyprland-contrib.packages.x86_64-linux.grimblast
@@ -62,12 +68,13 @@ in {
       ];
 
       workspace = lib.lists.flatten (map
-        (m:
-          map (w: "${w}, monitor:${m.name}") (m.workspaces)
+        (
+          m:
+            map (w: "${w}, monitor:${m.name}") (m.workspaces)
         )
         (config.monitors));
 
-      env = [ "XCURSOR_SIZE,24" ];
+      env = ["XCURSOR_SIZE,24"];
 
       general = {
         gaps_in = 5;
@@ -149,13 +156,17 @@ in {
       #   "natural_scroll" = true;
       # };
 
-      monitor = map
-        (m:
-          let
+      monitor =
+        map
+        (
+          m: let
             resolution = "${toString m.width}x${toString m.height}@${toString m.refreshRate}";
             position = "${toString m.x}x${toString m.y}";
-          in
-          "${m.name},${if m.enabled then "${resolution},${position},${toString m.scale},transform,${toString m.transform}" else "disable"}"
+          in "${m.name},${
+            if m.enabled
+            then "${resolution},${position},${toString m.scale},transform,${toString m.transform}"
+            else "disable"
+          }"
         )
         (config.monitors);
 
@@ -261,5 +272,4 @@ in {
       ];
     };
   };
-
 }
