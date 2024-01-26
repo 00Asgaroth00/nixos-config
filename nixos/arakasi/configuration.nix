@@ -293,6 +293,10 @@
   # Ensure that we can find stuff with `man -k`
   documentation.man.generateCaches = true;
 
+  systemd.tmpfiles.rules = [
+    "L+ /run/gdm/.config/monitors.xml /home/${username}/Git/nixos-config/home-manager/users/vzhsx/arakasi_monitors_gdm.xml"
+  ];
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.11";
 }

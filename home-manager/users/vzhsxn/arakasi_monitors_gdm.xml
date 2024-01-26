@@ -1,0 +1,65 @@
+<monitors version="2">
+  <configuration>
+    <logicalmonitor>
+      <x>1440</x>
+      <y>180</y>
+      <scale>1</scale>
+      <primary>yes</primary>
+      <monitor>
+        <monitorspec>
+          <connector>HDMI-A-1</connector>
+	        <!-- <vendor>AUO</vendor> -->
+	        <!-- <product>0x1536</product> -->
+	        <!-- <serial>0x00000000</serial> --> 
+        </monitorspec>
+        <mode>
+          <width>2560</width>
+          <height>1440</height>
+          <rate>120</rate>
+        </mode>
+      </monitor>
+    </logicalmonitor>
+    <logicalmonitor>
+      <x>0</x>
+      <y>0</y>
+      <scale>1.50</scale>
+      <primary>no</primary>
+      <transform>
+        <rotation>right</rotation>
+        <flipped>no</flipped>
+      </transform>
+      <monitor>
+        <monitorspec>
+          <connector>DP-1</connector>
+	        <!-- <vendor>SAM</vendor> -->
+	        <!-- <product>S24E650</product> -->
+	        <!-- <serial>H4ZH101485</serial> -->
+        </monitorspec>
+        <mode>
+          <width>3840</width>
+          <height>2160</height>
+          <rate>60</rate>
+        </mode>
+      </monitor>
+    </logicalmonitor>
+    <logicalmonitor>
+      <x>4000</x>
+      <y>180</y>
+      <scale>1.50</scale>
+      <primary>no</primary>
+      <monitor>
+        <monitorspec>
+          <connector>HDMI-A-2</connector>
+          <!-- <vendor>SAM</vendor> -->
+          <!-- <product>S24E650</product> -->
+          <!-- <serial>H4ZH101485</serial> -->
+        </monitorspec>
+        <mode>
+          <width>3840</width>
+          <height>2160</height>
+          <rate>60</rate>
+        </mode>
+      </monitor>
+    </logicalmonitor
+  </configuration>
+</monitors>
