@@ -19,7 +19,7 @@
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/C298-DECF";
+    { device = "/dev/disk/by-partlabel/disk-nvme1n1-ESP";
       fsType = "vfat";
     };
 
