@@ -187,7 +187,10 @@
 
   environment.shellAliases.rebuild = "sudo nixos-rebuild switch --flake /home/${username}/Git/nixos-config/\\#arakasi --show-trace";
 
-  # environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    WLR_NO_HARDWARE_CURSORS = "1";
+  };
 
   # fonts.fontDir.enable = true;
 
