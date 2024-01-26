@@ -81,12 +81,28 @@
 
   monitors = [
     {
-      name = "eDP-1";
-      width = 1920;
-      height = 1080;
-      refreshRate = 60;
+      name = "HDMI-A-1";
+      width = 2560;
+      height = 1440;
+      refreshRate = 120;
       scale = "1";
       workspaces = [ "1" "2" "3" "4" ];
+    }
+    {
+      name = "DP-1";
+      width = 3840;
+      height = 2160;
+      refreshRate = 60;
+      scale = "1.50";
+      workspaces = [ "5" "6" ];
+    }
+    {
+      name = "HDMI-A-2";
+      width = 3840;
+      height = 2160;
+      refreshRate = 60;
+      scale = "1.50";
+      workspaces = [ "7" "8" ];
     }
   ];
 
