@@ -24,6 +24,7 @@
     twinkle         # voip soft phone
     openlens        # kubernetes ide
     discord         # cross platform voice/text chat
+    nwg-displays    # gui for configuring screen layouts
   ];
 
   # dconf.settings = {
