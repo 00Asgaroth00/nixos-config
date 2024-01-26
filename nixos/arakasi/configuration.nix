@@ -293,8 +293,19 @@
   # Ensure that we can find stuff with `man -k`
   documentation.man.generateCaches = true;
 
-  systemd.tmpfiles.rules = [
-    "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm.xml"
+  # systemd.tmpfiles.rules = [
+  #   "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm.xml"
+  # ];
+
+  systemd.packages = [
+    (pkgs.writeTextFile {
+      name = monitors.conf;
+      destination = "/etc/systemd/system/gdm.service.d/monitors.conf";
+      text = ''
+        [Service]
+        ExecStartPre=cp /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm.xml /run/gdm/.config/monitors.xml
+      '';
+    })
   ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
