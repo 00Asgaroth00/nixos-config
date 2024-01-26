@@ -277,6 +277,8 @@
 
   services.blueman.enable = true;
 
+  services.fwupd.enable = true;
+
   # xdg.portal = {
   #   extraPortals = [ 
   #     pkgs.xdg-desktop-portal-gtk 
