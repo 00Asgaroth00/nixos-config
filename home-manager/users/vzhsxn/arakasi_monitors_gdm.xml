@@ -8,9 +8,9 @@
       <monitor>
         <monitorspec>
           <connector>HDMI-A-1</connector>
-	        <!-- <vendor>AUO</vendor> -->
-	        <!-- <product>0x1536</product> -->
-	        <!-- <serial>0x00000000</serial> --> 
+	        <vendor>unknown</vendor>
+	        <product>unknown</product>
+	        <serial>unknown</serial> 
         </monitorspec>
         <mode>
           <width>2560</width>
@@ -31,9 +31,9 @@
       <monitor>
         <monitorspec>
           <connector>DP-1</connector>
-	        <!-- <vendor>SAM</vendor> -->
-	        <!-- <product>S24E650</product> -->
-	        <!-- <serial>H4ZH101485</serial> -->
+	        <vendor>unknown</vendor>
+	        <product>unknown</product>
+	        <serial>unknown</serial>
         </monitorspec>
         <mode>
           <width>3840</width>
@@ -50,9 +50,9 @@
       <monitor>
         <monitorspec>
           <connector>HDMI-A-2</connector>
-          <!-- <vendor>SAM</vendor> -->
-          <!-- <product>S24E650</product> -->
-          <!-- <serial>H4ZH101485</serial> -->
+          <vendor>unknown</vendor>
+          <product>unknown</product>
+          <serial>unknown</serial>
         </monitorspec>
         <mode>
           <width>3840</width>
