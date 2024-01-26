@@ -18,7 +18,6 @@ in {
     ../strawberry
     ../thunderbird
     ../ulauncher
-    ../upower
     ../vscodium
     ../waybar
     ../wlogout
