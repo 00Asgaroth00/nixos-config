@@ -10,9 +10,8 @@
     displayManager.gdm = {
       enable = true;
       wayland = true;
+      debug = true;
     };
-
-    windowManager.hypr.enable = true;
 
     # windowManager.awesome.enable = true;
   };
