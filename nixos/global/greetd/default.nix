@@ -27,7 +27,7 @@
     ];
     settings = {
       background = {
-        path = "/home/vzhsxn/Git/nixos-config/home-manager/capabilities/desktop/wallpapers/zi2Bbda-anime-dragon-wallpaper.jpg"
+        path = "/home/vzhsxn/Git/nixos-config/home-manager/capabilities/desktop/wallpapers/zi2Bbda-anime-dragon-wallpaper.jpg";
       };
       commands = {
         reboot = [ "systemctl" "reboot" ];
