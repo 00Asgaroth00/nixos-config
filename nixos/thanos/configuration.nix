@@ -35,7 +35,7 @@
     ../global/locale
     ../global/pipewire
     ../global/xserver
-    ../global/greetd
+    # ../global/greetd
     ../global/xdg
     ../global/hyprland
     ../global/gtk

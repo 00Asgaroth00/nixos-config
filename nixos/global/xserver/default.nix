@@ -8,7 +8,7 @@
     enable = true;
 
     displayManager.gdm = {
-      enable = false;
+      enable = true;
       wayland = true;
       debug = false;
     };
