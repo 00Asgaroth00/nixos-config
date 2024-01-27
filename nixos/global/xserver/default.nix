@@ -10,7 +10,7 @@
     displayManager.gdm = {
       enable = true;
       wayland = true;
-      debug = true;
+      debug = false;
     };
 
     # windowManager.awesome.enable = true;
