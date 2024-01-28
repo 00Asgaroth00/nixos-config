@@ -37,8 +37,8 @@
     ../global/xserver
     # ../global/greetd
     ../global/xdg
-    ../global/hyprland
-    ../global/gtk
+    # ../global/hyprland
+    # ../global/gtk
     ../global/qt
     ../global/fonts
     ../global/stylix
