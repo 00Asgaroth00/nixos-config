@@ -15,10 +15,9 @@
     extraPackages = with pkgs; [
       docker-buildx
       docker-compose
-      lib.mkIf
-      (config.networking.hostName == "arakasi")
-      nvidia-docker
+      
       # nvidia-docker # inject this for main workstation, dont have nvidia gpu on laptop
     ];
+    lib.mkIf (config.networking.hostName == "arakasi") extraPackages = [nvidia-docker];
   };
 }
