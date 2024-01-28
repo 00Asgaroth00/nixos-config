@@ -17,7 +17,7 @@
           {
             criteria = "LG Electronics LG HDR 4K 0x0004DC12";
             position = "0,0";
-            mode = "3840x2160@60";
+            mode = "3840x2160@30"; # investigate why nbot 60Hz, check cable
             scale = 1.5;
             transform = "270"; # null or one of “normal”, “90”, “180”, “270”, “flipped”, “flipped-90”, “flipped-180”, “flipped-270”
             status = "enable";
