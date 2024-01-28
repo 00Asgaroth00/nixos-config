@@ -2,9 +2,17 @@
   description = "Your new nix config";
 
   nixConfig = {
-    experimental-features = [ "nix-command" "flakes" ];
-    substituters = [ "https://cache.nixos.org" ];
-    extraSubstituters = [ "https://nix-community.cachix.org" ];
+    experimental-features = ["nix-command" "flakes"];
+    substituters = [
+      "https://cache.nixos.org"
+      "https://hyprland.cachix.org"
+    ];
+    trusted-public-keys = [
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+    ];
+    extraSubstituters = [
+      "https://nix-community.cachix.org"
+    ];
     extra-trusted-public-keys = [
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
     ];
@@ -52,7 +60,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-stable.follows = "nixpkgs";
     };
-
   };
 
   outputs = {
@@ -103,32 +110,34 @@
     nixosConfigurations = {
       # DELL XPS 13 7390
       thanos = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs stylix username colour_scheme; };
+        specialArgs = {inherit inputs outputs stylix username colour_scheme;};
         modules = [
           # > Our main nixos configuration file <
           stylix.nixosModules.stylix
           ./nixos/thanos/configuration.nix
           disko.nixosModules.disko
-          home-manager.nixosModules.home-manager {
+          home-manager.nixosModules.home-manager
+          {
             # home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = import ./home-manager/users/${username}/thanos.nix;
-            home-manager.extraSpecialArgs = { inherit inputs outputs stylix username colour_scheme; };
+            home-manager.extraSpecialArgs = {inherit inputs outputs stylix username colour_scheme;};
           }
         ];
       };
       arakasi = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs stylix username colour_scheme; };
+        specialArgs = {inherit inputs outputs stylix username colour_scheme;};
         modules = [
           # > Our main nixos configuration file <
           stylix.nixosModules.stylix
           ./nixos/arakasi/configuration.nix
           disko.nixosModules.disko
-          home-manager.nixosModules.home-manager {
+          home-manager.nixosModules.home-manager
+          {
             # home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${username} = import ./home-manager/users/${username}/arakasi.nix;
-            home-manager.extraSpecialArgs = { inherit inputs outputs stylix username colour_scheme; };
+            home-manager.extraSpecialArgs = {inherit inputs outputs stylix username colour_scheme;};
           }
         ];
       };
