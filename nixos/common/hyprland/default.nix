@@ -7,7 +7,7 @@
   programs.hyprland = {
     enable = true;
     # package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    packages = pkgs.hyprland;
+    package = pkgs.hyprland;
   };
 
   xdg = {
