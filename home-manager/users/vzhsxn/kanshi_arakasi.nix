@@ -12,7 +12,7 @@
             mode = "2560x1440@120";
             scale = 1;
             transform = "normal"; # null or one of “normal”, “90”, “180”, “270”, “flipped”, “flipped-90”, “flipped-180”, “flipped-270”
-            status = "enabled";
+            status = "enable";
           }
           {
             criteria = "LG Electronics LG HDR 4K 0x0004DC12";
@@ -20,7 +20,7 @@
             mode = "3840x2160@60";
             scale = 1.5;
             transform = "270"; # null or one of “normal”, “90”, “180”, “270”, “flipped”, “flipped-90”, “flipped-180”, “flipped-270”
-            status = "enabled";
+            status = "enable";
           }
           {
             criteria = "LG Electronics LG HDR 4K 0x0004DC17";
@@ -28,7 +28,7 @@
             mode = "3840x2160@60";
             scale = 1.5;
             transform = "normal"; # null or one of “normal”, “90”, “180”, “270”, “flipped”, “flipped-90”, “flipped-180”, “flipped-270”
-            status = "enabled";
+            status = "enable";
           }
         ];
       };
