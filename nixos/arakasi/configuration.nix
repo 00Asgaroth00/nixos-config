@@ -35,6 +35,7 @@
 
     ../global/locale
     ../global/pipewire
+    ../greetd
     ../global/xserver
     ../global/xdg
     ../global/hyprland
@@ -293,9 +294,9 @@
   # Ensure that we can find stuff with `man -k`
   documentation.man.generateCaches = true;
 
-  systemd.tmpfiles.rules = [
-    "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm_gnome_generated.xml"
-  ];
+  # systemd.tmpfiles.rules = [
+  #   "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm_gnome_generated.xml"
+  # ];
 
   # systemd.packages = [
   #   (pkgs.writeTextFile {

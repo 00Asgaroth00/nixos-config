@@ -8,7 +8,7 @@
     enable = true;
 
     displayManager.gdm = {
-      enable = true;
+      enable = false; # disable this while testing greetd
       wayland = true;
       debug = false;
     };
