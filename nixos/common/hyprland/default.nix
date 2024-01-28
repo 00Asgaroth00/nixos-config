@@ -18,7 +18,7 @@
       enable = true;
       extraPortals = [
         inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland
-	inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-gtk # required for gdm
+	pkgs.xdg-desktop-portal-gtk # required for gdm
         # xdg-desktop-portal-wlr
       ];
       # configPackages = [ pkgs.hyprland ];
