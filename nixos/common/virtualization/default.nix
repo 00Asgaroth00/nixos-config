@@ -18,6 +18,7 @@
 
       # nvidia-docker # inject this for main workstation, dont have nvidia gpu on laptop
     ];
-    extraPackages = lib.mkIf (config.networking.hostName == "arakasi") [pkgs.nvidia-docker];
   };
+
+  virtualization.docker.extraPackages = lib.mkIf (config.networking.hostName == "arakasi") [pkgs.nvidia-docker];
 }
