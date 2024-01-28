@@ -38,8 +38,8 @@
     ../common/services
     ../common/users
 
-    ../global/locale
-    ../global/pipewire
+    # ../global/locale
+    # ../global/pipewire
     ../global/greetd
     ../global/xserver
     ../global/xdg
@@ -48,7 +48,7 @@
     ../global/qt
     ../global/fonts
     ../global/stylix
-    ../global/virtualisation
+    # ../global/virtualisation
     ../global/neovim # Managed by home manager as well
   ];
 
@@ -91,10 +91,6 @@
       };
     };
   };
-
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
-  # boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
 
   console = {
     font = "Lat2-Terminus16";
