@@ -182,7 +182,7 @@
 
   # services.blueman.enable = true;
 
-  services.fwupd.enable = true;
+  # services.fwupd.enable = true;
 
   # xdg.portal = {
   #   extraPortals = [
