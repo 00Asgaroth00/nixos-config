@@ -10,7 +10,7 @@
             criteria = "Microstep MAG274QRF-QD CA8A391A00356";
             position = "1440,180";
             mode = "2560x1440@120";
-            scale = 1;
+            scale = 1.0;
             transform = "normal"; # null or one of “normal”, “90”, “180”, “270”, “flipped”, “flipped-90”, “flipped-180”, “flipped-270”
             status = "enable";
           }
