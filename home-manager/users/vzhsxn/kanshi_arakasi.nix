@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   services.kanshi = {
     enable = true;
-    package = pkgs.kanshi;
+    # package = pkgs.kanshi;
     systemdTarget = "graphical-session.target";
     profiles = {
       home = {
