@@ -185,7 +185,7 @@
   #   # thermald
   # ];
 
-  environment.shellAliases.rebuild = "sudo nixos-rebuild switch --flake /home/${username}/Git/nixos-config/\\#arakasi --show-trace";
+  # environment.shellAliases.rebuild = "sudo nixos-rebuild switch --flake /home/${username}/Git/nixos-config/\\#arakasi --show-trace";
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";

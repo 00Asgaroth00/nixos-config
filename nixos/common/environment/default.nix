@@ -16,6 +16,10 @@
       usbutils
     ];
 
+    shellAliases = {
+      rebuild = "sudo nixos-rebuild switch --flake ~/Git/nixos-config/\\#${networking.hostName} --show-trace";
+    };
+
     shells = with pkgs; [
       zsh
       bash
