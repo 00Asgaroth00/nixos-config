@@ -34,6 +34,7 @@
     ./disko-config.nix
 
     ../common
+    ../common/services
 
     ../global/locale
     ../global/pipewire
@@ -209,22 +210,22 @@
 
   services.geoclue2.enable = true;
 
-  services.zfs = {
-    autoScrub.enable = true;
-    trim.enable = true;
-  };
+  # services.zfs = {
+  #   autoScrub.enable = true;
+  #   trim.enable = true;
+  # };
 
-  # This setups a SSH server. Very important if you're setting up a headless system.
-  # Feel free to remove if you don't need it.
-  services.openssh = {
-    enable = true;
-    settings = {
-      # Forbid root login through SSH.
-      PermitRootLogin = "no";
-      # Use keys only. Remove if you want to SSH using password (not recommended)
-      # PasswordAuthentication = false;
-    };
-  };
+  # # This setups a SSH server. Very important if you're setting up a headless system.
+  # # Feel free to remove if you don't need it.
+  # services.openssh = {
+  #   enable = true;
+  #   settings = {
+  #     # Forbid root login through SSH.
+  #     PermitRootLogin = "no";
+  #     # Use keys only. Remove if you want to SSH using password (not recommended)
+  #     # PasswordAuthentication = false;
+  #   };
+  # };
 
   services.gnome.gnome-keyring.enable = true;
 
