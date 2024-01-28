@@ -6,7 +6,7 @@
 }: {
   programs.hyprland = {
     enable = true;
-    packages = inputs.hyprland.packages.${pkgs.system}.hyprland;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     # packages = pkgs.hyprland
   };
 
