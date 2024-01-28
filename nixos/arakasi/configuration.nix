@@ -41,12 +41,12 @@
 
     # ../global/locale
     # ../global/pipewire
-    ../global/greetd
-    ../global/xserver
+    # ../global/greetd
+    # ../global/xserver
     # ../global/xdg
     # ../global/hyprland
-    ../global/gtk
-    ../global/qt
+    # ../global/gtk
+    # ../global/qt
     # ../global/fonts
     # ../global/stylix
     # ../global/virtualisation
