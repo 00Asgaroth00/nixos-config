@@ -35,6 +35,7 @@
     ./disko-config.nix
 
     ../common
+    ../common/programs
     ../common/services
     ../common/users
 
@@ -159,7 +160,7 @@
 
   # fonts.fontDir.enable = true;
 
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
 
   # settings specific to this machine, augments ../global/xserver/default.nix
   services.xserver = {
@@ -183,12 +184,12 @@
 
   # services.dbus.packages = [ pkgs.gcr ];
 
-  programs = {
-    gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
-  };
+  # programs = {
+  #   gnupg.agent = {
+  #     enable = true;
+  #     enableSSHSupport = true;
+  #   };
+  # };
 
   programs.dconf.enable = true;
 
