@@ -25,7 +25,7 @@
       # ./nvim.nix
 
       # nix-colors.homeManagerModule
-
+      (./. + "/kanshi_${osConfig.networking.hostName}.nix")
       ../../capabilities/common
       ../../capabilities/cli
       ../../capabilities/desktop
