@@ -126,22 +126,47 @@
     };
   };
 
-  networking.hostName = "arakasi";
-  networking.hostId = "a5569f6b";
-  networking.useDHCP = lib.mkForce true;
-  networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.backend = "iwd"; # default is "wpa_supplicant"
-  networking.wireless.iwd = {
-    enable = true;
-    settings = {
-      Network = {
-        EnableIPv6 = false; # default true
+  networking = {
+    hostId = "a5569f6b";
+    hostName = "arakasi";
+    useDHCP = lib.mkForce true;
+    networkmanager = {
+      enable = true;
+      wifi = {
+        backend = "iwd";
       };
-      Settings = {
-        AutoConnect = true;
+    };
+    wireless = {
+      iwd = {
+        enable = true;
+        settings = {
+          Network = {
+            EnableIPv6 = false; # default true
+          };
+          Settings = {
+            AutoConnect = true;
+          };
+        };
       };
     };
   };
+
+  # networking.hostName = "arakasi";
+  # networking.hostId = "a5569f6b";
+  # networking.useDHCP = lib.mkForce true;
+  # networking.networkmanager.enable = true;
+  # networking.networkmanager.wifi.backend = "iwd"; # default is "wpa_supplicant"
+  # networking.wireless.iwd = {
+  #   enable = true;
+  #   settings = {
+  #     Network = {
+  #       EnableIPv6 = false; # default true
+  #     };
+  #     Settings = {
+  #       AutoConnect = true;
+  #     };
+  #   };
+  # };
 
   # fonts.fontDir.enable = true;
 
