@@ -78,10 +78,57 @@
 
   # FIXME: Add the rest of your current configuration
 
+  # TODO: This is just an example, be sure to use whatever bootloader you prefer
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+
+  console = {
+    font = "Lat2-Terminus16";
+    # keyMap = "uk";
+    useXkbConfig = true;
+  };
+
+  # configure nixos with the specified devices
+  # should be true if the system is booted with those devices
+  # should be false on an installer image etc.
+  disko.enableConfig = true;
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    WLR_NO_HARDWARE_CURSORS = "1";
+  };
+
+  hardware = {
+    bluetooth = {
+      enable = false;
+      powerOnBoot = true;
+    };
+
+    enableRedistributableFirmware = true;
+
+    nvidia = {
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      open = false;
+      modesetting.enable = true;
+      nvidiaSettings = true;
+      prime.offload.enable = false;
+      powerManagement = {
+        enable = false;
+        finegrained = false;
+      };
+    };
+
+    opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+  };
+
   networking.hostName = "arakasi";
   networking.hostId = "a5569f6b";
   networking.useDHCP = lib.mkForce true;
-  # networking.wireless.iwd.enable = true;
   networking.networkmanager.enable = true;
   networking.networkmanager.wifi.backend = "iwd"; # default is "wpa_supplicant"
   networking.wireless.iwd = {
@@ -94,54 +141,6 @@
         AutoConnect = true;
       };
     };
-  };
-
-  # TODO: This is just an example, be sure to use whatever bootloader you prefer
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
-
-  # configure nixos with the specified devices
-  # should be true if the system is booted with those devices
-  # should be false on an installer image etc.
-  disko.enableConfig = true;
-
-  hardware.enableRedistributableFirmware = true;
-
-  console = {
-    font = "Lat2-Terminus16";
-    # keyMap = "uk";
-    useXkbConfig = true;
-  };
-
-  # systemd.sleep.extraConfig = "SuspendState=freeze";
-
-  # # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
-  # users.users = {
-  #   root = {
-  #     hashedPassword = "$y$j9T$MWL7ZiI04tv19poUTs./e1$DnFUJwg.lHgoypCyyl8s/NxVsQseq16KLFQajBpmMIB";
-  #   };
-  #   ${username} = {
-  #     # TODO: You can set an initial password for your user.
-  #     # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
-  #     # Be sure to change it (using passwd) after rebooting!
-  #     # run 'mkpasswd -m yescrypt'
-  #     # initialPassword = "correcthorsebatterystaple";
-  #     hashedPassword = "$y$j9T$LOW.UUJZdl94Miro2rPYi0$X7HGYuYWgrG87fGU9F31lElzJSrXC3rwYozqYbc0fZ6";
-  #     isNormalUser = true;
-  #     shell = pkgs.zsh;
-  #     openssh.authorizedKeys.keys = [
-  #       # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
-  #     ];
-  #     # TODO: Be sure to add any other groups you need (such as networkmanager, audio, docker, etc)
-  #     extraGroups = ["wheel" "networkmanager" "systemd-journal"];
-  #     packages = [pkgs.home-manager];
-  #   };
-  # };
-
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    WLR_NO_HARDWARE_CURSORS = "1";
   };
 
   # fonts.fontDir.enable = true;
@@ -181,29 +180,6 @@
 
   # services.auto-cpufreq.enable = true;
 
-  hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    open = false;
-    modesetting.enable = true;
-    nvidiaSettings = true;
-    prime.offload.enable = false;
-    powerManagement = {
-      enable = false;
-      finegrained = false;
-    };
-  };
-
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
-
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-
   services.blueman.enable = true;
 
   services.fwupd.enable = true;
@@ -227,9 +203,6 @@
   #   };
 
   # };
-
-  # # Ensure that we can find stuff with `man -k`
-  # documentation.man.generateCaches = true;
 
   # systemd.tmpfiles.rules = [
   #   "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm_gnome_generated.xml"
