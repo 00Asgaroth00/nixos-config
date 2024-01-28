@@ -5,7 +5,7 @@
   ...
 }: {
   programs.hyprland = {
-    enable = true;
+    enable = false;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     # packages = pkgs.hyprland
   };
@@ -15,7 +15,7 @@
         enable = true;
       };
     portal = {
-      enable = true;
+      enable = false;
       extraPortals = [
         inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland
 	pkgs.xdg-desktop-portal-gtk # required for gdm
