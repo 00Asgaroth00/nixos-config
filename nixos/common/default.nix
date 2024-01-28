@@ -5,6 +5,6 @@
     ./locale
     ./nix
     ./pipewire
-    ./virtualization
+    ./virtualisation
   ];
 }
