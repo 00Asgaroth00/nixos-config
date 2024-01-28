@@ -80,11 +80,12 @@
   # FIXME: Add the rest of your current configuration
 
   boot = {
+    kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
     loader = {
       efi = {
         canTouchEfiVariables = true;
       };
-      kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+
       systemd-boot = {
         enable = true;
       };
