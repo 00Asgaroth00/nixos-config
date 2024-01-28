@@ -10,17 +10,18 @@
     # packages = pkgs.hyprland
   };
 
-  # xdg = {
-  #   portal = {
-  #     enable = true;
-  #     mime = {
-  #       enable = true;
-  #     };
-  #     extraPortals = with pkgs; [
-  #       xdg-desktop-portal-hyprland
-  #       # xdg-desktop-portal-wlr
-  #     ];
-  #     configPackages = [ pkgs.hyprland ];
-  #   };
-  # };
+  xdg = {
+    portal = {
+      enable = true;
+      mime = {
+        enable = true;
+      };
+      extraPortals = [
+        inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland
+	inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-gtk # required for gdm
+        # xdg-desktop-portal-wlr
+      ];
+      # configPackages = [ pkgs.hyprland ];
+    };
+  };
 }
