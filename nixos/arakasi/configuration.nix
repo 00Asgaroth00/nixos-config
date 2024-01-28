@@ -166,24 +166,24 @@
     };
   };
 
-  environment.shells = [pkgs.zsh pkgs.bash];
-  environment.systemPackages = with pkgs; [
-    # neovim
-    git
-    wget
-    neofetch
-    # yubikey-personalization
-    # yubikey-manager
-    # pavucontrol
-    pulseaudio
-    # jack2
-    libcamera
-    # qmk
-    pciutils
-    hwloc
-    usbutils
-    # thermald
-  ];
+  # environment.shells = [pkgs.zsh pkgs.bash];
+  # environment.systemPackages = with pkgs; [
+  #   # neovim
+  #   git
+  #   wget
+  #   neofetch
+  #   # yubikey-personalization
+  #   # yubikey-manager
+  #   # pavucontrol
+  #   pulseaudio
+  #   # jack2
+  #   libcamera
+  #   # qmk
+  #   pciutils
+  #   hwloc
+  #   usbutils
+  #   # thermald
+  # ];
 
   environment.shellAliases.rebuild = "sudo nixos-rebuild switch --flake /home/${username}/Git/nixos-config/\\#arakasi --show-trace";
 
