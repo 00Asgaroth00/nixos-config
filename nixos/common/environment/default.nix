@@ -4,6 +4,15 @@
   ...
 }: {
   environment = {
+    shells = with pkgs; [
+      zsh
+      bash
+    ];
+
+    shellAliases = {
+      rebuild = "sudo nixos-rebuild switch --flake ~/Git/nixos-config/\\#${config.networking.hostName} --show-trace";
+    };
+
     systemPackages = with pkgs; [
       neovim
       git
@@ -18,15 +27,6 @@
       pciutils
       hwloc
       usbutils
-    ];
-
-    shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake ~/Git/nixos-config/\\#${config.networking.hostName} --show-trace";
-    };
-
-    shells = with pkgs; [
-      zsh
-      bash
     ];
   };
 }
