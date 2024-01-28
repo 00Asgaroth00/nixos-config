@@ -1,5 +1,6 @@
 {...}: {
   imports = [
+    ./documentation
     ./environment
     ./nix
   ];

@@ -294,8 +294,8 @@
 
   # };
 
-  # Ensure that we can find stuff with `man -k`
-  documentation.man.generateCaches = true;
+  # # Ensure that we can find stuff with `man -k`
+  # documentation.man.generateCaches = true;
 
   # systemd.tmpfiles.rules = [
   #   "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm_gnome_generated.xml"
