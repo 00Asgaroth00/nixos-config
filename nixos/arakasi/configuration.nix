@@ -30,6 +30,7 @@
     inputs.nixos-hardware.nixosModules.common-gpu-nvidia
     inputs.nixos-hardware.nixosModules.common-pc
     inputs.nixos-hardware.nixosModules.common-pc-ssd
+
     ./hardware-configuration.nix
     ./disko-config.nix
 
@@ -78,10 +79,21 @@
 
   # FIXME: Add the rest of your current configuration
 
-  # TODO: This is just an example, be sure to use whatever bootloader you prefer
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+  boot = {
+    loader = {
+      efi = {
+        canTouchEfiVariables = true;
+      };
+      kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+      systemd-boot = {
+        enable = true;
+      };
+    };
+  };
+
+  # boot.loader.systemd-boot.enable = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
+  # boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
 
   console = {
     font = "Lat2-Terminus16";
@@ -89,9 +101,6 @@
     useXkbConfig = true;
   };
 
-  # configure nixos with the specified devices
-  # should be true if the system is booted with those devices
-  # should be false on an installer image etc.
   disko.enableConfig = true;
 
   environment.sessionVariables = {
@@ -150,23 +159,6 @@
       };
     };
   };
-
-  # networking.hostName = "arakasi";
-  # networking.hostId = "a5569f6b";
-  # networking.useDHCP = lib.mkForce true;
-  # networking.networkmanager.enable = true;
-  # networking.networkmanager.wifi.backend = "iwd"; # default is "wpa_supplicant"
-  # networking.wireless.iwd = {
-  #   enable = true;
-  #   settings = {
-  #     Network = {
-  #       EnableIPv6 = false; # default true
-  #     };
-  #     Settings = {
-  #       AutoConnect = true;
-  #     };
-  #   };
-  # };
 
   # fonts.fontDir.enable = true;
 
