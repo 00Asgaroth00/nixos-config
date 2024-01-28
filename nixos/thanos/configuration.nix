@@ -37,8 +37,8 @@
     ../global/xserver
     # ../global/greetd
     ../global/xdg
-    # ../global/hyprland
-    # ../global/gtk
+    ../global/hyprland   # disable this when testing with gnome
+    ../global/gtk        # disable this when testing with gnome
     ../global/qt
     ../global/fonts
     ../global/stylix

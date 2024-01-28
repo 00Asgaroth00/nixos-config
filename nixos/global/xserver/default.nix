@@ -13,7 +13,7 @@
       debug = false;
     };
 
-    desktopManager.gnome.enable = true; # used for testing only
+    # desktopManager.gnome.enable = true; # when enabled be sure to disable assiciated options in configuration.nix and home-manager base user
     # windowManager.awesome.enable = true;
   };
 }

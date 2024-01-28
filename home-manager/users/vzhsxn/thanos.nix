@@ -26,7 +26,7 @@
 
     ../../capabilities/common
     ../../capabilities/cli
-    # ../../capabilities/desktop
+    ../../capabilities/desktop        # diable this when testing with gnome
     ../../capabilities/font_profiles
     # ../../capabilities/git
     # ../../capabilities/shell.nix
