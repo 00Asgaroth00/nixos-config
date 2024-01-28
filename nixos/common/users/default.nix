@@ -1,6 +1,6 @@
 {username, ...}: {
-    imports = [
-        ./root
-        (./. + "/${username}")
-    ]
+  imports = [
+    ./root
+    (./. + "/${username}")
+  ];
 }
