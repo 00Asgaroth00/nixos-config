@@ -6,8 +6,6 @@
     substituters = [
       "https://cache.nixos.org"
     ];
-    trusted-public-keys = [
-    ];
     extraSubstituters = [
       "https://nix-community.cachix.org"
       "https://hyprland.cachix.org"
