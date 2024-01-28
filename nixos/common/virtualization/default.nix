@@ -20,5 +20,5 @@
     ];
   };
 
-  virtualization.docker.extraPackages = lib.mkIf (config.networking.hostName == "arakasi") [pkgs.nvidia-docker];
+  virtualisation.docker.extraPackages = lib.mkIf (config.networking.hostName == "arakasi") [pkgs.nvidia-docker];
 }
