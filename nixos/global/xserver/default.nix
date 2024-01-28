@@ -13,6 +13,7 @@
       debug = false;
     };
 
+    desktopManager.gnome.enable = true; # used for testing only
     # windowManager.awesome.enable = true;
   };
 }

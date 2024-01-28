@@ -26,7 +26,7 @@
 
     ../../capabilities/common
     ../../capabilities/cli
-    ../../capabilities/desktop
+    # ../../capabilities/desktop
     ../../capabilities/font_profiles
     # ../../capabilities/git
     # ../../capabilities/shell.nix
