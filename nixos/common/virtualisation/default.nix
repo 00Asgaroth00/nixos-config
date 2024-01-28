@@ -20,9 +20,7 @@
     # ];
     extraPackages = lib.mkMerge [
       [pkgs.docker-buildx pkgs.docker-compose]
-      lib.mkIf
-      (config.networking.hostName == "arakasi")
-      [pkgs.nvidia-docker]
+      (lib.mkIf (config.networking.hostName == "arakasi") [pkgs.nvidia-docker])
     ];
   };
 
