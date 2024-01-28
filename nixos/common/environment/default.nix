@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   environment = {
     systemPackages = with pkgs; [
       neovim
@@ -17,7 +21,7 @@
     ];
 
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake ~/Git/nixos-config/\\#${networking.hostName} --show-trace";
+      rebuild = "sudo nixos-rebuild switch --flake ~/Git/nixos-config/\\#${config.networking.hostName} --show-trace";
     };
 
     shells = with pkgs; [
