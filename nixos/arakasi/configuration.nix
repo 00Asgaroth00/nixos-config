@@ -37,8 +37,8 @@
     ../global/pipewire
     ../global/xserver
     ../global/xdg
-    # ../global/hyprland
-    # ../global/gtk
+    ../global/hyprland
+    ../global/gtk
     ../global/qt
     ../global/fonts
     ../global/stylix
@@ -294,7 +294,7 @@
   documentation.man.generateCaches = true;
 
   systemd.tmpfiles.rules = [
-    "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm.xml"
+    "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm_gnome_generated.xml"
   ];
 
   # systemd.packages = [
