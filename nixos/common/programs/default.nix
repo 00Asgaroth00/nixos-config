@@ -1,6 +1,7 @@
 {...}: {
   imports = [
     ./gnupg
+    ./neovim
     ./zsh
   ];
 }

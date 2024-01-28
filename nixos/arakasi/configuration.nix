@@ -48,9 +48,9 @@
     ../global/gtk
     ../global/qt
     ../global/fonts
-    ../global/stylix
+    # ../global/stylix
     # ../global/virtualisation
-    ../global/neovim # Managed by home manager as well
+    # ../global/neovim # Managed by home manager as well
   ];
 
   nixpkgs = {

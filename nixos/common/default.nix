@@ -5,6 +5,7 @@
     ./locale
     ./nix
     ./pipewire
+    ./stylix
     ./virtualisation
   ];
 }
