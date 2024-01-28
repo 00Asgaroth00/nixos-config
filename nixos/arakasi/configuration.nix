@@ -43,11 +43,11 @@
     # ../global/pipewire
     ../global/greetd
     ../global/xserver
-    ../global/xdg
-    ../global/hyprland
+    # ../global/xdg
+    # ../global/hyprland
     ../global/gtk
     ../global/qt
-    ../global/fonts
+    # ../global/fonts
     # ../global/stylix
     # ../global/virtualisation
     # ../global/neovim # Managed by home manager as well
@@ -191,7 +191,8 @@
   #   };
   # };
 
-  programs.dconf.enable = true;
+  # not sure about this one
+  # programs.dconf.enable = true;
 
   # services.auto-cpufreq.enable = true;
 
