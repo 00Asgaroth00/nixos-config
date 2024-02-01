@@ -29,6 +29,9 @@
     discord # cross platform voice/text chat
     nwg-displays # gui for configuring screen layouts
     wlr-randr # needed for nwg-displays
+    zapzap # whatsapp linux tool
+    signal-desktop # signal messanger
+    element-desktop # matrix collaboration client
   ];
 
   # dconf.settings = {
