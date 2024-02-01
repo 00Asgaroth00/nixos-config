@@ -16,6 +16,7 @@ in {
     ../copyq
     ../dunst
     ../firefox
+    ../microsoft-edge
     ../flameshot # screenshot tool (issues on hyprland)
     ../hyprpaper
     ../keepassxc
