@@ -1,8 +1,20 @@
-{lib, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   time.timeZone = lib.mkDefault "Europe/Dublin";
 
   i18n = {
     defaultLocale = lib.mkDefault "en_IE.UTF-8";
+    inputMethod = {
+      enabled = "fcitx5";
+      fcitx5.addons = with pkgs; [
+        fcitx5-gtk
+        fcitx5-configtool
+        fcitx5-with-addons
+      ];
+    };
     extraLocaleSettings = {
       LC_ADDRESS = lib.mkDefault "en_IE.UTF-8";
       LC_IDENTIFICATION = lib.mkDefault "en_IE.UTF-8";
