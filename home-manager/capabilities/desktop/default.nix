@@ -1,13 +1,16 @@
-{ pkgs, home-manager, ... }:
-
 {
+  pkgs,
+  home-manager,
+  ...
+}: {
   imports = [
     ./hyprland
     ./gtk
   ];
 
-    home.packages = with pkgs; [
+  home.packages = with pkgs; [
     slack
+    teams # micrsoft teams
     # webcord
     # zoom-us
     xfce.thunar
@@ -20,12 +23,12 @@
     mpv
     # tidal-hifi
     font-manager
-    wireshark       # network anaylyzer
-    twinkle         # voip soft phone
-    openlens        # kubernetes ide
-    discord         # cross platform voice/text chat
-    nwg-displays    # gui for configuring screen layouts
-    wlr-randr       # needed for nwg-displays
+    wireshark # network anaylyzer
+    twinkle # voip soft phone
+    openlens # kubernetes ide
+    discord # cross platform voice/text chat
+    nwg-displays # gui for configuring screen layouts
+    wlr-randr # needed for nwg-displays
   ];
 
   # dconf.settings = {
@@ -70,5 +73,4 @@
 
   # home.sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Blue-light";
   # home.sessionVariables.GTK_THEME = "Catppuccin-Mocha-Standard-Blue-Dark";
-
 }
