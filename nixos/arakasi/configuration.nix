@@ -175,7 +175,7 @@
 
   # services.geoclue2.enable = true;
 
-  services.gnome.gnome-keyring.enable = true;
+  # services.gnome.gnome-keyring.enable = true;
 
   security.pam.services = {
     gdm.enableGnomeKeyring = true; # unlock keyring with gdm / gdm support for keyring
