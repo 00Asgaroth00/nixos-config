@@ -24,6 +24,7 @@ in {
     # ../satty        # screenshot tool
     ../strawberry
     ../thunderbird
+    ../udiskie
     ../ulauncher
     ../vscodium
     ../waybar
