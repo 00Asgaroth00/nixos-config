@@ -32,6 +32,7 @@
     zapzap # whatsapp linux tool
     signal-desktop # signal messanger
     element-desktop # matrix collaboration client
+    microsoft-edge-beta # ms edge browser
   ];
 
   # dconf.settings = {
