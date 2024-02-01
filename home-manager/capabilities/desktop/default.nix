@@ -10,7 +10,7 @@
 
   home.packages = with pkgs; [
     slack
-    teams # micrsoft teams
+    teams-for-linux # micrsoft teams unofficial wrapper
     # webcord
     # zoom-us
     xfce.thunar
