@@ -4,7 +4,7 @@
   ];
 
   xdg.configFile."hypr/per-app/firefox.conf".text = ''
-    bind = $mainMod, E, exec, ${pkgs.micrsoft-edge-beta}/opt/microsoft/msedge-beta/microsoft-edge
-    exec-once = [workspace 2 silent] ${pkgs.micrsoft-edge-beta}/opt/microsoft/msedge-beta/microsoft-edge
+    bind = $mainMod, E, exec, ${pkgs.microsoft-edge-beta}/opt/microsoft/msedge-beta/microsoft-edge
+    exec-once = [workspace 2 silent] ${pkgs.microsoft-edge-beta}/opt/microsoft/msedge-beta/microsoft-edge
   '';
 }
