@@ -14,6 +14,8 @@
     };
 
     systemPackages = with pkgs; [
+      # dbus
+      # wmctrl
       neovim
       git
       wget
