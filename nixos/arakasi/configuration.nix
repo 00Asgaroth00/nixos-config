@@ -135,13 +135,13 @@ in {
       driSupport32Bit = true;
       extraPackages = with pkgs; [
         nvidia-vaapi-driver
-        # libGL
+        libGL
         # libvdpau-va-gl
         vulkan-tools
         # vaapiVdpau
         mesa.drivers
       ];
-      # setLdLibraryPath = true;
+      setLdLibraryPath = true;
     };
   };
 
