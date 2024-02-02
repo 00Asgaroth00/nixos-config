@@ -12,7 +12,7 @@
   colour_scheme,
   ...
 }: let
-  monitorsXmlContent = builtins.readFile /home/${username}/Git/nixos-config/home-manager/users/${username}/${networking.hostName}_monitoris_gdm.xml;
+  monitorsXmlContent = builtins.readFile /home/${username}/Git/nixos-config/home-manager/users/${username}/${config.networking.hostName}_monitoris_gdm.xml;
   monitorsConfig = pkgs.writeText "gdm_monitors.xml" monitorsXmlContent;
 in {
   # You can import other NixOS modules here
