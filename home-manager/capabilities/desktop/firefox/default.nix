@@ -1,14 +1,17 @@
-{ pkgs, inputs, username, ... }: {
-
+{
+  pkgs,
+  inputs,
+  username,
+  ...
+}: {
   # see some user configurations below for inspiration
   #  https://github.com/gvolpe/nix-config/blob/6feb7e4f47e74a8e3befd2efb423d9232f522ccd/home/programs/browsers/firefox.nix
   #  https://github.com/TLATER/dotfiles/blob/b39af91fbd13d338559a05d69f56c5a97f8c905d/home-config/config/graphical-applications/firefox.nix
   #  https://github.com/Misterio77/nix-config/blob/main/home/misterio/features/desktop/common/firefox.nix
   #  https://gitlab.com/usmcamp0811/dotfiles/-/blob/fb584a888680ff909319efdcbf33d863d0c00eaa/modules/home/apps/firefox/default.nix
 
-
-  home.sessionVariables = { 
-    MOZ_ENABLE_WAYLAND = "1"; 
+  home.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = "1";
   };
 
   programs.firefox = {
@@ -49,16 +52,15 @@
   };
 
   xdg.mimeApps.defaultApplications = {
-    "text/html" = [ "firefox.desktop" ];
-    "text/xml" = [ "firefox.desktop" ];
-    "x-scheme-handler/http" = [ "firefox.desktop" ];
-    "x-scheme-handler/https" = [ "firefox.desktop" ];
+    "text/html" = ["firefox.desktop"];
+    "text/xml" = ["firefox.desktop"];
+    "x-scheme-handler/http" = ["firefox.desktop"];
+    "x-scheme-handler/https" = ["firefox.desktop"];
   };
 
   xdg.configFile."hypr/per-app/firefox.conf".text = ''
     bind = $mainMod, F, exec, firefox
     # bind = $mainMod, W, exec, firefox -p work
-    exec-once = [workspace 2 silent] firefox
+    exec-once = [workspace 7 silent] firefox
   '';
-
 }
