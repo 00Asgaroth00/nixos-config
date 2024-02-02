@@ -30,6 +30,11 @@
         keepassxc-browser
       ];
       settings = {
+        # Performance settings
+        "gfx.webrender.all" = true; # Force enable GPU acceleration
+        "media.ffmpeg.vaapi.enabled" = true;
+        "widget.dmabuf.force-enabled" = true; # Required in recent Firefoxes
+
         "browser.disableResetPrompt" = true;
         "browser.download.panel.shown" = true;
         "browser.download.useDownloadDir" = false;
