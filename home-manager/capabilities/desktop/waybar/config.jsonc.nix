@@ -24,7 +24,8 @@
       "clock": {
         "format": "{:%H:%M}  ",
         "format-alt": "{:%A, %B %d, %Y (%R)}  ",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        // "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "\n<span size='9pt' font='FiraCode Nerd Font'>{calendar}</span>",
         "calendar": {
                     "mode"          : "year",
                     "mode-mon-col"  : 3,
