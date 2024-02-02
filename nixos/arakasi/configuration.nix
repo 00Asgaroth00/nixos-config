@@ -134,11 +134,13 @@ in {
       driSupport = true;
       driSupport32Bit = true;
       extraPackages = with pkgs; [
+        libGL
         libvdpau-va-gl
         vulkan-tools
         vaapiVdpau
         mesa.drivers
       ];
+      setLdLibraryPath = true;
     };
   };
 
