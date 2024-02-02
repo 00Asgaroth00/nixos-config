@@ -117,6 +117,7 @@ in {
 
     enableRedistributableFirmware = true;
 
+    # look here - https://discourse.nixos.org/t/nvidia-gpu-video-acceleration-with-firefox/20098/6
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       open = false;
