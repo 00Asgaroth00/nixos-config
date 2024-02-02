@@ -4,8 +4,7 @@
 #   outputs,
 #   user,
 #   ...
-{ ... }: {
-
+{...}: {
   xdg.configFile."waybar/config.jsonc".text = ''
     {
       "layer": "top",
@@ -23,19 +22,46 @@
       "border-radius": 10,
 
       "clock": {
-        "interval": 1,
-        "format": "   {:%H:%M}",
-        "format-alt": "󰃭  {:%Y-%m-%d}",
-        // "format": " {:%I:%M} ",
-        // "format-alt": " {:%A, %d %B} ",
-        // "on-click": "gnome-calendar",
-        "tooltip": true,
-        "tooltip-format": "{calendar}",
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
-          "mode": "year",
-          "mode-mon-col": 3,
-          
-        }
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "on-click-right": "mode",
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+      },
+
+      # "clock": {
+      #   "interval": 1,
+      #   "format": "   {:%H:%M}",
+      #   "format-alt": "󰃭  {:%Y-%m-%d}",
+      #   // "format": " {:%I:%M} ",
+      #   // "format-alt": " {:%A, %d %B} ",
+      #   // "on-click": "gnome-calendar",
+      #   "tooltip": true,
+      #   "tooltip-format": "{calendar}",
+      #   "calendar": {
+      #     "mode": "year",
+      #     "mode-mon-col": 3,
+
+      #   }
       },
       "modules-left": [
         "clock",
@@ -135,7 +161,7 @@
           "󰤥",
           "󰤨"
         ],
-        
+
         "format-disconnected": "󰤮",
         "on-click": "iwgtk",
         "tooltip": true,
@@ -180,6 +206,4 @@
     }
 
   '';
-
-
 }
