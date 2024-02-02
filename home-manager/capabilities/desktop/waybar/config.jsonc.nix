@@ -48,21 +48,21 @@
                     }
       },
 
-      # "clock": {
-      #   "interval": 1,
-      #   "format": "   {:%H:%M}",
-      #   "format-alt": "󰃭  {:%Y-%m-%d}",
-      #   // "format": " {:%I:%M} ",
-      #   // "format-alt": " {:%A, %d %B} ",
-      #   // "on-click": "gnome-calendar",
-      #   "tooltip": true,
-      #   "tooltip-format": "{calendar}",
-      #   "calendar": {
-      #     "mode": "year",
-      #     "mode-mon-col": 3,
+      //"clock": {
+      //  "interval": 1,
+      //  "format": "   {:%H:%M}",
+      //  "format-alt": "󰃭  {:%Y-%m-%d}",
+      //  // "format": " {:%I:%M} ",
+      //  // "format-alt": " {:%A, %d %B} ",
+      //  // "on-click": "gnome-calendar",
+      //  "tooltip": true,
+      //  "tooltip-format": "{calendar}",
+      //  "calendar": {
+      //    "mode": "year",
+      //    "mode-mon-col": 3,
+      //  }
+      //},
 
-      #   }
-      # },
       "modules-left": [
         "clock",
         "hyprland/workspaces",
