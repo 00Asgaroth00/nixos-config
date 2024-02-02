@@ -62,7 +62,7 @@
       #     "mode-mon-col": 3,
 
       #   }
-      },
+      # },
       "modules-left": [
         "clock",
         "hyprland/workspaces",
