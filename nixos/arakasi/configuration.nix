@@ -11,7 +11,10 @@
   username,
   colour_scheme,
   ...
-}: {
+}: let
+  monitorsXmlContent = builtins.readFile /home/${username}/Git/nixos-config/home-manager/users/${username}/${networking.hostName}_monitoris_gdm.xml;
+  monitorsConfig = pkgs.writeText "gdm_monitors.xml" monitorsXmlContent;
+in {
   # You can import other NixOS modules here
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
@@ -229,6 +232,10 @@
   # systemd.tmpfiles.rules = [
   #   "L+ /run/gdm/.config/monitors.xml - - - - /home/${username}/Git/nixos-config/home-manager/users/${username}/arakasi_monitors_gdm_gnome_generated.xml"
   # ];
+
+  systemd.tmpfiles.rules = [
+    "L+ /run/gdm/.config/monitors.xml - - - - ${monitorsConfig}"
+  ];
 
   # systemd.packages = [
   #   (pkgs.writeTextFile {

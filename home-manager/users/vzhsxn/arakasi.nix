@@ -83,7 +83,7 @@
   # programs.git.enable = true;
 
   # create gdm monitors.xml
-  xdg.configFile."monitors.xml".source = ./. + "/${osConfig.networking.hostName}_monitors_gdm.xml";
+  # xdg.configFile."monitors.xml".source = ./. + "/${osConfig.networking.hostName}_monitors_gdm.xml";
 
   # configure with nwg-displays
   monitors = [
