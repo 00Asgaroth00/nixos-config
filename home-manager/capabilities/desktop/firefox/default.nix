@@ -24,7 +24,11 @@
       extensions = with inputs.firefox-addons.packages.${pkgs.system}; [
         ublock-origin
         privacy-badger
-        i-dont-care-about-cookies # auto-accept cookies, use only with ublock-origin and provacy-badger
+        i-dont-care-about-cookies # auto-accept cookies, use only with ublock-origin and privacy-badger
+        clearurls
+        duckduckgo-privacy-essentials
+        ghostery
+        floccus
         fastforwardteam
         unpaywall
         keepassxc-browser
