@@ -13,10 +13,11 @@ in {
   imports = [
     ../alacritty
     ../bemoji
+    ../chromium
     ../copyq
     ../dunst
     ../firefox
-    ../microsoft-edge
+    # ../microsoft-edge
     ../flameshot # screenshot tool (issues on hyprland)
     ../hyprpaper
     ../keepassxc
