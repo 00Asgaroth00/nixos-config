@@ -25,6 +25,7 @@ in {
     ../playerctl
     # ../satty        # screenshot tool
     ../strawberry
+    ../syncthing
     ../thunderbird
     ../udiskie
     ../ulauncher
