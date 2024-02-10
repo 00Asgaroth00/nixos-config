@@ -30,6 +30,9 @@
       {
         id = "ponfpcnoihfmfllpaingbgckeeldkhle"; # enhancer for youtube
       }
+      {
+        id = "cmedhionkhpnakcndndgjdbohmhepckk"; # addblock for youtube
+      }
     ];
   };
 
