@@ -1,5 +1,8 @@
-{ lib, pkgs, ... }: {
-
+{
+  lib,
+  pkgs,
+  ...
+}: {
   # https://alacritty.org/config-alacritty.html
 
   home.packages = with pkgs; [
@@ -14,8 +17,9 @@
         opacity = lib.mkForce 0.8;
       };
       shell = {
-        program = "${pkgs.zsh}/bin/zsh";
-        args = [ "-l" ];
+        # program = "${pkgs.zsh}/bin/zsh";
+        program = "${pkgs.tmux}/bin/tmux";
+        args = ["-2" "-l"];
       };
       scrolling = {
         history = 100000;
@@ -40,5 +44,4 @@
     windowrulev2 = opacity 0.8 0.8, class:^(alacritty)$
     bind = ALT, Return, exec, alacritty
   '';
-
 }
