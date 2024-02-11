@@ -1,13 +1,13 @@
-{ config, ... }: {
-
+{config, ...}: {
   xdg = {
     enable = true;
-    
+
     userDirs = {
       enable = true;
       createDirectories = true;
       extraConfig = {
         XDG_GIT_DIR = "${config.home.homeDirectory}/Git";
+        XDG_LIBRARY_DIR = "${config.home.homeDirectory}/Library";
         XDG_WORK_DIR = "${config.home.homeDirectory}/Work";
         XDG_WORK_DOCUMENTS_DIR = "${config.home.homeDirectory}/Work/Documents";
         XDG_WORK_DOWNLOAD_DIR = "${config.home.homeDirectory}/Work/Downloads";
@@ -16,7 +16,5 @@
         XDG_WORK_GIT_DIR = "${config.home.homeDirectory}/Work/Git";
       };
     };
-
   };
-
 }
