@@ -171,6 +171,10 @@ in {
     };
   };
 
+  powerManagement = {
+    cpuFreqGovernor = "ondemand"; # ondemand/powersave/performance/schedutil
+  };
+
   # fonts.fontDir.enable = true;
 
   # programs.zsh.enable = true;
