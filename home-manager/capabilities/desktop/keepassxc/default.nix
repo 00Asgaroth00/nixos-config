@@ -8,6 +8,6 @@
   ];
 
   xdg.configFile."hypr/per-app/keepassxc.conf".text = ''
-    exec-once = [workspace 2 silent] sleep 2 && ${pkgs.keepassxc}/bin/keypassxc
+    exec-once = [workspace 2 silent] sleep 2 && ${pkgs.keepassxc}/bin/keepassxc
   '';
 }
