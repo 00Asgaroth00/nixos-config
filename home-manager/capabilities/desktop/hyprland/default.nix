@@ -22,7 +22,7 @@ in {
     ../hyprpaper
     ../keepassxc
     # ../kitty
-    ../nwg-panel
+    # ../nwg-panel
     ../playerctl
     # ../satty        # screenshot tool
     ../strawberry
