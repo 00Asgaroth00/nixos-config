@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  osConfig,
+  pkgs,
+  ...
+}: {
   imports = [
     # ./config.jsonc.nix
     (./. + "/config.jsonc.${osConfig.networking.hostName}.nix")
