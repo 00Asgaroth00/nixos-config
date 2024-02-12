@@ -66,7 +66,7 @@
         host = "smtp.office365.com";
         port = lib.mkForce 587;
         tls.enable = true;
-        tls.useStartTls = false;
+        tls.useStartTls = lib.mkForce false;
       };
       thunderbird.enable = true;
       thunderbird.profiles = ["home"];
