@@ -116,7 +116,7 @@
 
       "cpu": {
         "interval": 1,
-        "format": "  {usage}%",
+        "format": "  {usage:3d}%",
         "on-click": "",
         "tooltip": false
       },
