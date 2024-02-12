@@ -21,7 +21,7 @@
         host = "smtp.gmail.com";
         port = lib.mkForce 587;
         tls.enable = true;
-        tls.useStartTls = false;
+        tls.useStartTls = true;
       };
       thunderbird.enable = true;
       thunderbird.profiles = ["home"];
@@ -66,7 +66,7 @@
         host = "smtp.office365.com";
         port = lib.mkForce 587;
         tls.enable = true;
-        tls.useStartTls = lib.mkForce false;
+        tls.useStartTls = lib.mkForce true;
       };
       thunderbird.enable = true;
       thunderbird.profiles = ["home"];
