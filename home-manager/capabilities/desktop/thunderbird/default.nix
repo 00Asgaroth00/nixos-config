@@ -13,7 +13,7 @@
       flavor = "gmail.com";
       imap = {
         host = "imap.gmail.com";
-        port = 143;
+        port = lib.mkFroce 143;
         tls.enable = true;
         tls.useStartTls = true;
       };
