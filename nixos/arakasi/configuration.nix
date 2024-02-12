@@ -172,7 +172,7 @@ in {
   };
 
   powerManagement = {
-    cpuFreqGovernor = "schedutil"; # ondemand/powersave/performance/schedutil
+    cpuFreqGovernor = "performance"; # ondemand/powersave/performance/schedutil
   };
 
   # fonts.fontDir.enable = true;
