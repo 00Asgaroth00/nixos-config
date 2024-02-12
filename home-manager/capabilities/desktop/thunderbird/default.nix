@@ -15,6 +15,7 @@
         host = "imap.gmail.com";
         port = 993;
         tls.enable = true;
+        tls.useStartTls = true;
       };
       smtp = {
         host = "smtp.gmail.com";
@@ -36,6 +37,7 @@
         host = "imap.gmail.com";
         port = 993;
         tls.enable = true;
+        tls.useStartTls = true;
       };
       smtp = {
         host = "smtp.gmail.com";
@@ -58,6 +60,7 @@
         host = "outlook.office365.com";
         port = 993;
         tls.enable = true;
+        tls.useStartTls = true;
       };
       smtp = {
         host = "smtp.office365.com";
