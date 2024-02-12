@@ -79,7 +79,7 @@
         "memory",
         "network#if1",
         "network#if2",
-        "network#wlan",
+        // "network#wlan",
         // "network",
         // "bluetooth",
         // "backlight",
@@ -175,7 +175,7 @@
 
       "network#if1": {
          "interval": 2,
-         "interface": "en01",
+         "interface": "eno1",
          "max-length": 50,
          "format": "",
          "format-ethernet": "<span foreground='#829181'>󰱔 </span>{ipaddr}/{cidr}",
