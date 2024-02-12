@@ -195,17 +195,17 @@
          "tooltip-format-ethernet": "Ifname:\t{ifname}\nNMask:\t{netmask}\nDown:\t{bandwidthDownBits}\nUp:\t{bandwidthUpBits}",
          "tooltip-format-disconnected": ""
       },
-      "network#wlan": {
-        "interval": 2,
-        "interface": "wlan0",
-        "max-length": 50,
-        "format": "",
-        "format-wifi": "<span foreground='#93b259'>󰀂 </span>{essid}({signalStrength}%)",
-        "format-disconnected": "<span foreground='#fb4934'>󰯡 </span>no wlan",
-        "tooltip-format": "",
-        "tooltip-format-wifi": "Ifname:\t{ifname}\nIPv4:\t{ipaddr}/{cidr}\nNMask:\t{netmask}\nDown:\t{bandwidthDownBits}\nUp:\t{bandwidthUpBits}",
-        "tooltip-format-disconnected": ""
-      },
+      // "network#wlan": {
+      //   "interval": 2,
+      //   "interface": "wlan0",
+      //   "max-length": 50,
+      //   "format": "",
+      //   "format-wifi": "<span foreground='#93b259'>󰀂 </span>{essid}({signalStrength}%)",
+      //   "format-disconnected": "<span foreground='#fb4934'>󰯡 </span>no wlan",
+      //   "tooltip-format": "",
+      //   "tooltip-format-wifi": "Ifname:\t{ifname}\nIPv4:\t{ipaddr}/{cidr}\nNMask:\t{netmask}\nDown:\t{bandwidthDownBits}\nUp:\t{bandwidthUpBits}",
+      //   "tooltip-format-disconnected": ""
+      // },
 
       "bluetooth": {
         "format-disabled": " 󰂲 ",
