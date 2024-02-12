@@ -117,6 +117,45 @@
             on-click = "";
             tooltip = false;
           };
+
+          "pulseaudio#audio" = {
+            format = " {icon} {volume:2} ";
+            format-bluetooth = " {icon} {volume}%  ";
+            format-muted = " {icon} Muted ";
+            format-icons = {
+              headphones = "";
+              default = [
+                ""
+                ""
+              ];
+            };
+            scroll-step = 5;
+            on-click = "pavucontrol";
+            on-click-right = "pamixer -t";
+          };
+
+          "network#if1" = {
+            interval = 2;
+            interface = "eno1";
+            max-length = 50;
+            format = "";
+            format-ethernet = "<span foreground='#829181'>󰱔 </span>{ipaddr}/{cidr}";
+            format-disconnected = "";
+            tooltip-format = "";
+            tooltip-format-ethernet = "Ifname:\t{ifname}\nNMask:\t{netmask}\nDown:\t{bandwidthDownBits}\nUp:\t{bandwidthUpBits}";
+            tooltip-format-disconnected = "";
+          };
+          "network#if2" = {
+            interval = 2;
+            interface = "enp15s0u5u3u1";
+            max-length = 50;
+            format = "";
+            format-ethernet = "<span foreground='#829181'>󰱔 </span>{ipaddr}/{cidr}";
+            format-disconnected = "";
+            tooltip-format = "";
+            tooltip-format-ethernet = "Ifname:\t{ifname}\nNMask:\t{netmask}\nDown:\t{bandwidthDownBits}\nUp:\t{bandwidthUpBits}";
+            tooltip-format-disconnected = "";
+          };
         };
       }
     ];
