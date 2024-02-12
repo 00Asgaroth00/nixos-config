@@ -18,7 +18,8 @@
       };
       smtp = {
         host = "smtp.gmail.com";
-        port = lib.mkForce 465;
+        port = lib.mkForce 587; #587 = starttls 465 = ssl
+        tls.enable = true;
         tls.useStartTls = true;
       };
       thunderbird.enable = true;
@@ -38,7 +39,8 @@
       };
       smtp = {
         host = "smtp.gmail.com";
-        port = lib.mkForce 465;
+        port = lib.mkForce 587;
+        tls.enable = true;
         tls.useStartTls = true;
       };
       thunderbird.enable = true;
@@ -60,6 +62,7 @@
       smtp = {
         host = "smtp.office365.com";
         port = lib.mkForce 587;
+        tle.enable = true;
         tls.useStartTls = true;
       };
       thunderbird.enable = true;
