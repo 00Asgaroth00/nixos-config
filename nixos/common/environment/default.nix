@@ -29,6 +29,7 @@
       pciutils
       hwloc
       usbutils
+      cpufrequtils
     ];
   };
 }
