@@ -41,9 +41,9 @@
       };
       smtp = {
         host = "smtp.gmail.com";
-        port = lib.mkForce 465;
+        port = lib.mkForce 587;
         tls.enable = true;
-        tls.useStartTls = false;
+        tls.useStartTls = true;
       };
       thunderbird.enable = true;
       thunderbird.profiles = ["home"];
