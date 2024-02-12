@@ -41,7 +41,7 @@
       };
       smtp = {
         host = "smtp.gmail.com";
-        port = lib.mkForce 587;
+        port = lib.mkForce 465;
         tls.enable = true;
         tls.useStartTls = false;
       };
