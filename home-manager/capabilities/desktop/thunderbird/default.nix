@@ -13,15 +13,15 @@
       flavor = "gmail.com";
       imap = {
         host = "imap.gmail.com";
-        port = lib.mkForce 143;
+        port = lib.mkForce 993;
         tls.enable = true;
-        tls.useStartTls = true;
+        tls.useStartTls = false;
       };
       smtp = {
         host = "smtp.gmail.com";
-        port = lib.mkForce 587; #587 = starttls 465 = ssl
+        port = lib.mkForce 587;
         tls.enable = true;
-        tls.useStartTls = true;
+        tls.useStartTls = false;
       };
       thunderbird.enable = true;
       thunderbird.profiles = ["home"];
@@ -35,15 +35,15 @@
       flavor = "gmail.com";
       imap = {
         host = "imap.gmail.com";
-        port = 993;
+        port = lib.mkForce 993;
         tls.enable = true;
-        tls.useStartTls = true;
+        tls.useStartTls = false;
       };
       smtp = {
         host = "smtp.gmail.com";
         port = lib.mkForce 587;
         tls.enable = true;
-        tls.useStartTls = true;
+        tls.useStartTls = false;
       };
       thunderbird.enable = true;
       thunderbird.profiles = ["home"];
@@ -58,15 +58,15 @@
       flavor = "outlook.office365.com";
       imap = {
         host = "outlook.office365.com";
-        port = 993;
+        port = lib.mkForce 993;
         tls.enable = true;
-        tls.useStartTls = true;
+        tls.useStartTls = false;
       };
       smtp = {
         host = "smtp.office365.com";
         port = lib.mkForce 587;
         tls.enable = true;
-        tls.useStartTls = true;
+        tls.useStartTls = false;
       };
       thunderbird.enable = true;
       thunderbird.profiles = ["home"];
