@@ -77,7 +77,10 @@
 
         "cpu",
         "memory",
-        "network",
+        "network#if1",
+        "network#if2",
+        "network#wlan",
+        // "network",
         // "bluetooth",
         // "backlight",
         // "pulseaudio#microphone",
@@ -151,23 +154,57 @@
         "on-click-right": "pamixer -t"
       },
 
-      "network": {
-        "interface": "wlan0",
-        "format-ethernet":  "󰣶  {ifname}",
-        "format-wifi":  "󰖩 {ifname}",
-        "interval": 1,
-        "format-icons": [
-          "󰤯",
-          "󰤟",
-          "󰤢",
-          "󰤥",
-          "󰤨"
-        ],
+      // "network": {
+      //   "interface": "wlan0",
+      //   "format-ethernet":  "󰣶  {ifname}",
+      //   "format-wifi":  "󰖩 {ifname}",
+      //   "interval": 1,
+      //   "format-icons": [
+      //     "󰤯",
+      //     "󰤟",
+      //     "󰤢",
+      //     "󰤥",
+      //     "󰤨"
+      //   ],
+      //
+      //   "format-disconnected": "󰤮",
+      //   "on-click": "iwgtk",
+      //   "tooltip": true,
+      //   "tooltip-format": "󰢮 {ifname}\n󰩟 {ipaddr}/{cidr}\n{icon} {essid}\n󱑽 {signalStrength}% {signaldBm} dBm {frequency} MHz\n󰞒 {bandwidthDownBytes}\n󰞕 {bandwidthUpBytes}"
+      // },
 
-        "format-disconnected": "󰤮",
-        "on-click": "iwgtk",
-        "tooltip": true,
-        "tooltip-format": "󰢮 {ifname}\n󰩟 {ipaddr}/{cidr}\n{icon} {essid}\n󱑽 {signalStrength}% {signaldBm} dBm {frequency} MHz\n󰞒 {bandwidthDownBytes}\n󰞕 {bandwidthUpBytes}"
+      "network#if1": {
+         "interval": 2,
+         "interface": "en01",
+         "max-length": 50,
+         "format": "",
+         "format-ethernet": "<span foreground='#829181'>󰱔 </span>{ipaddr}/{cidr}",
+         "format-disconnected": "",
+         "tooltip-format": "",
+         "tooltip-format-ethernet": "Ifname:\t{ifname}\nNMask:\t{netmask}\nDown:\t{bandwidthDownBits}\nUp:\t{bandwidthUpBits}",
+         "tooltip-format-disconnected": ""
+      },
+      "network#if2": {
+         "interval": 2,
+         "interface": "enp15s0u5u3u1",
+         "max-length": 50,
+         "format": "",
+         "format-ethernet": "<span foreground='#829181'>󰱔 </span>{ipaddr}/{cidr}",
+         "format-disconnected": "",
+         "tooltip-format": "",
+         "tooltip-format-ethernet": "Ifname:\t{ifname}\nNMask:\t{netmask}\nDown:\t{bandwidthDownBits}\nUp:\t{bandwidthUpBits}",
+         "tooltip-format-disconnected": ""
+      },
+      "network#wlan": {
+        "interval": 2,
+        "interface": "wlan0",
+        "max-length": 50,
+        "format": "",
+        "format-wifi": "<span foreground='#93b259'>󰀂 </span>{essid}({signalStrength}%)",
+        "format-disconnected": "<span foreground='#fb4934'>󰯡 </span>no wlan",
+        "tooltip-format": "",
+        "tooltip-format-wifi": "Ifname:\t{ifname}\nIPv4:\t{ipaddr}/{cidr}\nNMask:\t{netmask}\nDown:\t{bandwidthDownBits}\nUp:\t{bandwidthUpBits}",
+        "tooltip-format-disconnected": ""
       },
 
       "bluetooth": {
