@@ -37,7 +37,7 @@
             # "bluetooth"
             # "backlight"
             # "pulseaudio#microphone"
-            # "pulseaudio#audio"
+            "pulseaudio#audio"
             # "battery"
             "tray"
           ];
