@@ -1,9 +1,32 @@
-{ lib, pkgs, ... }: {
-
+{
+  lib,
+  pkgs,
+  ...
+}: {
   accounts.email.accounts = {
-    Asgaroth = {
+    Bruce = {
       # Need to change auth type to oauth2
       primary = true;
+      userName = "bruce.mcalister@gmail.com";
+      realName = "Bruce McAlister";
+      address = "bruce.mcalister@gmail.com";
+      flavor = "gmail.com";
+      imap = {
+        host = "imap.gmail.com";
+        port = 993;
+        tls.enable = true;
+      };
+      smtp = {
+        host = "smtp.gmail.com";
+        port = lib.mkForce 465;
+        tls.useStartTls = true;
+      };
+      thunderbird.enable = true;
+      thunderbird.profiles = ["home"];
+    };
+    Asgaroth = {
+      # Need to change auth type to oauth2
+      primary = false;
       userName = "00asgaroth00@gmail.com";
       realName = "Asgaroth";
       address = "00asgaroth00@gmail.com";
@@ -19,7 +42,7 @@
         tls.useStartTls = true;
       };
       thunderbird.enable = true;
-      thunderbird.profiles = [ "home" ];
+      thunderbird.profiles = ["home"];
     };
     VoidBurn = {
       # Need app password for this one
@@ -40,7 +63,7 @@
         tls.useStartTls = true;
       };
       thunderbird.enable = true;
-      thunderbird.profiles = [ "home" ];
+      thunderbird.profiles = ["home"];
     };
   };
 
@@ -56,5 +79,4 @@
     # bind = $mainMod, W, exec, firefox -p work
     exec-once = [workspace 3 silent] thunderbird
   '';
-
 }
