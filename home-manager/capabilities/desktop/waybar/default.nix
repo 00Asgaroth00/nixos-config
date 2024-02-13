@@ -4,9 +4,9 @@
   ...
 }: {
   imports = [
-    ./config.jsonc.nix
+    # ./config.jsonc.nix
     # (./. + "/config.jsonc.${osConfig.networking.hostName}.nix")
-    # (./. + "/${osConfig.networking.hostName}.nix")
+    (./. + "/${osConfig.networking.hostName}.nix")
   ];
 
   home.packages = with pkgs; [
