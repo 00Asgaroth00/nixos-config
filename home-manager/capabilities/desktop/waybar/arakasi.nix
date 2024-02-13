@@ -7,6 +7,7 @@
           position = "top";
           height = 36;
           # output = ["eDP-1" "HDMI-A-1"];
+	  output = [ "DP-1" ];
           margin-top = 10;
           margin-bottom = 0;
           margin-left = 10;
