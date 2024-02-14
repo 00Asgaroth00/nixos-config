@@ -150,6 +150,11 @@ in {
     hostId = "a5569f6b";
     hostName = "arakasi";
     useDHCP = lib.mkForce true;
+    resolvconf = {
+      enable = true;
+      useLocalResolver = true;
+      dnsSingleRequest = true;
+    };
     networkmanager = {
       enable = true;
       wifi = {
