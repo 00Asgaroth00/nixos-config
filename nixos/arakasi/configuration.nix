@@ -149,31 +149,39 @@ in {
   networking = {
     hostId = "a5569f6b";
     hostName = "arakasi";
+    enableIPv6 = false; # IPv4 at home
     useDHCP = lib.mkForce true;
+    useNetworkd = true;
+    domain = "home.ie";
+    search = [
+      "home.ie"
+    ];
     resolvconf = {
-      enable = true;
-      useLocalResolver = true;
-      dnsSingleRequest = true;
+      # enable = true;
+      #   useLocalResolver = false;
+      dnsSingleRequest = true; # stop sending AAA as part of the same A request
+      dnsExtensionMechanism = false; # disable edns0, my upstream dns server doesnt support DNSSEC
     };
-    networkmanager = {
-      enable = true;
-      wifi = {
-        backend = "iwd";
-      };
-    };
-    wireless = {
-      iwd = {
-        enable = true;
-        settings = {
-          Network = {
-            EnableIPv6 = false; # default true
-          };
-          Settings = {
-            AutoConnect = true;
-          };
-        };
-      };
-    };
+    # networkmanager = {
+    #   enable = true;
+    #   # dns = "systemd-resolved";
+    #   wifi = {
+    #     backend = "iwd";
+    #   };
+    # };
+    # wireless = {
+    #   iwd = {
+    #     enable = true;
+    #     settings = {
+    #       Network = {
+    #         EnableIPv6 = false; # default true
+    #       };
+    #       Settings = {
+    #         AutoConnect = true;
+    #       };
+    #     };
+    #   };
+    # };
   };
 
   powerManagement = {
