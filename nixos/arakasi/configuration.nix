@@ -84,7 +84,19 @@ in {
   # FIXME: Add the rest of your current configuration
 
   boot = {
+    kernelModules = [
+      "tcp_bbr"
+    ];
     kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+    kernelParams = [
+      "ipv6.disable=1"
+    ];
+    kernel = {
+      sysctl = {
+        "net.ipv4.tcp_congestion_control" = "bbr";
+        "net.core.default_qdisc" = "fq"; # see https://news.ycombinator.com/item?id=14814530
+      };
+    };
     loader = {
       efi = {
         canTouchEfiVariables = true;
@@ -153,15 +165,13 @@ in {
     useDHCP = lib.mkForce true;
     useNetworkd = true;
     domain = "home.ie";
-    search = [
-      "home.ie"
-    ];
-    resolvconf = {
-      # enable = true;
-      #   useLocalResolver = false;
-      dnsSingleRequest = true; # stop sending AAA as part of the same A request
-      dnsExtensionMechanism = false; # disable edns0, my upstream dns server doesnt support DNSSEC
-    };
+    search = ["home.ie"];
+    # resolvconf = {
+    #   enable = true;
+    #   useLocalResolver = false;
+    #   dnsSingleRequest = true; # stop sending AAA as part of the same A request
+    #   dnsExtensionMechanism = false; # disable edns0, my upstream dns server doesnt support DNSSEC
+    # };
     # networkmanager = {
     #   enable = true;
     #   # dns = "systemd-resolved";
@@ -191,6 +201,15 @@ in {
   # fonts.fontDir.enable = true;
 
   # programs.zsh.enable = true;
+
+  services.resolved = {
+    enable = true;
+    llmnr = "false";
+    # domains = ["home.ie"];
+    dnssec = "false";
+    dnsovertls = "false";
+    fallbackDns = ["172.16.17.1"];
+  };
 
   # settings specific to this machine, augments ../global/xserver/default.nix
   services.xserver = {
