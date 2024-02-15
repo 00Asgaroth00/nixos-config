@@ -16,6 +16,7 @@
     #   docker-buildx
     #   docker-compose
     # ];
+    extraOptions = "--insecure-registry harbor.home.ie";
     extraPackages = lib.mkMerge [
       [pkgs.docker-buildx pkgs.docker-compose]
       (lib.mkIf (config.networking.hostName == "arakasi") [pkgs.nvidia-docker])
