@@ -195,9 +195,9 @@ in {
     # };
   };
 
-  powerManagement = {
-    cpuFreqGovernor = "performance"; # ondemand/powersave/performance/schedutil
-  };
+  # powerManagement = {
+  #   cpuFreqGovernor = "performance"; # ondemand/powersave/performance/schedutil
+  # };
 
   # fonts.fontDir.enable = true;
 
