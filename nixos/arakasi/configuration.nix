@@ -91,6 +91,8 @@ in {
     kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
     kernelParams = [
       "ipv6.disable=1"
+      "pcie_port_pm=off" # see https://www.reddit.com/r/buildapc/comments/xypn1m/network_card_intel_ethernet_controller_i225v_igc/
+      "pcie_aspm.policy=performance" # see https://www.reddit.com/r/buildapc/comments/xypn1m/network_card_intel_ethernet_controller_i225v_igc/
     ];
     kernel = {
       sysctl = {
