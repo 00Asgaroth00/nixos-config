@@ -4,6 +4,7 @@
   ...
 }: let
   custom-extensions = {
+    # https://marketplace.visualstudio.com/items?itemName=miconda.kamailio-syntax
     kamailio-syntax = pkgs.vscode-utils.extensionFromVscodeMarketplace {
       publisher = "miconda";
       name = "kamailio-syntax";
