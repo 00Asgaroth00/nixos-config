@@ -25,6 +25,7 @@
     font-manager
     wireshark # network anaylyzer
     twinkle # voip soft phone
+    linphone # voip softphone
     openlens # kubernetes ide
     discord # cross platform voice/text chat
     nwg-displays # gui for configuring screen layouts
@@ -70,7 +71,7 @@
 
   qt = {
     enable = true;
-    # platformTheme = "gtk";
+    platformTheme = "gtk";
     # style.name = "adwaita-gtk";
   };
 
