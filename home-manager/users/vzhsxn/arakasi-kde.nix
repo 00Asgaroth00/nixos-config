@@ -92,6 +92,19 @@
   # create gdm monitors.xml
   # xdg.configFile."monitors.xml".source = ./. + "/${osConfig.networking.hostName}_monitors_gdm.xml";
 
+  home.packages = with pkgs; [
+    wireshark # network anaylyzer
+    twinkle # voip soft phone
+    linphone # voip softphone
+    openlens # kubernetes ide
+    discord # cross platform voice/text chat
+    nwg-displays # gui for configuring screen layouts
+    wlr-randr # needed for nwg-displays
+    zapzap # whatsapp linux tool
+    signal-desktop # signal messanger
+    element-desktop # matrix collaboration client
+  ];
+
   # configure with nwg-displays
   monitors = [
     {
