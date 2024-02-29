@@ -7,7 +7,7 @@
     # git-credential-keepassxc
   ];
 
-  xdg.configFile."hypr/per-app/keepassxc.conf".text = ''
-    exec-once = [workspace 2 silent] sleep 2 && ${pkgs.keepassxc}/bin/keepassxc
-  '';
+  # xdg.configFile."hypr/per-app/keepassxc.conf".text = ''
+  #   exec-once = [workspace 2 silent] sleep 2 && ${pkgs.keepassxc}/bin/keepassxc
+  # '';
 }

@@ -67,9 +67,9 @@
     "x-scheme-handler/https" = ["firefox.desktop"];
   };
 
-  xdg.configFile."hypr/per-app/firefox.conf".text = ''
-    bind = $mainMod, F, exec, firefox
-    # bind = $mainMod, W, exec, firefox -p work
-    exec-once = [workspace 7 silent] firefox
-  '';
+  # xdg.configFile."hypr/per-app/firefox.conf".text = ''
+  #   bind = $mainMod, F, exec, firefox
+  #   # bind = $mainMod, W, exec, firefox -p work
+  #   exec-once = [workspace 7 silent] firefox
+  # '';
 }

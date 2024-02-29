@@ -80,9 +80,9 @@
     };
   };
 
-  xdg.configFile."hypr/per-app/thunderbird.conf".text = ''
-    bind = $mainMod, T, exec, thunderbird
-    # bind = $mainMod, W, exec, firefox -p work
-    exec-once = [workspace 3 silent] thunderbird
-  '';
+  # xdg.configFile."hypr/per-app/thunderbird.conf".text = ''
+  #   bind = $mainMod, T, exec, thunderbird
+  #   # bind = $mainMod, W, exec, firefox -p work
+  #   exec-once = [workspace 3 silent] thunderbird
+  # '';
 }

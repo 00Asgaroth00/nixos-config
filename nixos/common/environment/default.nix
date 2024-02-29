@@ -30,6 +30,13 @@
       hwloc
       usbutils
       cpufrequtils
+
+      # needed for kde plasman 6
+      aha
+      clinfo
+      glxinfo
+      vulkan-tools
+      wayland-utils
     ];
   };
 }
