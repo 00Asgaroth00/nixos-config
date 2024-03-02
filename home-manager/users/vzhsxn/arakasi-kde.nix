@@ -25,7 +25,7 @@
       # ./nvim.nix
 
       # nix-colors.homeManagerModule
-      (./. + "/kanshi_${osConfig.networking.hostName}.nix")
+      # (./. + "/kanshi_${osConfig.networking.hostName}.nix")
       ../../capabilities/common
       ../../capabilities/cli
       ../../capabilities/desktop/alacritty
@@ -103,6 +103,7 @@
     zapzap # whatsapp linux tool
     signal-desktop # signal messanger
     element-desktop # matrix collaboration client
+    slack
   ];
 
   # configure with nwg-displays

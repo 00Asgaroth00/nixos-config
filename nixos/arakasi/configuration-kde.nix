@@ -191,23 +191,23 @@ in {
     # };
     networkmanager = {
       enable = true;
-    #   # dns = "systemd-resolved";
-    #   wifi = {
-    #     backend = "iwd";
-    #   };
-    # };
-    # wireless = {
-    #   iwd = {
-    #     enable = true;
-    #     settings = {
-    #       Network = {
-    #         EnableIPv6 = false; # default true
-    #       };
-    #       Settings = {
-    #         AutoConnect = true;
-    #       };
-    #     };
-    #   };
+      #   # dns = "systemd-resolved";
+      #   wifi = {
+      #     backend = "iwd";
+      #   };
+      # };
+      # wireless = {
+      #   iwd = {
+      #     enable = true;
+      #     settings = {
+      #       Network = {
+      #         EnableIPv6 = false; # default true
+      #       };
+      #       Settings = {
+      #         AutoConnect = true;
+      #       };
+      #     };
+      #   };
     };
   };
 
@@ -231,6 +231,7 @@ in {
   # settings specific to this machine, augments ../global/xserver/default.nix
   services.xserver = {
     enable = true;
+    displayManager.defaultSession = "plasma"; # plasma or plasmax11
     displayManager.gdm = {
       enable = true;
       wayland = true;
@@ -244,7 +245,7 @@ in {
     xkb = {
       layout = "gb";
       model = "pc104";
-      variant = "";
+      variant = "extd";
       options = "terminate:ctrl_alt_bksp";
     };
   };
