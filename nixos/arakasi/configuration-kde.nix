@@ -47,6 +47,7 @@ in {
     ../common/locale
     ../common/nix
     ../common/pipewire
+    ../common/programs/gnupg
     ../common/programs/neovim
     ../common/programs/zsh
     ../common/services/fwupd
