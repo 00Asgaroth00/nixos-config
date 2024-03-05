@@ -36,8 +36,8 @@
     ];
   };
 
-  # xdg.configFile."hypr/per-app/chromium.conf".text = ''
-  #   bind = $mainMod, C, exec, ${pkgs.chromium}/bin/chromium
-  #   exec-once = [workspace 8 silent] ${pkgs.chromium}/bin/chromium
-  # '';
+  xdg.configFile."hypr/per-app/chromium.conf".text = ''
+    bind = $mainMod, C, exec, ${pkgs.chromium}/bin/chromium
+    exec-once = [workspace 8 silent] ${pkgs.chromium}/bin/chromium
+  '';
 }

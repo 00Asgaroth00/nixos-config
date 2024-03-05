@@ -43,6 +43,7 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
 
     hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.inputs.nixpkgs.follows = "nixpkgs";
     hyprland-contrib = {
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -128,13 +129,13 @@
         modules = [
           # > Our main nixos configuration file <
           stylix.nixosModules.stylix
-          ./nixos/arakasi/configuration-kde.nix
+          ./nixos/arakasi/configuration-hyprland.nix
           disko.nixosModules.disko
           home-manager.nixosModules.home-manager
           {
             # home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${username} = import ./home-manager/users/${username}/arakasi-kde.nix;
+            home-manager.users.${username} = import ./home-manager/users/${username}/arakasi-hyprland.nix;
             home-manager.extraSpecialArgs = {inherit inputs outputs stylix username colour_scheme;};
           }
         ];

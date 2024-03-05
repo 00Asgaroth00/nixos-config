@@ -33,6 +33,7 @@
     zapzap # whatsapp linux tool
     signal-desktop # signal messanger
     element-desktop # matrix collaboration client
+    calibre # e-book software
   ];
 
   # dconf.settings = {
