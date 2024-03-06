@@ -30,6 +30,7 @@ in {
     extensions = with pkgs.vscode-extensions; [
       bbenoist.nix
       enkia.tokyo-night
+      golang.go
       kamadorueda.alejandra
       mkhl.direnv
       ms-azuretools.vscode-docker
