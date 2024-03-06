@@ -4,20 +4,42 @@
   ...
 }: let
   custom-extensions = {
-    # https://marketplace.visualstudio.com/items?itemName=miconda.kamailio-syntax
     kamailio-syntax = pkgs.vscode-utils.extensionFromVscodeMarketplace {
       publisher = "miconda";
       name = "kamailio-syntax";
       version = "1.0.8";
       sha256 = "sha256-8wGof/ESIjWk31U4iIl+oYoGD8B+ToTVucqnGK0RYGM=";
     };
+    tokyo-night = pkgs.vscode-utils.extensionFromVscodeMarketplace {
+      publisher = "enkia";
+      name = "tokyo-night";
+      version = "1.0.6";
+      sha256 = "sha256-VWdUAU6SC7/dNDIOJmSGuIeffbwmcfeGhuSDmUE7Dig=";
+    };
   };
 in {
+  home.packages = with pkgs; [
+    golangci-lint
+  ];
+
   programs.vscode = {
     enable = true;
     enableExtensionUpdateCheck = true;
     userSettings = {
       "[nix]"."editor.tabSize" = 2;
+      "[nix]"."editor.defaultFormatter" = "kamadorueda.alejandra";
+      "[nix]"."editor.formatOnPaste" = true;
+      "[nix]"."editor.formatOnSave" = true;
+      "[nix]"."editor.formatOnType" = false;
+      "alejandra.program" = "${pkgs.alejandra}/bin/alejandra";
+      "[go]"."editor.tabSize" = 2;
+      "[go]"."editor.defaultFormatter" = "golang.go";
+      "[go]"."editor.formatOnPaste" = true;
+      "[go]"."editor.formatOnSave" = true;
+      "[go]"."editor.formatOnType" = false;
+      "go.lintTool" = "golangci-lint";
+      "go.lintFlags" = ["--fast"];
+
       "editor.formatOnSave" = true;
       "files.insertFinalNewline" = true; # Make sure to have a final new line at end of files
       "files.trimFinalNewlines" = true; # Trim superfluous new lines at end of files
@@ -29,7 +51,7 @@ in {
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
       bbenoist.nix
-      enkia.tokyo-night
+      # enkia.tokyo-night
       golang.go
       kamadorueda.alejandra
       mkhl.direnv
@@ -39,6 +61,7 @@ in {
       timonwong.shellcheck
       yzhang.markdown-all-in-one
       custom-extensions.kamailio-syntax
+      custom-extensions.tokyo-night
     ];
   };
 
