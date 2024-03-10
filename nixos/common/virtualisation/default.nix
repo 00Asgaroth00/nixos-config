@@ -22,4 +22,11 @@
       (lib.mkIf (config.networking.hostName == "arakasi") [pkgs.nvidia-docker])
     ];
   };
+
+  virtualisation.vmware = {
+    host = {
+      enable = true;
+      package = pkgs.vmware-workstation;
+    };
+  };
 }

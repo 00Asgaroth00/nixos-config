@@ -32,7 +32,7 @@ in {
       "[nix]"."editor.formatOnSave" = true;
       "[nix]"."editor.formatOnType" = false;
       "alejandra.program" = "${pkgs.alejandra}/bin/alejandra";
-      "[go]"."editor.tabSize" = 2;
+      "[go]"."editor.tabSize" = 2; # go fmt has an 8 tab size
       "[go]"."editor.defaultFormatter" = "golang.go";
       "[go]"."editor.formatOnPaste" = true;
       "[go]"."editor.formatOnSave" = true;
