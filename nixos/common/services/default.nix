@@ -5,6 +5,8 @@
     ./fwupd
     ./gnome
     ./openssh
+    ./printing
+    ./scanner
     ./zfs
   ];
 }
