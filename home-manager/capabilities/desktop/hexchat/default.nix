@@ -1,0 +1,5 @@
+{...}: {
+  programs.hexchat = {
+    enable = true;
+  };
+}

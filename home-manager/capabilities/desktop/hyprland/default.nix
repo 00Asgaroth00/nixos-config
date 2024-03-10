@@ -19,6 +19,7 @@ in {
     ../firefox
     # ../microsoft-edge
     ../flameshot # screenshot tool (issues on hyprland)
+    ../hexchat
     ../hyprpaper
     ../keepassxc
     # ../kitty
