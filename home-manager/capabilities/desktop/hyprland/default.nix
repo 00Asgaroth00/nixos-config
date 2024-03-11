@@ -36,6 +36,7 @@ in {
     ../waybar
     ../wlogout
     ../wofi
+    ../zathura
 
     (./. + "/${osConfig.networking.hostName}.nix")
   ];

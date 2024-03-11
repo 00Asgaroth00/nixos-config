@@ -30,6 +30,7 @@
       hwloc
       usbutils
       cpufrequtils
+      ouch # [de]compression tool - https://github.com/ouch-org/ouch
 
       # needed for kde plasman 6
       aha
