@@ -24,6 +24,7 @@ in {
     ../keepassxc
     # ../kitty
     # ../nwg-panel
+    ../notepadqq
     ../playerctl
     # ../satty        # screenshot tool
     ../strawberry
