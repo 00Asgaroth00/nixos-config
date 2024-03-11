@@ -35,6 +35,7 @@
     element-desktop # matrix collaboration client
     calibre # e-book software
     # notepadqq # notepad++ like editor for linux
+    libreoffice # Office suite
   ];
 
   # dconf.settings = {
