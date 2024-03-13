@@ -36,6 +36,11 @@
 
   services.spice-vdagentd.enable = true;
 
+  programs.virt-manager = {
+    enable = true;
+    package = pkgs.virt-manager;
+  };
+
   environment.systemPackages = with pkgs; [
     virt-manager
     virt-viewer
