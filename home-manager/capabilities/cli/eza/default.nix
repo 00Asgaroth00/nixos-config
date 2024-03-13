@@ -1,11 +1,10 @@
-{ ... }: {
-
+{...}: {
   programs.eza = {
     enable = true;
-    enableAliases = true;
+    # enableAliases = true;
+    enableZshIntegration = true;
     icons = true;
-    extraOptions = [ "--group-directories-first" "--header" ];
+    extraOptions = ["--group-directories-first" "--header"];
     git = true;
   };
-
 }
