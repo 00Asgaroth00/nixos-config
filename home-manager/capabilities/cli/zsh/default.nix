@@ -10,7 +10,8 @@
 
   programs.zsh = {
     enable = true;
-    enableAutosuggestions = true;
+    # enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     autocd = true;
     cdpath = [ "." "/home/${username}" "/home/${username}/Public" "/home/${username}/Documents" "/home/${username}/Notes" ];
