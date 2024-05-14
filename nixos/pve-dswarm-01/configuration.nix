@@ -2,12 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../common/users
     ];
 
   # Bootloader.
@@ -53,15 +54,15 @@
   console.keyMap = "uk";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.vzhsxn = {
-    isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
-    shell = pkgs.zsh;
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEzAnRPOvWws2JBZ+ghFqfTnhZr87iA3X5FvWyCTTsCM vzhsxn@thanatos"
-    ];
-    packages = with pkgs; [];
-  };
+  # users.users.vzhsxn = {
+  #   isNormalUser = true;
+  #   extraGroups = [ "networkmanager" "wheel" "docker" ];
+  #   shell = pkgs.zsh;
+  #   openssh.authorizedKeys.keys = [
+  #     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEzAnRPOvWws2JBZ+ghFqfTnhZr87iA3X5FvWyCTTsCM vzhsxn@thanatos"
+  #   ];
+  #   packages = with pkgs; [];
+  # };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -100,6 +101,7 @@
     ];
     liveRestore = false;
   };
+  users.users.${username}.extraGroups = ["docker"];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
