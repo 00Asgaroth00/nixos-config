@@ -4,7 +4,8 @@ set -e
 
 partition_and_format() {
   local blockdevice=$1
-  parted -s "${blockdevice}" -- mklabel gpt
+  # parted -s "${blockdevice}" -- mklabel gpt
+  parted -s "${blockdevice}" -- mklabel msdos
 
   # 512MiB boot partition at the beginning
   # parted "${blockdevice}" -- mkpart ESP fat32 1MiB 512MiB
