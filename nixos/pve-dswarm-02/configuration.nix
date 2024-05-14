@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../common/users
     ];
 
   # Bootloader.
@@ -15,7 +16,7 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "pve-dswarm-01"; # Define your hostname.
+  networking.hostName = "pve-dswarm-02"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -53,15 +54,15 @@
   console.keyMap = "uk";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.vzhsxn = {
-    isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
-    shell = pkgs.zsh;
-    openssh.authorizedKeys.keys = [
-      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEzAnRPOvWws2JBZ+ghFqfTnhZr87iA3X5FvWyCTTsCM vzhsxn@thanatos"
-    ];
-    packages = with pkgs; [];
-  };
+  # users.users.vzhsxn = {
+  #   isNormalUser = true;
+  #   extraGroups = [ "networkmanager" "wheel" "docker" ];
+  #   shell = pkgs.zsh;
+  #   openssh.authorizedKeys.keys = [
+  #     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEzAnRPOvWws2JBZ+ghFqfTnhZr87iA3X5FvWyCTTsCM vzhsxn@thanatos"
+  #   ];
+  #   packages = with pkgs; [];
+  # };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
