@@ -25,9 +25,9 @@ partition_and_format() {
 }
 
 mount_block_devices() {
-  # mount /dev/disk/by-label/nixos /mnt
+  mount /dev/disk/by-label/nixos /mnt
   # mkdir -p /mnt/boot
-  mount /dev/disk/by-label/boot /mnt/boot
+  # mount /dev/disk/by-label/boot /mnt/boot
 }
 
 main() {
